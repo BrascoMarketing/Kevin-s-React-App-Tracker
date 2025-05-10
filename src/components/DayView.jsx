@@ -7,6 +7,8 @@ import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
 import { CalendarDaysIcon } from "@heroicons/react/24/solid";
 import { PlusIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
+import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
+import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 const schedule = {
   Sunday: "Rest",
@@ -206,8 +208,8 @@ useEffect(() => {
                 </button>
               ) : (
                 <div className="flex items-center space-x-2">
-                  <p className="text-green-400">
-                    ✅ Completed on{" "}
+                  <p className="flex items-center text-green-400">
+                    <CheckBadgeIcon className="h-4 w-4 mr-1" /> Completed on{" "}
                     {new Date(currentState.completedDate).toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
@@ -218,7 +220,7 @@ useEffect(() => {
                     onClick={handleToggleCompletion}
                     className="text-yellow-400 hover:underline"
                   >
-                    Unmark
+                    <ArrowUturnLeftIcon className="h-4 w-4" />
                   </button>
                 </div>
               )}
