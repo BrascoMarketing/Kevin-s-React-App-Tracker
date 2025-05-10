@@ -5,8 +5,7 @@ export default function CalendarPanel({ viewedDate, setViewedDate, logs }) {
   const loggedDates = [...new Set(logs.map(log => new Date(log.date).toDateString()))];
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4">
-      <h2 class="text-xl font-bold mb-4">Workout Log</h2>  
+    <div className="bg-gray-900 text-white rounded-xl p-4">        
       <div className="calendar-wrapper">
       <Calendar
         onChange={setViewedDate}

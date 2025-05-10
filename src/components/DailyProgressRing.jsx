@@ -12,7 +12,7 @@ export default function DailyProgressRing({ targetSets, loggedSets }) {
     datasets: [
       {
         data: [percentage, 100 - percentage],
-        backgroundColor: [isOverAchieved ? '#f97316' : '#3b82f6', '#1f2937'],
+        backgroundColor: [isOverAchieved ? '#f97316' : '#4ade80', '#3b82f6'],
         borderWidth: 0,
       },
     ],
@@ -24,11 +24,11 @@ export default function DailyProgressRing({ targetSets, loggedSets }) {
   };
 
   return (
-    <div className={`relative w-48 h-48 ${isOverAchieved ? 'animate-pulse' : ''}`}>
+    <div className={`relative w-48 h-48 block m-auto ${isOverAchieved ? 'animate-pulse' : ''}`}>
       <Doughnut data={data} options={options} />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         <span className="text-2xl font-bold">{Math.round(progressRaw)}%</span>
-        <span className="text-sm">of target</span>
+        <span className="text-sm">of expected sets</span>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ export default function VolumeChart() {
         label: 'Total Volume (Reps × Weight)',
         data: filteredDates.map(date => volumeByDate[date]),
         fill: false,
-        borderColor: '#3B82F6',
+        borderColor: '#4ade80',
         tension: 0.3,
       },
     ],
@@ -41,7 +41,7 @@ export default function VolumeChart() {
   const options = {
     responsive: true,
     plugins: {
-      legend: { position: 'bottom' },
+      legend: { display: false },
       title: { display: false, text: 'Volume Over Time' },
     },
     scales: {
@@ -67,8 +67,7 @@ export default function VolumeChart() {
   };
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 space-y-4">
-        <h2 class="text-xl font-bold mb-4">Total Volume</h2>
+    <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">        
       <div className="flex space-x-2 mb-2">        
         {timeFrames.map(frame => (
           <button

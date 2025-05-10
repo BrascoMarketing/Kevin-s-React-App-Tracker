@@ -131,7 +131,7 @@ useEffect(() => {
             </div>
 
 
-        <h2 className="text-xl font-bold mb-4">Today's Workout: {viewedCategory}</h2>
+        <h2 className="text-xl font-bold mb-4">Workout: {viewedCategory}</h2>
         <p className="mb-4">
             {viewedDate.toLocaleDateString("en-US", {weekday: "long", year: "numeric", month: "long", day: "numeric" })}
         </p>

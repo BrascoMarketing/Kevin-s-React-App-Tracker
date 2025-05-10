@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 body {
-    background-color: #101010
+    background-color: #003366;
+background-image: linear-gradient(315deg, #003366 0%, #242124 74%);
+
 }
 .indi-exercise h3 {
     margin-bottom: 15px;
@@ -61,7 +63,7 @@ button.completion {
 .calendar-wrapper .react-calendar__tile--active,
 .calendar-wrapper .react-calendar__tile--active:enabled:hover, 
 .calendar-wrapper .react-calendar__tile--active:enabled:focus {
-    background-color: #efefef !important;
+    background-color: #f97316 !important;
     color: #1a1a1a;
 }
 .calendar-wrapper button.react-calendar__tile--now {
