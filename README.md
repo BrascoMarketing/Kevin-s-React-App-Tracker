@@ -1,12 +1,29 @@
-# React + Vite
+# Brasco /// Fitness Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, fully offline fitness tracker built with React and Tailwind CSS.  
+Log exercises, track progress by day, and build your exercise library — all stored in your browser's LocalStorage.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Manage your own Exercise Library (Add, Rename, Reorder, Delete)
+- Categorize exercises by Push, Pull, or Legs
+- Log sets with reps and weight for any day
+- Mark exercises as completed (with commit-style confirmation)
+- Navigate forward or backward through days to review or add logs
+- All data stored locally in your browser's LocalStorage (no account required)
+- Dark Mode Only UI (because light mode is banned here)
 
-## Expanding the ESLint configuration
+## Built With
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [@hello-pangea/dnd](https://github.com/hello-pangea/dnd) (Drag and Drop library)
+
+## Coming Soon
+
+- Calendar
+- History Log
+- Streak Tracker
+- Progressive Overload Notification
+- AI Integration
