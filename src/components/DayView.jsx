@@ -25,7 +25,7 @@ function getExerciseDayKey(exerciseId, date) {
   return `${exerciseId}-${midnightTimestamp}`;
 }
 
-export default function DayView({ library }) {
+export default function DayView({ library, setExerciseLogs }) {
   const [viewedDate, setViewedDate] = useState(new Date());
 
 function getCategoryForDate(date) {
@@ -166,16 +166,19 @@ useEffect(() => {
             });
 
             if (newCompleted) {
-              saveExerciseLog({
-                id: uuidv4(),
-                exerciseId: ex.id,
-                name: ex.name,
-                type: viewedCategory,
-                date: viewedDate.getTime(),
-                sets: currentState.sets,
-                completed: newCompleted,
-                completedDate: newCompleted ? Date.now() : null,
-              });
+              const logEntry = {
+              id: uuidv4(),
+              exerciseId: ex.id,
+              name: ex.name,
+              type: viewedCategory,
+              date: viewedDate.getTime(),
+              sets: currentState.sets,
+              completed: newCompleted,
+              completedDate: newCompleted ? Date.now() : null,
+            };
+            saveExerciseLog(logEntry);
+
+            setExerciseLogs(loadExerciseLogs());
             }
           };
 

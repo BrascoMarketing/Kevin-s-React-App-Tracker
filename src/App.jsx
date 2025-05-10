@@ -3,10 +3,13 @@ import { loadExerciseLibrary, saveExerciseLibrary } from "./utils/storage";
 import ExerciseFormPanel from "./components/ExerciseFormPanel";
 import ExerciseLibraryColumns from "./components/ExerciseLibraryColumns";
 import DayView from "./components/DayView";
+import VolumeChart from "./components/VolumeChart";
+import { loadExerciseLogs } from "./utils/storage";
 
 function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [exerciseLibrary, setExerciseLibrary] = useState([]);
+  const [exerciseLogs, setExerciseLogs] = useState(loadExerciseLogs());
 
   // Load from LocalStorage when app starts
   useEffect(() => {
@@ -28,12 +31,13 @@ function App() {
         {/* First Row */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className=" space-y-4">
-            <DayView library={exerciseLibrary} />
+            <DayView library={exerciseLibrary} setExerciseLogs={setExerciseLogs} />
           </div>
 
           <div className="lg:col-span-2 space-y-4">
             <div class="bg-zinc-900 text-white rounded-xl shadow-md p-4">
-              <h3 class="text-lg font-bold mb-2">Placeholder Container</h3>
+              <h3 class="text-lg font-bold mb-2">Volume over Time</h3>
+              <VolumeChart logs={exerciseLogs} />
             </div>
           </div>
         </div>
