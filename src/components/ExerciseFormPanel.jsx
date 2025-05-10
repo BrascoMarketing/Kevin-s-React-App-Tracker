@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function ExerciseFormPanel({ library, setLibrary }) {
   const [name, setName] = useState("");
   const [type, setType] = useState("Push");
+  const [targetSetsInput, setTargetSetsInput] = useState(3);
 
   const handleAddExercise = (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
       id: crypto.randomUUID(),
       name: name.trim(),
       type,
+      targetSets: targetSetsInput || 3,  // Default to 3 if blank
       history: [],
     };
 
@@ -43,6 +45,14 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
           <option value="Legs">Legs</option>
           <option value="Freestyle">Freestyle</option>
         </select>
+        <input
+          type="number"
+          min="1"
+          value={targetSetsInput}
+          onChange={(e) => setTargetSetsInput(parseInt(e.target.value))}
+          className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
+          placeholder="Target Sets (default 3)"
+        />
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"
           type="submit"

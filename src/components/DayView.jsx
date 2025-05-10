@@ -1,4 +1,4 @@
-import { loadExerciseLogs, saveExerciseLog } from "../utils/storage";
+import { loadExerciseLogs } from "../utils/storage";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useEffect } from "react";
@@ -166,19 +166,26 @@ useEffect(() => {
             });
 
             if (newCompleted) {
-              const logEntry = {
-              id: uuidv4(),
-              exerciseId: ex.id,
-              name: ex.name,
-              type: viewedCategory,
-              date: viewedDate.getTime(),
-              sets: currentState.sets,
-              completed: newCompleted,
-              completedDate: newCompleted ? Date.now() : null,
-            };
-            saveExerciseLog(logEntry);
+              const updatedLogs = loadExerciseLogs().filter(
+                (log) =>
+                  !(log.exerciseId === ex.id && new Date(log.date).toDateString() === viewedDate.toDateString())
+              );
 
-            setExerciseLogs(loadExerciseLogs());
+              const logEntry = {
+                id: uuidv4(),
+                exerciseId: ex.id,
+                name: ex.name,
+                type: viewedCategory,
+                date: viewedDate.getTime(),
+                sets: currentState.sets,
+                completed: newCompleted,
+                completedDate: newCompleted ? Date.now() : null,
+              };
+
+              updatedLogs.push(logEntry);
+
+              localStorage.setItem("exerciseLogs", JSON.stringify(updatedLogs));
+              setExerciseLogs(updatedLogs);
             }
           };
 

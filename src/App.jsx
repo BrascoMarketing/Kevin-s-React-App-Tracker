@@ -35,10 +35,13 @@ const totalLoggedSetsForViewedDay = viewedLogs.reduce((sum, log) => sum + log.se
 const viewedDayName = viewedDate.toLocaleDateString("en-US", { weekday: "long" });
 const viewedCategory = schedule[viewedDayName];
 
-const expectedExercisesForViewedDay = exerciseLibrary.filter(
+const todayExerciseObjects = exerciseLibrary.filter(
   (ex) => ex.type === viewedCategory
-).length;
-
+);
+const targetSets = todayExerciseObjects.reduce(
+  (sum, ex) => sum + (ex.targetSets || 3),
+  0
+);
 
   // Load from LocalStorage when app starts
   useEffect(() => {
@@ -68,7 +71,7 @@ const expectedExercisesForViewedDay = exerciseLibrary.filter(
             <div class="bg-zinc-900 text-white rounded-xl shadow-md p-4">  
 
               <DailyProgressRing
-                totalExercises={expectedExercisesForViewedDay}
+                targetSets={targetSets}
                 loggedSets={totalLoggedSetsForViewedDay}
               />
 

@@ -6,6 +6,8 @@ import {
 } from "@hello-pangea/dnd";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
+import { BookmarkSquareIcon } from "@heroicons/react/24/solid";
+import { XCircleIcon } from "@heroicons/react/24/solid";
 
 export default function ExerciseLibraryColumns({ library, setLibrary }) {
   const handleDeleteExercise = (id) => {
@@ -15,6 +17,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
 
     const [editingId, setEditingId] = useState(null);
     const [editValue, setEditValue] = useState("");
+    const [editTargetSets, setEditTargetSets] = useState(3);
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -72,14 +75,24 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                             {editingId === ex.id ? (
                                 <div className="flex items-center space-x-2 w-full">
                                 <input
-                                    className="bg-gray-700 text-white border border-gray-600 p-1 flex-1"
+                                    className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 flex-1"
                                     value={editValue}
                                     onChange={(e) => setEditValue(e.target.value)}
+                                />
+                                <input
+                                  type="number"
+                                  min="1"
+                                  value={editTargetSets}
+                                  onChange={(e) => setEditTargetSets(parseInt(e.target.value))}
+                                  className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 w-10"
+                                  placeholder="Sets"
                                 />
                                 <button
                                     onClick={() => {
                                     const updatedLibrary = library.map((item) =>
-                                        item.id === ex.id ? { ...item, name: editValue } : item
+                                        item.id === ex.id 
+                                          ? { ...item, name: editValue, targetSets: editTargetSets } 
+                                          : item
                                     );
                                     setLibrary(updatedLibrary);
                                     setEditingId(null);
@@ -87,26 +100,27 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                                     }}
                                     className="text-green-400"
                                 >
-                                    Save
+                                    <BookmarkSquareIcon className="h-4 w-4" />
                                 </button>
                                 <button
                                     onClick={() => {
                                     setEditingId(null);
                                     setEditValue("");
                                     }}
-                                    className="text-gray-400"
+                                    className="text-red-400"
                                 >
-                                    Cancel
+                                    <XCircleIcon className="h-4 w-4" />
                                 </button>
                                 </div>
                             ) : (
                                 <div className="flex justify-between items-center w-full">
-                                <span>⋮⋮ {ex.name}</span>
+                                <span>⋮⋮&nbsp; {ex.name}</span>
                                 <div className="flex space-x-2">
                                     <button
                                       onClick={() => {
                                         setEditingId(ex.id);
                                         setEditValue(ex.name);
+                                        setEditTargetSets(ex.targetSets || 3);
                                       }}
                                       className="text-yellow-400 flex items-center space-x-1"
                                     >

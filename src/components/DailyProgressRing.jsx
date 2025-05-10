@@ -3,8 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip);
 
-export default function DailyProgressRing({ totalExercises, loggedSets }) {
-  const targetSets = totalExercises * 3;
+export default function DailyProgressRing({ targetSets, loggedSets }) {
   const progressRaw = targetSets > 0 ? (loggedSets / targetSets) * 100 : 0;
   const percentage = Math.min(progressRaw, 100);
   const isOverAchieved = progressRaw > 100;
@@ -13,7 +12,7 @@ export default function DailyProgressRing({ totalExercises, loggedSets }) {
     datasets: [
       {
         data: [percentage, 100 - percentage],
-        backgroundColor: [isOverAchieved ? '#22c55e' : '#3b82f6', '#1f2937'],
+        backgroundColor: [isOverAchieved ? '#f97316' : '#3b82f6', '#1f2937'],
         borderWidth: 0,
       },
     ],
