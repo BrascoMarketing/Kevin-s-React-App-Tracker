@@ -17,7 +17,7 @@ const schedule = {
   Wednesday: "Legs",
   Thursday: "Push",
   Friday: "Pull",
-  Saturday: "Legs",
+  Saturday: "Freestyle",
 };
 
 function getExerciseDayKey(exerciseId, date) {
@@ -131,9 +131,9 @@ useEffect(() => {
             </div>
 
 
-        <h2 className="text-xl font-bold mb-4">Day Type: {viewedCategory}</h2>
+        <h2 className="text-xl font-bold mb-4">Today's Workout: {viewedCategory}</h2>
         <p className="mb-4">
-            {viewedDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            {viewedDate.toLocaleDateString("en-US", {weekday: "long", year: "numeric", month: "long", day: "numeric" })}
         </p>
       {exercisesForToday.length === 0 ? (
         <p>No exercises assigned for today.</p>

@@ -27,20 +27,21 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
       </h2>
       <form onSubmit={handleAddExercise} className="space-y-2">
         <input
-          className="bg-zinc-800 text-white border border-gray-700 p-1 w-full"
+          className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
           type="text"
           placeholder="Exercise Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <select
-          className="bg-zinc-800 text-white border border-gray-700 p-1 w-full"
+          className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
           <option value="Push">Push</option>
           <option value="Pull">Pull</option>
           <option value="Legs">Legs</option>
+          <option value="Freestyle">Freestyle</option>
         </select>
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"

@@ -37,8 +37,8 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {["Push", "Pull", "Legs"].map((category) => {            
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {["Push", "Pull", "Legs", "Freestyle"].map((category) => {            
           return (
           <div
             key={category}
