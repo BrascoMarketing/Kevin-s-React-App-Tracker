@@ -38,6 +38,10 @@ button.completion {
   width: 100%;
 }
 
+.calendar-wrapper .react-calendar__navigation button:disabled {
+    background-color: transparent;
+}
+
 .calendar-wrapper .react-calendar__tile {
     position: relative;
     padding: 0.5rem;

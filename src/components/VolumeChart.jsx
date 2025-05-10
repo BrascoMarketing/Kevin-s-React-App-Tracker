@@ -41,14 +41,35 @@ export default function VolumeChart() {
   const options = {
     responsive: true,
     plugins: {
-      legend: { position: 'top' },
+      legend: { position: 'bottom' },
       title: { display: false, text: 'Volume Over Time' },
     },
+    scales: {
+        x: {
+            grid: {
+                color: '#53607dcc'
+            },
+            ticks: {
+                display: true,
+                color: '#efefef',                              
+            },
+        },
+        y: {
+            grid: {
+                color: '#53607dcc'
+            },
+            ticks: {
+                display: true,
+                color: '#efefef',                              
+            },            
+        }
+    }
   };
 
   return (
     <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 space-y-4">
-      <div className="flex space-x-2 mb-2">
+        <h2 class="text-xl font-bold mb-4">Total Volume</h2>
+      <div className="flex space-x-2 mb-2">        
         {timeFrames.map(frame => (
           <button
             key={frame}

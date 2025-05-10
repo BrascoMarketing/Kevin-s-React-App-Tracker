@@ -6,12 +6,39 @@ import DayView from "./components/DayView";
 import VolumeChart from "./components/VolumeChart";
 import { loadExerciseLogs } from "./utils/storage";
 import CalendarPanel from "./components/CalendarPanel";
+import DailyProgressRing from './components/DailyProgressRing';
+
+const schedule = {
+  Sunday: "Rest",
+  Monday: "Push",
+  Tuesday: "Pull",
+  Wednesday: "Legs",
+  Thursday: "Push",
+  Friday: "Pull",
+  Saturday: "Freestyle",
+};
 
 function App() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [exerciseLibrary, setExerciseLibrary] = useState([]);
   const [exerciseLogs, setExerciseLogs] = useState(loadExerciseLogs());
   const [viewedDate, setViewedDate] = useState(new Date());
+
+  const viewedKey = viewedDate.toDateString();
+
+  const viewedLogs = exerciseLogs.filter(log =>
+    new Date(log.date).toDateString() === viewedKey
+  );
+
+const totalLoggedSetsForViewedDay = viewedLogs.reduce((sum, log) => sum + log.sets.length, 0);
+
+const viewedDayName = viewedDate.toLocaleDateString("en-US", { weekday: "long" });
+const viewedCategory = schedule[viewedDayName];
+
+const expectedExercisesForViewedDay = exerciseLibrary.filter(
+  (ex) => ex.type === viewedCategory
+).length;
+
 
   // Load from LocalStorage when app starts
   useEffect(() => {
@@ -38,12 +65,19 @@ function App() {
           </div>
 
           <div className="lg:col-span-1 space-y-4">
-            <div class="bg-zinc-900 text-white rounded-xl shadow-md p-4">                            
-              <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
+            <div class="bg-zinc-900 text-white rounded-xl shadow-md p-4">  
 
+              <DailyProgressRing
+                totalExercises={expectedExercisesForViewedDay}
+                loggedSets={totalLoggedSetsForViewedDay}
+              />
+
+              <VolumeChart logs={exerciseLogs} />
+              
               <div className="mt-8">
-                <VolumeChart logs={exerciseLogs} />
+                <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
               </div>
+
             </div>
           </div>
           

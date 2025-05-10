@@ -90,7 +90,7 @@ useEffect(() => {
     return (
         <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto mt-8">
             {navigation}
-            <h2 className="text-xl font-bold">Rest Day 😎</h2>
+            <h2 className="text-xl font-bold">Rest Day</h2>
             <p>Enjoy your recovery!</p>
         </div>
         );
@@ -190,7 +190,7 @@ useEffect(() => {
 
               <ul className="list-disc list-inside mb-2">
                 {currentState.sets.map((set, i) => (
-                  <li key={i} className="flex items-center space-x-2">
+                  <li key={i} className="flex items-center space-x-2 mb-1">
                     <span>{set.reps} reps @ {set.weight} lbs</span>
                     <button
                       onClick={() => handleDeleteSet(i)}
