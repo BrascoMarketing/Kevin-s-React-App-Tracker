@@ -28,3 +28,43 @@ button.completion {
     margin-right: 0;
     margin-left: auto;
 }
+/* index.css or global stylesheet */
+.calendar-wrapper .react-calendar {
+  background-color: #111827; /* Dark background */
+  color: #f9fafb; /* Light text */
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.calendar-wrapper .react-calendar__tile {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.calendar-wrapper .react-calendar__tile .indicator {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% -10px);
+    opacity: .6;
+    width: 24px;
+    height: 24px;
+}
+.calendar-wrapper .react-calendar__tile--active,
+.calendar-wrapper .react-calendar__tile--active:enabled:hover, 
+.calendar-wrapper .react-calendar__tile--active:enabled:focus {
+    background-color: #efefef !important;
+    color: #1a1a1a;
+}
+.calendar-wrapper button.react-calendar__tile--now {
+    background-color: rgba(255, 255, 255,0.2) !important;
+}
+
+/* Weekends */
+.calendar-wrapper .react-calendar__month-view__days__day--weekend {
+    color: #efefef;
+}

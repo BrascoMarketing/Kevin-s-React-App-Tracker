@@ -25,8 +25,8 @@ function getExerciseDayKey(exerciseId, date) {
   return `${exerciseId}-${midnightTimestamp}`;
 }
 
-export default function DayView({ library, setExerciseLogs }) {
-  const [viewedDate, setViewedDate] = useState(new Date());
+export default function DayView({  library, viewedDate, setViewedDate, setExerciseLogs }) {
+  
 
 function getCategoryForDate(date) {
   const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
