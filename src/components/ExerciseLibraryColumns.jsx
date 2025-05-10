@@ -31,16 +31,12 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     const otherExercises = library.filter((ex) => ex.type !== category);
 
     setLibrary([...otherExercises, ...reordered]);
-  };
-
-  console.log("Rendering Library Columns with:", library);  
+  };    
 
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {["Push", "Pull", "Legs"].map((category) => {
-            console.log("Filtering for category:", category);
-            console.log("Library items:", library.map((ex) => ex.type));
+        {["Push", "Pull", "Legs"].map((category) => {            
           return (
           <div
             key={category}

@@ -5,8 +5,7 @@ export function loadExerciseLibrary() {
 }
 
 // Save exercise library to LocalStorage
-export function saveExerciseLibrary(library) {
-  console.log("Saving to LocalStorage:", library); // Diagnostic log
+export function saveExerciseLibrary(library) {  
   localStorage.setItem("exerciseLibrary", JSON.stringify(library));
 }
 

@@ -10,16 +10,14 @@ function App() {
 
   // Load from LocalStorage when app starts
   useEffect(() => {
-    const savedLibrary = loadExerciseLibrary();
-  console.log("Loaded from LocalStorage on startup:", savedLibrary);
-  setExerciseLibrary(savedLibrary);
-  setHasLoaded(true); // ✅ Mark as loaded
+    const savedLibrary = loadExerciseLibrary();  
+    setExerciseLibrary(savedLibrary);
+    setHasLoaded(true); // ✅ Mark as loaded
   }, []);
 
   // Save to LocalStorage whenever library changes
   useEffect(() => {
-  if (!hasLoaded) return; // ✅ Block premature save
-  console.log("Effect Triggered - Saving to LocalStorage:", exerciseLibrary);
+  if (!hasLoaded) return; // ✅ Block premature save  
   saveExerciseLibrary(exerciseLibrary);
 }, [exerciseLibrary, hasLoaded]);
 
