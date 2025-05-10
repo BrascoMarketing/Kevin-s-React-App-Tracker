@@ -25,19 +25,32 @@ function App() {
 
   return (
     <div>      
+      <div className="p-12 space-y-4">
 
-      <div className="p-8 space-y-4">
-        <DayView library={exerciseLibrary} />
-      </div>      
+        {/* First Row */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className=" space-y-4">
+            <DayView library={exerciseLibrary} />
+          </div>
 
-      <div className="p-8 space-y-4">
-        <ExerciseLibraryColumns library={exerciseLibrary} setLibrary={setExerciseLibrary} />
+          <div className="lg:col-span-2 space-y-4">
+            <div class="bg-zinc-900 text-white rounded-xl shadow-md p-4">
+              <h3 class="text-lg font-bold mb-2">Placeholder Container</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Second Row */}
+        <div className="pt-4 space-y-4">
+          <ExerciseLibraryColumns library={exerciseLibrary} setLibrary={setExerciseLibrary} />
+        </div>
+
+        {/* Third Row */}
+        <div className="p-8 space-y-4">
+          <ExerciseFormPanel library={exerciseLibrary} setLibrary={setExerciseLibrary} />
+        </div>
+
       </div>
-
-      <div className="p-8 space-y-4">
-        <ExerciseFormPanel library={exerciseLibrary} setLibrary={setExerciseLibrary} />
-      </div>
-
     </div>
   );
 }

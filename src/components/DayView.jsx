@@ -56,14 +56,14 @@ useEffect(() => {
                 new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1)
                 )
             }
-            className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
             ⬅️ Previous
             </button>
 
             <button
             onClick={() => setViewedDate(new Date())}
-            className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
             📅 Today
             </button>
@@ -74,7 +74,7 @@ useEffect(() => {
                 new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1)
                 )
             }
-            className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
             Next ➡️
             </button>
@@ -90,7 +90,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-4xl mx-auto">
+    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 mx-auto">
 
         <div className="flex items-center justify-center space-x-4 mb-4">
             <button
@@ -99,14 +99,14 @@ useEffect(() => {
                     new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1)
                 )
                 }
-                className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
                 ⬅️ Previous
             </button>
 
             <button
                 onClick={() => setViewedDate(new Date())}
-                className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
                 📅 Today
             </button>
@@ -117,7 +117,7 @@ useEffect(() => {
                     new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1)
                 )
                 }
-                className="px-2 py-1 border border-gray-600 rounded hover:bg-gray-700"
+                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
                 Next ➡️
             </button>
@@ -173,7 +173,7 @@ useEffect(() => {
           };
 
           return (
-            <div key={ex.id} className="border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
+            <div key={ex.id} className="indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
               <h3 className="font-semibold mb-2">{ex.name}</h3>
 
               {!currentState.completed && <SetLogger onAddSet={handleAddSet} />}
@@ -195,9 +195,9 @@ useEffect(() => {
               {!currentState.completed ? (
                 <button
                   onClick={handleToggleCompletion}
-                  className="bg-green-600 text-white px-2 py-1 rounded"
+                  className="completion bg-green-600 text-white px-2 py-1 rounded"
                 >
-                  Mark as Done ✅
+                  Mark as Done
                 </button>
               ) : (
                 <div className="flex items-center space-x-2">
@@ -255,7 +255,7 @@ function SetLogger({ onAddSet }) {
       />
       <button
         type="submit"
-        className="bg-blue-600 text-white px-2 py-1 rounded"
+        className="bg-blue-600 text-white py-1 rounded"
       >
         Add Set
       </button>

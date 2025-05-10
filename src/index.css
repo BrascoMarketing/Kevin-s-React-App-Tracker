@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 body {
-    background-image: conic-gradient(from 90deg at -10% 100%,#2b303b 0deg,#2b303b 90deg,#16181d 1turn);
-    color: #ccc;
+    background-color: #101010
+}
+.indi-exercise h3 {
+    margin-bottom: 15px;
+}
+.indi-exercise form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.indi-exercise input {
+    width: 100%;
+    max-width: calc(50% - 68px);
+    border-radius: 0.25rem;
+}
+.indi-exercise button[type=submit] {
+    min-width: 114px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+button.completion {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
 }
