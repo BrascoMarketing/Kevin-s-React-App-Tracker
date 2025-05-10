@@ -4,6 +4,8 @@ import {
   Droppable,
   Draggable,
 } from "@hello-pangea/dnd";
+import { PencilIcon } from "@heroicons/react/24/solid";
+import { TrashIcon } from "@heroicons/react/24/solid";
 
 export default function ExerciseLibraryColumns({ library, setLibrary }) {
   const handleDeleteExercise = (id) => {
@@ -100,21 +102,21 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                             ) : (
                                 <div className="flex justify-between items-center w-full">
                                 <span>⋮⋮ {ex.name}</span>
-                                <div className="space-x-2">
+                                <div className="flex space-x-2">
                                     <button
-                                    onClick={() => {
+                                      onClick={() => {
                                         setEditingId(ex.id);
                                         setEditValue(ex.name);
-                                    }}
-                                    className="text-yellow-400"
+                                      }}
+                                      className="text-yellow-400 flex items-center space-x-1"
                                     >
-                                    Edit
+                                      <PencilIcon className="h-4 w-4" />
                                     </button>
                                     <button
                                     onClick={() => handleDeleteExercise(ex.id)}
                                     className="text-red-400"
                                     >
-                                    Delete
+                                    <TrashIcon className="h-4 w-4" />
                                     </button>
                                 </div>
                                 </div>

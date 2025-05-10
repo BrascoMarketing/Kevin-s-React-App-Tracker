@@ -2,6 +2,11 @@ import { loadExerciseLogs, saveExerciseLog } from "../utils/storage";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useEffect } from "react";
+import { ChevronDoubleLeftIcon } from "@heroicons/react/24/solid";
+import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
+import { CalendarDaysIcon } from "@heroicons/react/24/solid";
+import { PlusIcon } from "@heroicons/react/24/solid";
+import { TrashIcon } from "@heroicons/react/24/solid";
 
 const schedule = {
   Sunday: "Rest",
@@ -49,7 +54,7 @@ useEffect(() => {
 
   if (viewedCategory === "Rest") {
     const navigation = (
-        <div className="flex items-center justify-center space-x-4 mb-4">
+        <div className="flex items-center justify-center space-x-4 mb-8">
             <button
             onClick={() =>
                 setViewedDate(
@@ -58,14 +63,14 @@ useEffect(() => {
             }
             className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-            ⬅️ Previous
+            <ChevronDoubleLeftIcon className="h-4 w-4 mr-1" /> Previous
             </button>
 
             <button
             onClick={() => setViewedDate(new Date())}
-            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+            className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-            📅 Today
+            <CalendarDaysIcon className="h-4 w-4 mr-1" /> Today
             </button>
 
             <button
@@ -76,7 +81,7 @@ useEffect(() => {
             }
             className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-            Next ➡️
+            Next <ChevronDoubleRightIcon className="h-4 w-4 ml-1" />
             </button>
         </div>
         );
@@ -92,23 +97,23 @@ useEffect(() => {
   return (
     <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 mx-auto">
 
-        <div className="flex items-center justify-center space-x-4 mb-4">
+        <div className="flex items-center justify-center space-x-4 mb-8">
             <button
                 onClick={() =>
                 setViewedDate(
                     new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1)
                 )
                 }
-                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+                className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-                ⬅️ Previous
+                <ChevronDoubleLeftIcon className="h-4 w-4 mr-1" /> Previous
             </button>
 
             <button
                 onClick={() => setViewedDate(new Date())}
-                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+                className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-                📅 Today
+                <CalendarDaysIcon className="h-4 w-4 mr-1" /> Today
             </button>
 
             <button
@@ -117,9 +122,9 @@ useEffect(() => {
                     new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1)
                 )
                 }
-                className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+                className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
-                Next ➡️
+                Next <ChevronDoubleRightIcon className="h-4 w-4 ml-1" />
             </button>
             </div>
 
@@ -186,7 +191,7 @@ useEffect(() => {
                       onClick={() => handleDeleteSet(i)}
                       className="text-red-400 hover:underline"
                     >
-                      Delete
+                      <TrashIcon className="h-4 w-4" />
                     </button>
                   </li>
                 ))}
@@ -255,9 +260,9 @@ function SetLogger({ onAddSet }) {
       />
       <button
         type="submit"
-        className="bg-blue-600 text-white py-1 rounded"
+        className="flex items-center bg-blue-600 text-white py-1 rounded"
       >
-        Add Set
+        <PlusIcon className="h-4 w-4 mr-1" /> Add Set
       </button>
     </form>
   );
