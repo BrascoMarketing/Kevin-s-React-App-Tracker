@@ -33,10 +33,15 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     setLibrary([...otherExercises, ...reordered]);
   };
 
+  console.log("Rendering Library Columns with:", library);  
+
   return (
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {["Push", "Pull", "Legs"].map((category) => (
+        {["Push", "Pull", "Legs"].map((category) => {
+            console.log("Filtering for category:", category);
+            console.log("Library items:", library.map((ex) => ex.type));
+          return (
           <div
             key={category}
             className="bg-gray-900 text-white rounded-xl shadow-md p-4"
@@ -49,10 +54,16 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                   {...provided.droppableProps}
                   ref={provided.innerRef}
                 >
-                  {library
-                    .filter((ex) => ex.type === category)
-                    .map((ex, index) => (
-                      <Draggable key={ex.id} draggableId={ex.id} index={index}>
+                  {library.filter((ex) => ex.type === category).length === 0 ? (
+                    <li className="text-gray-500">No exercises found.</li>
+                    ) : (
+                    library
+                        .filter((ex) => ex.type === category)
+                        .map((ex, index) => (
+                        <Draggable key={ex.id} draggableId={ex.id} index={index}>
+
+
+
                         {(provided) => (
                           <li
                             ref={provided.innerRef}
@@ -115,14 +126,18 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                             </li>
 
                         )}
+
+
+
                       </Draggable>
-                    ))}
+    ))
+)}
                   {provided.placeholder}
                 </ul>
               )}
             </Droppable>
-          </div>
-        ))}
+          </div> );
+        })}
       </div>
     </DragDropContext>
   );

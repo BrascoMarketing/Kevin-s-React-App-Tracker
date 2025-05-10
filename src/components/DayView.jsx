@@ -34,15 +34,16 @@ useEffect(() => {
   const initialStates = {};
 
   savedLogs.forEach((log) => {
-    initialStates[log.exerciseId] = {
+    const dayKey = getExerciseDayKey(log.exerciseId, new Date(log.date));
+    initialStates[dayKey] = {
       sets: log.sets,
       completed: log.completed,
-      completedDate: log.date,  // ✅ Store the saved date here
+      completedDate: log.date,
     };
   });
 
   setExerciseStates(initialStates);
-}, []);
+}, [viewedDate]);
 
   const exercisesForToday = library.filter((ex) => ex.type === viewedCategory);
 
@@ -89,7 +90,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-4xl mx-auto mt-8">
+    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-4xl mx-auto">
 
         <div className="flex items-center justify-center space-x-4 mb-4">
             <button
