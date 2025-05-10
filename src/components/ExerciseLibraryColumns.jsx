@@ -44,7 +44,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
           return (
           <div
             key={category}
-            className="bg-gray-900 text-white rounded-xl shadow-md p-4"
+            className="bg-zinc-900 text-white rounded-xl shadow-md p-4"
           >
             <h3 className="text-lg font-bold mb-2">{category}</h3>
             <Droppable droppableId={category}>
@@ -69,7 +69,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                             ref={provided.innerRef}
                             {...provided.draggableProps}
                             {...provided.dragHandleProps}
-                            className="p-2 border border-gray-700 rounded flex justify-between items-center bg-gray-800 text-white shadow hover:bg-gray-700 transition-colors"
+                            className="p-2 border border-gray-700 rounded flex justify-between items-center bg-zinc-800 text-white shadow hover:bg-gray-700 transition-colors"
                             >
                             {editingId === ex.id ? (
                                 <div className="flex items-center space-x-2 w-full">

@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 body {
-    background: #1a1a1a;
+    background-image: conic-gradient(from 90deg at -10% 100%,#2b303b 0deg,#2b303b 90deg,#16181d 1turn);
     color: #ccc;
 }

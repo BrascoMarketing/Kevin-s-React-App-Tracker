@@ -81,7 +81,7 @@ useEffect(() => {
         </div>
         );
     return (
-        <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto mt-8">
+        <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto mt-8">
             {navigation}
             <h2 className="text-xl font-bold">Rest Day 😎</h2>
             <p>Enjoy your recovery!</p>
@@ -90,7 +90,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-4xl mx-auto">
+    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-4xl mx-auto">
 
         <div className="flex items-center justify-center space-x-4 mb-4">
             <button
@@ -173,7 +173,7 @@ useEffect(() => {
           };
 
           return (
-            <div key={ex.id} className="border border-gray-700 rounded p-2 mb-4 bg-gray-800">
+            <div key={ex.id} className="border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
               <h3 className="font-semibold mb-2">{ex.name}</h3>
 
               {!currentState.completed && <SetLogger onAddSet={handleAddSet} />}
