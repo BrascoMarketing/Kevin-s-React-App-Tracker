@@ -52,7 +52,7 @@ useEffect(() => {
   setExerciseStates(initialStates);
 }, [viewedDate]);
 
-  const exercisesForToday = library.filter((ex) => ex.type === viewedCategory);
+  const exercisesForToday = library.filter((ex) => ex.type.includes(viewedCategory));
 
   if (viewedCategory === "Rest") {
     const navigation = (

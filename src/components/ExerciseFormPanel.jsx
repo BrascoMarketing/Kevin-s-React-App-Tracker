@@ -2,24 +2,26 @@ import { useState } from "react";
 
 export default function ExerciseFormPanel({ library, setLibrary }) {
   const [name, setName] = useState("");
-  const [type, setType] = useState("");
+  const [types, setTypes] = useState([]);
   const [targetSetsInput, setTargetSetsInput] = useState(3);
+  const [useBodyweight, setUseBodyweight] = useState(false);
 
   const handleAddExercise = (e) => {
     e.preventDefault();
-    if (!name.trim() || !type) return;
+    if (!name.trim() || types.length === 0) return;
 
     const newExercise = {
       id: crypto.randomUUID(),
       name: name.trim(),
-      type,
-      targetSets: targetSetsInput || 3,  // Default to 3 if blank
+      type: types,
+      targetSets: targetSetsInput || 3,
+      useBodyweight,
       history: [],
     };
 
     setLibrary([...library, newExercise]);
     setName("");
-    setType("Push");
+    setTypes([]);
   };
 
   return (
@@ -35,17 +37,24 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <select
-          className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <option value="" disabled>Select Category</option>
-          <option value="Push">Push</option>
-          <option value="Pull">Pull</option>
-          <option value="Legs">Legs</option>
-          <option value="Freestyle">Freestyle</option>
-        </select>        
+        <div className="space-y-1">
+          {["Push", "Pull", "Legs", "Freestyle"].map(category => (
+            <label key={category} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={types.includes(category)}
+                onChange={() => {
+                  setTypes(prev =>
+                    prev.includes(category)
+                      ? prev.filter(t => t !== category)
+                      : [...prev, category]
+                  );
+                }}
+              />
+              <span>{category}</span>
+            </label>
+          ))}
+        </div>        
         <label className="target-label block text-sm font-medium text-gray-300 mb-1">
           Target Sets (default is 3)
         </label>
@@ -57,6 +66,14 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
           className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
           placeholder="e.g., 3"
         />
+        <label className="flex items-center space-x-2 mt-2">
+          <input
+            type="checkbox"
+            checked={useBodyweight}
+            onChange={(e) => setUseBodyweight(e.target.checked)}
+          />
+          <span>Use Bodyweight (No Weight Entry Needed)</span>
+        </label>
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"
           type="submit"

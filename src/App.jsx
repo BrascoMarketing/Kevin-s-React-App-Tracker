@@ -38,7 +38,7 @@ const viewedDayName = viewedDate.toLocaleDateString("en-US", { weekday: "long" }
 const viewedCategory = schedule[viewedDayName];
 
 const todayExerciseObjects = exerciseLibrary.filter(
-  (ex) => ex.type === viewedCategory
+  (ex) => ex.type.includes(viewedCategory)
 );
 const targetSets = todayExerciseObjects.reduce(
   (sum, ex) => sum + (ex.targetSets || 3),

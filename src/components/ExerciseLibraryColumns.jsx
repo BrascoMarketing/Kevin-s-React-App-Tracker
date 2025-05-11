@@ -17,7 +17,9 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
 
     const [editingId, setEditingId] = useState(null);
     const [editValue, setEditValue] = useState("");
+    const [editTypes, setEditTypes] = useState([]);
     const [editTargetSets, setEditTargetSets] = useState(3);
+    const [editUseBodyweight, setEditUseBodyweight] = useState(false);
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -27,7 +29,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     if (source.droppableId !== destination.droppableId) return; // Prevent cross-category moves
 
     const category = source.droppableId;
-    const filtered = library.filter((ex) => ex.type === category);
+    const filtered = library.filter((ex) => ex.type.includes(category));
 
     const reordered = Array.from(filtered);
     const [moved] = reordered.splice(source.index, 1);
@@ -49,105 +51,117 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
           >
             <h3 className="text-lg font-bold mb-2">{category}</h3>
             <Droppable droppableId={category}>
-              {(provided) => (
-                <ul
-                  className="space-y-2"
-                  {...provided.droppableProps}
-                  ref={provided.innerRef}
-                >
-                  {library.filter((ex) => ex.type === category).length === 0 ? (
-                    <li className="text-gray-500">No exercises found.</li>
+              {(provided) => {
+                const filtered = library.filter((ex) => ex.type.includes(category));
+
+                return (
+                  <ul
+                    className="space-y-2"
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                  >
+                    {filtered.length === 0 ? (
+                      <li className="text-gray-500">No exercises found.</li>
                     ) : (
-                    library
-                        .filter((ex) => ex.type === category)
-                        .map((ex, index) => (
+                      filtered.map((ex, index) => (
                         <Draggable key={ex.id} draggableId={ex.id} index={index}>
-
-
-
-                        {(provided) => (
-                          <li
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
-                            className="p-2 border border-gray-700 rounded flex justify-between items-center bg-zinc-800 text-white shadow hover:bg-gray-700 transition-colors"
+                          {(provided) => (
+                            <li
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              className="p-2 border border-gray-700 rounded flex justify-between items-center bg-zinc-800 text-white shadow hover:bg-gray-700 transition-colors"
                             >
-                            {editingId === ex.id ? (
+                              {editingId === ex.id ? (
                                 <div className="flex items-center space-x-2 w-full">
-                                <input
+                                  <input
                                     className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 flex-1"
                                     value={editValue}
                                     onChange={(e) => setEditValue(e.target.value)}
-                                />
-                                <input
-                                  type="number"
-                                  min="1"
-                                  value={editTargetSets}
-                                  onChange={(e) => setEditTargetSets(parseInt(e.target.value))}
-                                  className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 w-10"
-                                  placeholder="Sets"
-                                />
-                                <button
+                                  />
+                                  <input
+                                    type="number"
+                                    min="1"
+                                    value={editTargetSets}
+                                    onChange={(e) => setEditTargetSets(parseInt(e.target.value))}
+                                    className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 w-10"
+                                    placeholder="Sets"
+                                  />
+                                  <label className="flex items-center space-x-2 mt-2">
+                                    <input
+                                      type="checkbox"
+                                      checked={editUseBodyweight}
+                                      onChange={(e) => setEditUseBodyweight(e.target.checked)}
+                                    />
+                                    <span>Use Bodyweight (No Weight Entry Needed)</span>
+                                  </label>
+                                  <button
                                     onClick={() => {
-                                    const updatedLibrary = library.map((item) =>
-                                        item.id === ex.id 
-                                          ? { ...item, name: editValue, targetSets: editTargetSets } 
+                                      const updatedLibrary = library.map((item) =>
+                                        item.id === ex.id
+                                          ? {
+                                              ...item,
+                                              name: editValue,
+                                              type: editTypes,
+                                              targetSets: editTargetSets,
+                                              useBodyweight: editUseBodyweight,
+                                            }
                                           : item
-                                    );
-                                    setLibrary(updatedLibrary);
-                                    setEditingId(null);
-                                    setEditValue("");
+                                      );
+                                      setLibrary(updatedLibrary);
+                                      setEditingId(null);
+                                      setEditValue("");
                                     }}
                                     className="text-green-400"
-                                >
+                                  >
                                     <BookmarkSquareIcon className="h-4 w-4" />
-                                </button>
-                                <button
+                                  </button>
+                                  <button
                                     onClick={() => {
-                                    setEditingId(null);
-                                    setEditValue("");
+                                      setEditingId(null);
+                                      setEditValue("");
                                     }}
                                     className="text-red-400"
-                                >
+                                  >
                                     <XCircleIcon className="h-4 w-4" />
-                                </button>
+                                  </button>
                                 </div>
-                            ) : (
+                              ) : (
                                 <div className="flex justify-between items-center w-full">
-                                <span>⋮⋮&nbsp; {ex.name}</span>
-                                <div className="flex space-x-2">
+                                  <span>⋮⋮&nbsp; {ex.name}</span>
+                                  <div className="flex space-x-2">
                                     <button
                                       onClick={() => {
                                         setEditingId(ex.id);
                                         setEditValue(ex.name);
                                         setEditTargetSets(ex.targetSets || 3);
+                                        setEditTypes(ex.type || []);
+                                        setEditUseBodyweight(ex.useBodyweight || false);
                                       }}
                                       className="text-yellow-400 flex items-center space-x-1"
                                     >
                                       <PencilIcon className="h-4 w-4" />
                                     </button>
                                     <button
-                                    onClick={() => handleDeleteExercise(ex.id)}
-                                    className="text-red-400"
+                                      onClick={() => handleDeleteExercise(ex.id)}
+                                      className="text-red-400"
                                     >
-                                    <TrashIcon className="h-4 w-4" />
+                                      <TrashIcon className="h-4 w-4" />
                                     </button>
+                                  </div>
                                 </div>
-                                </div>
-                            )}
+                              )}
                             </li>
-
-                        )}
-
-
-
-                      </Draggable>
-    ))
-)}
-                  {provided.placeholder}
-                </ul>
-              )}
+                          )}
+                        </Draggable>
+                      ))
+                    )}
+                    {provided.placeholder}
+                  </ul>
+                );
+              }}
             </Droppable>
+
           </div> );
         })}
       </div>
