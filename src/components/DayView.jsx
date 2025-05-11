@@ -193,7 +193,13 @@ useEffect(() => {
             <div key={ex.id} className="indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
               <h3 className="font-semibold mb-2">{ex.name}</h3>
 
-              {!currentState.completed && <SetLogger onAddSet={handleAddSet} />}
+              {!currentState.completed && 
+                <SetLogger
+                  onAddSet={handleAddSet}
+                  useBodyweight={ex.useBodyweight}
+                  userBodyWeight={parseFloat(localStorage.getItem("userBodyWeight") || 0)}
+                />
+              }
 
               <ul className="list-disc list-inside mb-2">
                 {currentState.sets.map((set, i) => (
@@ -242,9 +248,9 @@ useEffect(() => {
   );
 }
 
-function SetLogger({ onAddSet }) {
+function SetLogger({ onAddSet, useBodyweight, userBodyWeight }) {
   const [reps, setReps] = useState("");
-  const [weight, setWeight] = useState("");
+  const [weight, setWeight] = useState(useBodyweight ? userBodyWeight : "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
