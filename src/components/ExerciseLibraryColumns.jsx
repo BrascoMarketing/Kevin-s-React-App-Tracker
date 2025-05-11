@@ -8,6 +8,7 @@ import { PencilIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { BookmarkSquareIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
+import ExerciseEditModal from "./ExerciseEditModal";
 
 export default function ExerciseLibraryColumns({ library, setLibrary }) {
   const handleDeleteExercise = (id) => {
@@ -20,6 +21,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     const [editTypes, setEditTypes] = useState([]);
     const [editTargetSets, setEditTargetSets] = useState(3);
     const [editUseBodyweight, setEditUseBodyweight] = useState(false);
+    const [editingExercise, setEditingExercise] = useState(null);
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -149,13 +151,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                                   <span>⋮⋮&nbsp; {ex.name}</span>
                                   <div className="flex space-x-2">
                                     <button
-                                      onClick={() => {
-                                        setEditingId(ex.id);
-                                        setEditValue(ex.name);
-                                        setEditTargetSets(ex.targetSets || 3);
-                                        setEditTypes(ex.type || []);
-                                        setEditUseBodyweight(ex.useBodyweight || false);
-                                      }}
+                                      onClick={() => setEditingExercise(ex)}
                                       className="text-yellow-400 flex items-center space-x-1"
                                     >
                                       <PencilIcon className="h-4 w-4" />
@@ -183,6 +179,19 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
           </div> );
         })}
       </div>
+
+        {editingExercise && (
+          <ExerciseEditModal
+            exercise={editingExercise}
+            onClose={() => setEditingExercise(null)}
+            onSave={(updatedExercise) => {
+              const updatedLibrary = library.map((item) =>
+                item.id === updatedExercise.id ? updatedExercise : item
+              );
+              setLibrary(updatedLibrary);
+            }}
+          />
+        )}
     </DragDropContext>
   );
 }

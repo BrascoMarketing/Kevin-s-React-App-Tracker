@@ -4,8 +4,12 @@
 
 body {
     background-color: #003366;
-background-image: linear-gradient(315deg, #003366 0%, #242124 74%);
+    background-image: linear-gradient(315deg, #003366 0%, #242124 74%);
+    margin: 0 !important;
 
+}
+.modal-backdrop {
+    margin: 0 !important;
 }
 .indi-exercise h3 {
     margin-bottom: 15px;
