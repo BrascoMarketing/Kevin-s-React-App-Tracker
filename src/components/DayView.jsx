@@ -1,58 +1,42 @@
 import { loadExerciseLogs } from "../utils/storage";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { useEffect } from "react";
-import { ChevronDoubleLeftIcon } from "@heroicons/react/24/solid";
-import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
-import { CalendarDaysIcon } from "@heroicons/react/24/solid";
-import { PlusIcon } from "@heroicons/react/24/solid";
-import { TrashIcon } from "@heroicons/react/24/solid";
-import { ArrowUturnLeftIcon } from "@heroicons/react/24/solid";
-import { CheckBadgeIcon } from "@heroicons/react/24/solid";
+import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, CalendarDaysIcon, PlusIcon, TrashIcon, ArrowUturnLeftIcon, CheckBadgeIcon } from "@heroicons/react/24/solid";
 
-const schedule = {
-  Sunday: "Rest",
-  Monday: "Push",
-  Tuesday: "Pull",
-  Wednesday: "Legs",
-  Thursday: "Push",
-  Friday: "Pull",
-  Saturday: "Freestyle",
-};
-
+// Generate unique key for each exercise on a specific day
 function getExerciseDayKey(exerciseId, date) {
   const midnightTimestamp = new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
   return `${exerciseId}-${midnightTimestamp}`;
 }
 
-export default function DayView({  library, viewedDate, setViewedDate, setExerciseLogs }) {
-  
-
+// Safely get the category assigned for a given date
 function getCategoryForDate(date) {
   const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
-  return schedule[dayName];
+  const savedSchedule = JSON.parse(localStorage.getItem("weeklySchedule")) || {};
+  return savedSchedule[dayName] || "Rest";
 }
 
-const viewedCategory = getCategoryForDate(viewedDate);
-const [exerciseStates, setExerciseStates] = useState({});
+export default function DayView({ library, viewedDate, setViewedDate, setExerciseLogs }) {
+  const [exerciseStates, setExerciseStates] = useState({});
 
-useEffect(() => {
-  const savedLogs = loadExerciseLogs();
-  const initialStates = {};
+  const viewedCategory = getCategoryForDate(viewedDate);  // Get the active category first
+  const exercisesForToday = library.filter((ex) => ex.type.includes(viewedCategory));  // Filter exercises for that category
 
-  savedLogs.forEach((log) => {
-    const dayKey = getExerciseDayKey(log.exerciseId, new Date(log.date));
-    initialStates[dayKey] = {
-      sets: log.sets,
-      completed: log.completed,
-      completedDate: log.date,
-    };
-  });
+  useEffect(() => {
+    const savedLogs = loadExerciseLogs();
+    const initialStates = {};
 
-  setExerciseStates(initialStates);
-}, [viewedDate]);
+    savedLogs.forEach((log) => {
+      const dayKey = getExerciseDayKey(log.exerciseId, new Date(log.date));
+      initialStates[dayKey] = {
+        sets: log.sets,
+        completed: log.completed,
+        completedDate: log.date,
+      };
+    });
 
-  const exercisesForToday = library.filter((ex) => ex.type.includes(viewedCategory));
+    setExerciseStates(initialStates);
+  }, [viewedDate]);
 
   if (viewedCategory === "Rest") {
     const navigation = (

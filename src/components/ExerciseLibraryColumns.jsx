@@ -55,16 +55,15 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
 
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        {["Push", "Pull", "Legs", "Freestyle"].map((category) => {            
+        {(JSON.parse(localStorage.getItem("exerciseCategories")) || []).map((cat) => {            
           return (
-          <div
-            key={category}
+          <div key={cat.id}
             className="bg-zinc-900 text-white rounded-xl shadow-md p-4"
           >
-            <h3 className="text-lg font-bold mb-2">{category}</h3>
-            <Droppable droppableId={category}>
+            <h3 className="text-lg font-bold mb-2">{cat.name}</h3>
+            <Droppable droppableId={cat.name}>
               {(provided) => {
-                const filtered = library.filter((ex) => ex.type.includes(category));
+                const filtered = library.filter((ex) => ex.type.includes(cat.name));
 
                 return (
                   <ul

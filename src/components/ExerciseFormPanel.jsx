@@ -2,12 +2,12 @@ import { useState } from "react";
 import { saveLastUsedType, loadLastUsedType } from "../utils/storage";
 import CategorySwitch from './CategorySwitch';
 
-export default function ExerciseFormPanel({ library, setLibrary, setNotification }) {
+export default function ExerciseFormPanel({ library, setLibrary, setNotification, exerciseCategories }) {
   const [name, setName] = useState("");
   const [types, setTypes] = useState(loadLastUsedType());
   const [targetSetsInput, setTargetSetsInput] = useState(3);
-  const [useBodyweight, setUseBodyweight] = useState(false);  
-
+  const [useBodyweight, setUseBodyweight] = useState(false);
+  
   const handleAddExercise = (e) => {
     e.preventDefault();
     if (!name.trim() || types.length === 0) return;
@@ -44,16 +44,16 @@ export default function ExerciseFormPanel({ library, setLibrary, setNotification
           onChange={(e) => setName(e.target.value)}
         />
         <div className="space-y-2">
-          {["Push", "Pull", "Legs", "Freestyle"].map((category) => (
+          {exerciseCategories.map((cat) => (
             <CategorySwitch
-              key={category}
-              label={category}
-              isChecked={types.includes(category)}
+              key={cat.id}
+              label={cat.name}
+              isChecked={types.includes(cat.name)}
               onChange={(isChecked) => {
                 if (isChecked) {
-                  setTypes([...types, category]);
+                  setTypes([...types, cat.name]);
                 } else {
-                  setTypes(types.filter((t) => t !== category));
+                  setTypes(types.filter((t) => t !== cat.name));
                 }
               }}
             />

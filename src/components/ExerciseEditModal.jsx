@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CategorySwitch from './CategorySwitch';
 
 export default function ExerciseEditModal({
@@ -10,6 +10,13 @@ export default function ExerciseEditModal({
   const [targetSets, setTargetSets] = useState(exercise.targetSets || 3);
   const [types, setTypes] = useState(exercise.type || []);
   const [useBodyweight, setUseBodyweight] = useState(exercise.useBodyweight || false);
+  const [availableCategories, setAvailableCategories] = useState([]);
+
+  // Load categories from LocalStorage on mount
+  useEffect(() => {
+    const savedCategories = JSON.parse(localStorage.getItem("exerciseCategories")) || [];
+    setAvailableCategories(savedCategories);
+  }, []);
 
   const handleSave = () => {
     onSave({
@@ -45,16 +52,16 @@ export default function ExerciseEditModal({
         />
 
         <div className="space-y-2">
-          {["Push", "Pull", "Legs", "Freestyle"].map((category) => (
+          {availableCategories.map((cat) => (
             <CategorySwitch
-              key={category}
-              label={category}
-              isChecked={types.includes(category)}
+              key={cat.id}
+              label={cat.name}
+              isChecked={types.includes(cat.name)}
               onChange={(isChecked) => {
                 if (isChecked) {
-                  setTypes([...types, category]);
+                  setTypes([...types, cat.name]);
                 } else {
-                  setTypes(types.filter((t) => t !== category));
+                  setTypes(types.filter((t) => t !== cat.name));
                 }
               }}
             />
