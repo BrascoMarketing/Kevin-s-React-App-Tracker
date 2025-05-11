@@ -23,7 +23,7 @@ export default function WeeklyScheduleBuilder({ setNotification, categories }) {
   };
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto mt-8">
+    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
       <h2 className="text-xl font-bold mb-4">Weekly Schedule</h2>
       <ul className="space-y-2">
         {daysOfWeek.map((day) => (

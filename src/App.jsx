@@ -131,15 +131,7 @@ function App() {
               <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4">      
                 <h2 className="text-white text-xl font-bold mb-4">Workout Log</h2>          
                 <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
-              </div>
-              <div className="bg-zinc-900 text-white rounded-xl p-4">
-                <ExerciseFormPanel
-                  library={exerciseLibrary}
-                  setLibrary={setExerciseLibrary}
-                  setNotification={setNotification}
-                  exerciseCategories={exerciseCategories} 
-                />
-              </div>
+              </div>              
             </div>
 
           </div>
@@ -153,20 +145,30 @@ function App() {
           <ExerciseLibraryColumns library={exerciseLibrary} setLibrary={setExerciseLibrary} />
         </div>
 
-        {/* Third Row */}
-        <div className="pt-4 space-y-4">
-          <CategoryManager
-            setNotification={setNotification}
-            setCategories={setExerciseCategories}
-            categories={exerciseCategories}
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="">
+            <CategoryManager
+              setNotification={setNotification}
+              setCategories={setExerciseCategories}
+              categories={exerciseCategories}
+            />
+          </div>
+          <div className="">
+            <WeeklyScheduleBuilder
+              categories={exerciseCategories}
+              setNotification={setNotification}
+            />
+          </div>
+          <div className="">
+              <ExerciseFormPanel
+                library={exerciseLibrary}
+                setLibrary={setExerciseLibrary}
+                setNotification={setNotification}
+                exerciseCategories={exerciseCategories} 
+              />
+            </div>
         </div>
-        <div className="pt-4 space-y-4">
-          <WeeklyScheduleBuilder
-            categories={exerciseCategories}
-            setNotification={setNotification}
-          />
-        </div>
+
 
       </div>
     </div>

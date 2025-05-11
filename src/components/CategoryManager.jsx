@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { PencilIcon } from "@heroicons/react/24/solid";
+import { TrashIcon } from "@heroicons/react/24/solid";
 
 export default function CategoryManager({ categories, setCategories, setNotification }) {  
   const [newCategoryName, setNewCategoryName] = useState("");
@@ -97,7 +99,7 @@ const [renameInput, setRenameInput] = useState("");
 const [renameTargetId, setRenameTargetId] = useState(null);
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto mt-8">
+    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
       <h2 className="text-xl font-bold mb-4">Manage Categories</h2>
       <div className="flex space-x-2 mb-2">
         <input
@@ -156,13 +158,13 @@ const [renameTargetId, setRenameTargetId] = useState(null);
               }}
               className="text-yellow-400"
             >
-              Rename
+              <PencilIcon className="h-4 w-4" />
             </button>
             <button
               onClick={() => handleDeleteCategory(cat.id)}
               className="text-red-400"
             >
-              🗑️
+              <TrashIcon className="h-4 w-4" />
             </button>
           </div>
         </>
