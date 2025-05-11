@@ -77,7 +77,13 @@ export default function VolumeChart() {
   return (
     <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
       <div className="flex justify-end items-center mb-2">        
-        <span className="text-sm text-green-400 font-bold">{totalVolume.toLocaleString()} lbs</span>
+        <span className="text-sm text-green-400 font-bold">
+          {totalVolume.toLocaleString()} lbs 
+          {" "}
+          (
+          {(totalVolume / 2000).toFixed(2).toLocaleString()} tons
+          )
+        </span>
       </div>
 
       <div className="flex space-x-2 mb-2">
