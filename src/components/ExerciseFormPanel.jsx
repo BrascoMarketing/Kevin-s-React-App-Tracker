@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { saveLastUsedType, loadLastUsedType } from "../utils/storage";
 
 export default function ExerciseFormPanel({ library, setLibrary }) {
   const [name, setName] = useState("");
-  const [types, setTypes] = useState([]);
+  const [types, setTypes] = useState(loadLastUsedType());
   const [targetSetsInput, setTargetSetsInput] = useState(3);
-  const [useBodyweight, setUseBodyweight] = useState(false);
+  const [useBodyweight, setUseBodyweight] = useState(false);  
 
   const handleAddExercise = (e) => {
     e.preventDefault();
@@ -21,7 +22,8 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
 
     setLibrary([...library, newExercise]);
     setName("");
-    setTypes([]);
+    saveLastUsedType(types);
+    setTypes(types);    
   };
 
   return (

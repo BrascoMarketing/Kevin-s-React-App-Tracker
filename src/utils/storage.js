@@ -21,3 +21,13 @@ export function saveExerciseLog(log) {
   const updatedLogs = [...existingLogs, log];
   localStorage.setItem("exerciseLogs", JSON.stringify(updatedLogs));
 }
+
+// Persistence Function (used in ExerciseFormPanel.jsx)
+export function saveLastUsedType(type) {
+  localStorage.setItem("lastUsedType", JSON.stringify(type));
+}
+
+export function loadLastUsedType() {
+  const data = localStorage.getItem("lastUsedType");
+  return data ? JSON.parse(data) : [];
+}
