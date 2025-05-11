@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CategorySwitch from './CategorySwitch';
 
 export default function ExerciseEditModal({
   exercise,
@@ -9,14 +10,6 @@ export default function ExerciseEditModal({
   const [targetSets, setTargetSets] = useState(exercise.targetSets || 3);
   const [types, setTypes] = useState(exercise.type || []);
   const [useBodyweight, setUseBodyweight] = useState(exercise.useBodyweight || false);
-
-  const handleTypeChange = (type) => {
-    setTypes((prevTypes) =>
-      prevTypes.includes(type)
-        ? prevTypes.filter((t) => t !== type)
-        : [...prevTypes, type]
-    );
-  };
 
   const handleSave = () => {
     onSave({
@@ -51,16 +44,20 @@ export default function ExerciseEditModal({
           placeholder="Target Sets"
         />
 
-        <div className="space-y-1 mt-2">
-          {["Push", "Pull", "Legs", "Freestyle"].map((typeOption) => (
-            <label key={typeOption} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={types.includes(typeOption)}
-                onChange={() => handleTypeChange(typeOption)}
-              />
-              <span>{typeOption}</span>
-            </label>
+        <div className="space-y-2">
+          {["Push", "Pull", "Legs", "Freestyle"].map((category) => (
+            <CategorySwitch
+              key={category}
+              label={category}
+              isChecked={types.includes(category)}
+              onChange={(isChecked) => {
+                if (isChecked) {
+                  setTypes([...types, category]);
+                } else {
+                  setTypes(types.filter((t) => t !== category));
+                }
+              }}
+            />
           ))}
         </div>
 

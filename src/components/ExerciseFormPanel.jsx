@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { saveLastUsedType, loadLastUsedType } from "../utils/storage";
+import CategorySwitch from './CategorySwitch';
 
 export default function ExerciseFormPanel({ library, setLibrary, setNotification }) {
   const [name, setName] = useState("");
@@ -42,22 +43,20 @@ export default function ExerciseFormPanel({ library, setLibrary, setNotification
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <div className="space-y-1">
-          {["Push", "Pull", "Legs", "Freestyle"].map(category => (
-            <label key={category} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={types.includes(category)}
-                onChange={() => {
-                  setTypes(prev =>
-                    prev.includes(category)
-                      ? prev.filter(t => t !== category)
-                      : [...prev, category]
-                  );
-                }}
-              />
-              <span>{category}</span>
-            </label>
+        <div className="space-y-2">
+          {["Push", "Pull", "Legs", "Freestyle"].map((category) => (
+            <CategorySwitch
+              key={category}
+              label={category}
+              isChecked={types.includes(category)}
+              onChange={(isChecked) => {
+                if (isChecked) {
+                  setTypes([...types, category]);
+                } else {
+                  setTypes(types.filter((t) => t !== category));
+                }
+              }}
+            />
           ))}
         </div>        
         <label className="target-label block text-sm font-medium text-gray-300 mb-1">
@@ -77,7 +76,7 @@ export default function ExerciseFormPanel({ library, setLibrary, setNotification
             checked={useBodyweight}
             onChange={(e) => setUseBodyweight(e.target.checked)}
           />
-          <span>Use Bodyweight (No Weight Entry Needed)</span>
+          <span>Use Bodyweight? (No Weight Entry Needed)</span>
         </label>
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"
