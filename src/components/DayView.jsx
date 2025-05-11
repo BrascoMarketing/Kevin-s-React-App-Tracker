@@ -63,7 +63,7 @@ useEffect(() => {
                 new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1)
                 )
             }
-            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+            className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
             <ChevronDoubleLeftIcon className="h-4 w-4 mr-1" /> Previous
             </button>
@@ -81,7 +81,7 @@ useEffect(() => {
                 new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1)
                 )
             }
-            className="text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
+            className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700"
             >
             Next <ChevronDoubleRightIcon className="h-4 w-4 ml-1" />
             </button>
@@ -272,7 +272,7 @@ function SetLogger({ onAddSet }) {
       />
       <button
         type="submit"
-        className="flex items-center bg-blue-600 text-white py-1 rounded"
+        className="flex items-center bg-blue-500 text-white py-1 rounded"
       >
         <PlusIcon className="h-4 w-4 mr-1" /> Add Set
       </button>

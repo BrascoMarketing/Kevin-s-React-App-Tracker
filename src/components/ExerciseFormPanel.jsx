@@ -2,12 +2,12 @@ import { useState } from "react";
 
 export default function ExerciseFormPanel({ library, setLibrary }) {
   const [name, setName] = useState("");
-  const [type, setType] = useState("Push");
+  const [type, setType] = useState("");
   const [targetSetsInput, setTargetSetsInput] = useState(3);
 
   const handleAddExercise = (e) => {
     e.preventDefault();
-    if (!name.trim()) return;
+    if (!name.trim() || !type) return;
 
     const newExercise = {
       id: crypto.randomUUID(),
@@ -40,18 +40,22 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
           value={type}
           onChange={(e) => setType(e.target.value)}
         >
+          <option value="" disabled>Select Category</option>
           <option value="Push">Push</option>
           <option value="Pull">Pull</option>
           <option value="Legs">Legs</option>
           <option value="Freestyle">Freestyle</option>
-        </select>
+        </select>        
+        <label className="target-label block text-sm font-medium text-gray-300 mb-1">
+          Target Sets (default is 3)
+        </label>
         <input
           type="number"
           min="1"
           value={targetSetsInput}
           onChange={(e) => setTargetSetsInput(parseInt(e.target.value))}
           className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
-          placeholder="Target Sets (default 3)"
+          placeholder="e.g., 3"
         />
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"

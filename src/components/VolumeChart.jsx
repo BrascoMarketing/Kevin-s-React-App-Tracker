@@ -11,26 +11,44 @@ export default function VolumeChart() {
   const [timeFrame, setTimeFrame] = useState("Week");
   const logs = loadExerciseLogs();
 
-  // Process logs into date-keyed volume map
-  const volumeByDate = logs.reduce((acc, log) => {
+  // Filter logs based on selected time frame
+  const filteredLogs = logs.filter((log) => {
+    const logDate = new Date(log.date);
+    const now = new Date();
+
+    if (timeFrame === 'Week') {
+      const sevenDaysAgo = new Date();
+      sevenDaysAgo.setDate(now.getDate() - 7);
+      return logDate >= sevenDaysAgo;
+    } else if (timeFrame === 'Month') {
+      return logDate.getMonth() === now.getMonth() && logDate.getFullYear() === now.getFullYear();
+    } else {
+      return true; // All-Time
+    }
+  });
+
+  // Calculate total volume for filtered logs
+  const totalVolume = filteredLogs.reduce((sum, log) => {
+    const logVolume = log.sets.reduce((setSum, set) => setSum + (set.reps * set.weight), 0);
+    return sum + logVolume;
+  }, 0);
+
+  // Build volume map by date for filtered logs
+  const volumeByDate = filteredLogs.reduce((acc, log) => {
     const date = new Date(log.date).toLocaleDateString("en-US");
-    const totalVolume = log.sets.reduce((sum, set) => sum + (set.reps * set.weight), 0);
-    acc[date] = (acc[date] || 0) + totalVolume;
+    const logVolume = log.sets.reduce((setSum, set) => setSum + (set.reps * set.weight), 0);
+    acc[date] = (acc[date] || 0) + logVolume;
     return acc;
   }, {});
 
   const sortedDates = Object.keys(volumeByDate).sort((a, b) => new Date(a) - new Date(b));
 
-  let filteredDates = sortedDates;
-  if (timeFrame === "Week") filteredDates = sortedDates.slice(-7);
-  if (timeFrame === "Month") filteredDates = sortedDates.slice(-30);
-
   const data = {
-    labels: filteredDates,
+    labels: sortedDates,
     datasets: [
       {
         label: 'Total Volume (Reps × Weight)',
-        data: filteredDates.map(date => volumeByDate[date]),
+        data: sortedDates.map(date => volumeByDate[date]),
         fill: false,
         borderColor: '#4ade80',
         tension: 0.3,
@@ -42,33 +60,27 @@ export default function VolumeChart() {
     responsive: true,
     plugins: {
       legend: { display: false },
-      title: { display: false, text: 'Volume Over Time' },
+      title: { display: false },
     },
     scales: {
-        x: {
-            grid: {
-                color: '#53607dcc'
-            },
-            ticks: {
-                display: true,
-                color: '#efefef',                              
-            },
-        },
-        y: {
-            grid: {
-                color: '#53607dcc'
-            },
-            ticks: {
-                display: true,
-                color: '#efefef',                              
-            },            
-        }
+      x: {
+        grid: { color: '#53607dcc' },
+        ticks: { color: '#efefef' },
+      },
+      y: {
+        grid: { color: '#53607dcc' },
+        ticks: { color: '#efefef' },
+      }
     }
   };
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">        
-      <div className="flex space-x-2 mb-2">        
+    <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
+      <div className="flex justify-end items-center mb-2">        
+        <span className="text-sm text-green-400 font-bold">{totalVolume.toLocaleString()} lbs</span>
+      </div>
+
+      <div className="flex space-x-2 mb-2">
         {timeFrames.map(frame => (
           <button
             key={frame}
@@ -79,6 +91,7 @@ export default function VolumeChart() {
           </button>
         ))}
       </div>
+
       <Line data={data} options={options} />
     </div>
   );

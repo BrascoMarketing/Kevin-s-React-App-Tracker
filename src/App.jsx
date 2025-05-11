@@ -7,6 +7,8 @@ import VolumeChart from "./components/VolumeChart";
 import { loadExerciseLogs } from "./utils/storage";
 import CalendarPanel from "./components/CalendarPanel";
 import DailyProgressRing from './components/DailyProgressRing';
+import { UserCircleIcon } from "@heroicons/react/24/solid";
+import { Cog8ToothIcon } from "@heroicons/react/24/solid";
 
 const schedule = {
   Sunday: "Rest",
@@ -59,6 +61,10 @@ const targetSets = todayExerciseObjects.reduce(
   return (
     <div>      
       <div className="p-12 space-y-4">
+        <div className="flex justify-end text-gray-200 mb-4">
+          <UserCircleIcon className="h-6 w-6 mr-1" />
+          <Cog8ToothIcon className="h-6 w-6 ml-2" />
+        </div>
 
         {/* First Row */}
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4">
