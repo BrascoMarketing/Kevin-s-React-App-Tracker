@@ -87,6 +87,24 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                                     className="bg-gray-700 rounded-lg text-white border border-gray-600 p-1 pl-2 w-10"
                                     placeholder="Sets"
                                   />
+                                  <div className="flex flex-col space-y-1">
+                                    {["Push", "Pull", "Legs", "Freestyle"].map((cat) => (
+                                      <label key={cat} className="flex items-center space-x-2">
+                                        <input
+                                          type="checkbox"
+                                          checked={editTypes.includes(cat)}
+                                          onChange={(e) => {
+                                            if (e.target.checked) {
+                                              setEditTypes([...editTypes, cat]);
+                                            } else {
+                                              setEditTypes(editTypes.filter((t) => t !== cat));
+                                            }
+                                          }}
+                                        />
+                                        <span>{cat}</span>
+                                      </label>
+                                    ))}
+                                  </div>
                                   <label className="flex items-center space-x-2 mt-2">
                                     <input
                                       type="checkbox"
