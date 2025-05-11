@@ -22,6 +22,7 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     const [editTargetSets, setEditTargetSets] = useState(3);
     const [editUseBodyweight, setEditUseBodyweight] = useState(false);
     const [editingExercise, setEditingExercise] = useState(null);
+    const [notification, setNotification] = useState("");
 
   const handleDragEnd = (result) => {
     if (!result.destination) return;
@@ -42,7 +43,16 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
     setLibrary([...otherExercises, ...reordered]);
   };    
 
+  
   return (
+    
+    <>
+    {notification && (
+      <div className="fixed top-0 left-0 w-full bg-green-600 text-white text-center py-2 z-50 shadow-md">
+        {notification}
+      </div>
+    )}
+
     <DragDropContext onDragEnd={handleDragEnd}>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {["Push", "Pull", "Legs", "Freestyle"].map((category) => {            
@@ -189,9 +199,16 @@ export default function ExerciseLibraryColumns({ library, setLibrary }) {
                 item.id === updatedExercise.id ? updatedExercise : item
               );
               setLibrary(updatedLibrary);
-            }}
+
+              setNotification(`${updatedExercise.name} updated successfully!`);
+
+              // Auto-hide after 3 seconds
+              setTimeout(() => setNotification(""), 3000);
+            }
+          }        
           />
         )}
     </DragDropContext>
+    </>
   );
 }
