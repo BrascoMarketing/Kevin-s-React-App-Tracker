@@ -8,7 +8,7 @@ import { loadExerciseLogs } from "./utils/storage";
 import CalendarPanel from "./components/CalendarPanel";
 import DailyProgressRing from './components/DailyProgressRing';
 import { UserCircleIcon } from "@heroicons/react/24/solid";
-import { Cog8ToothIcon } from "@heroicons/react/24/solid";
+import UserProfileModal from "./components/UserProfileModal";
 
 const schedule = {
   Sunday: "Rest",
@@ -25,6 +25,8 @@ function App() {
   const [exerciseLibrary, setExerciseLibrary] = useState([]);
   const [exerciseLogs, setExerciseLogs] = useState(loadExerciseLogs());
   const [viewedDate, setViewedDate] = useState(new Date());
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [notification, setNotification] = useState("");
 
   const viewedKey = viewedDate.toDateString();
 
@@ -59,12 +61,27 @@ const targetSets = todayExerciseObjects.reduce(
 }, [exerciseLibrary, hasLoaded]);
 
   return (
+    <>
+      {notification && (
+          <div className="fixed top-0 left-0 w-full bg-green-600 text-white text-center py-2 z-50 shadow-md">
+            {notification}
+          </div>
+        )}    
     <div>      
       <div className="p-12 space-y-4">
         <div className="flex justify-end text-gray-200 mb-4">
-          <UserCircleIcon className="h-6 w-6 mr-1" />
-          <Cog8ToothIcon className="h-6 w-6 ml-2" />
+          <button onClick={() => setIsProfileOpen(true)} className="absolute top-4 right-4">
+            <UserCircleIcon className="h-6 w-6 text-white" />
+          </button>          
         </div>
+
+        {/*Profile Modal Trigger*/}
+        {isProfileOpen && (
+          <UserProfileModal
+            onClose={() => setIsProfileOpen(false)}
+            setNotification={setNotification}
+          />
+        )}
 
         {/* First Row */}
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4">
@@ -114,7 +131,8 @@ const targetSets = todayExerciseObjects.reduce(
 
       </div>
     </div>
-  );
+    </>
+  );  
 }
 
 export default App;
