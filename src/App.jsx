@@ -114,7 +114,7 @@ const targetSets = todayExerciseObjects.reduce(
                 <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
               </div>
               <div className="bg-zinc-900 text-white rounded-xl p-4">
-                <ExerciseFormPanel library={exerciseLibrary} setLibrary={setExerciseLibrary} />
+                <ExerciseFormPanel library={exerciseLibrary} setLibrary={setExerciseLibrary} setNotification={setNotification} />
               </div>
             </div>
 

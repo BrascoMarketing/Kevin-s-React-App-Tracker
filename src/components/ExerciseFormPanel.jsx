@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { saveLastUsedType, loadLastUsedType } from "../utils/storage";
 
-export default function ExerciseFormPanel({ library, setLibrary }) {
+export default function ExerciseFormPanel({ library, setLibrary, setNotification }) {
   const [name, setName] = useState("");
   const [types, setTypes] = useState(loadLastUsedType());
   const [targetSetsInput, setTargetSetsInput] = useState(3);
@@ -23,7 +23,10 @@ export default function ExerciseFormPanel({ library, setLibrary }) {
     setLibrary([...library, newExercise]);
     setName("");
     saveLastUsedType(types);
-    setTypes(types);    
+    setTypes(types);
+    
+    setNotification(`${name.trim()} added successfully!`);
+    setTimeout(() => setNotification(""), 3000);
   };
 
   return (
