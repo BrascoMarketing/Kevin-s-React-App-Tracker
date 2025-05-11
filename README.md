@@ -18,17 +18,31 @@ Log exercises, track progress by day, and build your exercise library — all st
 
 ## Components
 
-- **CalendarPanel**: Displays status of past workouts with the ability to load that day's stats into the main view
-- **CategoryManager**: Allows the creation of custom categories. Created categories can be renamed and or deleted. App preloads with 'Push', 'Pull', 'Legs', and 'Freestyle' if no categories exist in the user's LocalStorage
-- **CategorySwitch**: Component used in the Edit Exercise component to enable/disable categories on a per/exercises basis through the use of toggle switches.
-- **DailyProgressRing**: Calculates and displays a progress chart (Donut) based on the total number of exercises for the day (estimating 3 sets each unless overridden in the exercises settings)
-- **DayView**: Main view of the app displaying the exercises of the day and their completion status
-- **ExerciseEditModal**: Popup window that allows renaming an exercise, setting the category/categories it appears, turning on/off the Body Weight mechanism.
-- **ExerciseFormPanel**: Add exercises in this component. Fields for name, category, target number of sets, and Use Bodyweight?
-- **ExerciseLibraryColumns**: All stored categories will appear in this component along with the editable exercises assigned to each
-- **UserProfileModal**: Modal to enter body weight for calculation and prepopulation for body weight exercises
-- **VolumeChart**: Line chart displaying the accumulated Volume (reps x weight) over the course of a week, month, or all time. Also displays the total
-  **WeeklyScheduleBuilder**: A component displaying every day of the week, allowing the user to assign what category of exercises should be done on that day.
+#### **CalendarPanel**
+
+Displays status of past workouts with the ability to load that day's stats into the main view
+
+#### **CategoryManager**
+
+Allows the creation of custom categories. Created categories can be renamed and or deleted. App preloads with 'Push', 'Pull', 'Legs', and 'Freestyle' if no categories exist in the user's LocalStorage
+
+#### **CategorySwitch**: Component used in the Edit Exercise component to enable/disable categories on a per/exercises basis through the use of toggle switches.
+
+#### **DailyProgressRing**: Calculates and displays a progress chart (Donut) based on the total number of exercises for the day (estimating 3 sets each unless overridden in the exercises settings)
+
+#### **DayView**: Main view of the app displaying the exercises of the day and their completion status
+
+#### **ExerciseEditModal**: Popup window that allows renaming an exercise, setting the category/categories it appears, turning on/off the Body Weight mechanism.
+
+#### **ExerciseFormPanel**: Add exercises in this component. Fields for name, category, target number of sets, and Use Bodyweight?
+
+#### **ExerciseLibraryColumns**: All stored categories will appear in this component along with the editable exercises assigned to each
+
+#### **UserProfileModal**: Modal to enter body weight for calculation and prepopulation for body weight exercises
+
+#### **VolumeChart**: Line chart displaying the accumulated Volume (reps x weight) over the course of a week, month, or all time. Also displays the total
+
+**WeeklyScheduleBuilder**: A component displaying every day of the week, allowing the user to assign what category of exercises should be done on that day.
 
 ## Built With
 
