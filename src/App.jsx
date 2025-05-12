@@ -113,7 +113,7 @@ function App() {
           
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4">
-                <h2 className="text-white text-xl font-bold mb-4 mt-8">Today's Progress</h2>
+                <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
                 <DailyProgressRing
                   targetSets={targetSets}
                   loggedSets={totalLoggedSetsForViewedDay}

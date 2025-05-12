@@ -101,25 +101,10 @@ const [renameTargetId, setRenameTargetId] = useState(null);
   return (
     <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full mx-auto">
       <h2 className="text-xl font-bold mb-4">Manage Categories</h2>
-      <div className="flex space-x-2 mb-2">
-        <input
-          className="flex-1 bg-gray-700 text-white border border-gray-600 p-1 rounded"
-          type="text"
-          placeholder="New Category Name"
-          value={newCategoryName}
-          onChange={(e) => setNewCategoryName(e.target.value)}
-        />
-        <button
-          onClick={handleAddCategory}
-          className="bg-blue-600 text-white px-3 py-1 rounded"
-        >
-          Add
-        </button>
-      </div>
-      {error && <div className="text-red-500 text-sm mb-2">{error}</div>}
-      <ul className="space-y-1">
+      
+      <ul className="space-y-2">
   {categories.map((cat) => (
-    <li key={cat.id} className="flex justify-between items-center bg-gray-800 p-2 rounded">
+    <li key={cat.id} className="p-2 border border-gray-700 rounded flex justify-between items-center bg-zinc-800 text-white shadow hover:bg-gray-700 transition-colors">
       {renameTargetId === cat.id ? (
         <div className="flex space-x-2">
           <input
@@ -172,6 +157,22 @@ const [renameTargetId, setRenameTargetId] = useState(null);
     </li>
   ))}
 </ul>
+<div className="flex space-x-2 mt-6">
+        <input
+          className="flex-1 bg-zinc-800 text-white border border-gray-600 p-1 rounded"
+          type="text"
+          placeholder="New Category Name"
+          value={newCategoryName}
+          onChange={(e) => setNewCategoryName(e.target.value)}
+        />
+        <button
+          onClick={handleAddCategory}
+          className="bg-blue-600 text-white px-3 py-1 rounded"
+        >
+          Add
+        </button>
+      </div>
+      {error && <div className="text-red-500 text-sm mb-2">{error}</div>}
 
     </div>
   );
