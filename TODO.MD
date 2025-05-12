@@ -12,6 +12,10 @@
 - In DayView.jsx, display previously logged set numbers for exercises.
 - In DayView.jsx, display expected number of sets to perform (set in exercise).
 
+### 3. Exercise Stats
+
+- Display history log and stats by exercise (chart)
+
 ### 3. Reorganize Management Tools into Dedicated Settings View
 
 - Move the following into a single "Settings" or "Management" section:
