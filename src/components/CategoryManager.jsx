@@ -99,7 +99,7 @@ const [renameInput, setRenameInput] = useState("");
 const [renameTargetId, setRenameTargetId] = useState(null);
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
+    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full mx-auto">
       <h2 className="text-xl font-bold mb-4">Manage Categories</h2>
       <div className="flex space-x-2 mb-2">
         <input

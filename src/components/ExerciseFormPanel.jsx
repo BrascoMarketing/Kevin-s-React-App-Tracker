@@ -31,7 +31,7 @@ export default function ExerciseFormPanel({ library, setLibrary, setNotification
   };
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl p-4 w-full max-w-md mx-auto mb-8">
+    <div className="bg-zinc-900 text-white rounded-xl p-4 w-full mx-auto mb-8">
       <h2 className="text-xl font-bold mb-4 flex items-center">
         <span>Add New Exercise</span>
       </h2>
