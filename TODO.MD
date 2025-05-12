@@ -5,9 +5,13 @@
 ### 1. Live Progress Ring Update Improvements
 
 - Enable _real-time_ ProgressRing updates when sets are logged (not just when exercises are marked complete).
-- Ensure updates occur without requiring a page refresh.
+- Ensure updates occur without requiring a page refresh (reference newly created exercises).
 
-### 2. Reorganize Management Tools into Dedicated Settings View
+### 2. Display Previous Sets
+
+- In DayView.jsx, display previously logged set numbers for exercises.
+
+### 3. Reorganize Management Tools into Dedicated Settings View
 
 - Move the following into a single "Settings" or "Management" section:
 
@@ -17,7 +21,7 @@
 
 - Add easy navigation back to the **Dashboard** or **Workout Log**.
 
-### 3. Prepare for Scalable Data Management
+### 4. Prepare for Scalable Data Management
 
 - Plan transition from **LocalStorage** to a **Database-backed API**.
 

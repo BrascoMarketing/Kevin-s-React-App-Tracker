@@ -23,7 +23,7 @@ export default function WeeklyScheduleBuilder({ setNotification, categories }) {
   };
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
+    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
       <h2 className="text-xl font-bold mb-4">Weekly Schedule</h2>
       <ul className="space-y-2">
         {daysOfWeek.map((day) => (
@@ -32,7 +32,7 @@ export default function WeeklyScheduleBuilder({ setNotification, categories }) {
             <select
               value={weeklySchedule[day]}
               onChange={(e) => handleScheduleChange(day, e.target.value)}
-              className="bg-gray-800 text-white border border-gray-600 p-1 rounded"
+              className="bg-gray-800 w-48 text-white border border-gray-600 p-1 rounded"
             >
               <option value="Rest">Rest</option>
               {categories.map((cat) => (
