@@ -17,6 +17,7 @@ export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, on
       categoryOrder: JSON.parse(localStorage.getItem("categoryOrder") || "{}"),
       weeklySchedule: JSON.parse(localStorage.getItem("weeklySchedule") || "{}"),
       exerciseCategories: JSON.parse(localStorage.getItem("exerciseCategories") || "[]"),
+      exerciseLogs: JSON.parse(localStorage.getItem("exerciseLogs") || "[]"),
       userBodyWeight: localStorage.getItem("userBodyWeight") || ""
     };
 
@@ -43,6 +44,7 @@ export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, on
         if (importedData.categoryOrder) localStorage.setItem("categoryOrder", JSON.stringify(importedData.categoryOrder));
         if (importedData.weeklySchedule) localStorage.setItem("weeklySchedule", JSON.stringify(importedData.weeklySchedule));
         if (importedData.exerciseCategories) localStorage.setItem("exerciseCategories", JSON.stringify(importedData.exerciseCategories));
+        if (importedData.exerciseLogs) localStorage.setItem("exerciseLogs", JSON.stringify(importedData.exerciseLogs));
         if (importedData.userBodyWeight) localStorage.setItem("userBodyWeight", importedData.userBodyWeight);
 
         setNotification("Backup restored successfully! Please refresh to see changes.");
