@@ -1,4 +1,5 @@
 import { useState } from "react";
+ import { XCircleIcon } from '@heroicons/react/24/outline';
 
 export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, onClose, setNotification }) {
   const [inputWeight, setInputWeight] = useState(userBodyWeight);
@@ -61,10 +62,17 @@ export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, on
 
   return (
     <div className="modal-backdrop fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-      <div className="bg-zinc-900 text-white p-6 rounded-lg space-y-4 w-full max-w-md">
+      <div className="relative bg-zinc-900 text-white p-6 rounded-lg space-y-4 w-full max-w-md">    
+
+        <button 
+          onClick={onClose} 
+          className="absolute transition duration-300 ease-in-out top-2 right-2 text-white-400 hover:text-blue-500"
+          aria-label="Close"
+        >
+          <XCircleIcon className="h-6 w-6" />
+        </button>
 
         <h2 className="text-xl font-bold mb-2">Your Profile</h2>
-
         <div>
           <label className="block mb-1 font-semibold">Body Weight (lbs)</label>
           <input
@@ -84,6 +92,7 @@ export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, on
         </div>
 
         <div>
+          <h2 className="text-xl font-bold mb-2">Data</h2>
           <h3 className="text-sm font-semibold mb-1">Backup Your Data</h3>
           <button onClick={handleExport} className="w-full bg-blue-600 hover:bg-blue-500 text-white p-2 rounded">
             Download Backup
