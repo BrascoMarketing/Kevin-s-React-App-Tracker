@@ -15,6 +15,7 @@ Log exercises, track progress by day, and build your exercise library — all st
 - Navigate forward or backward through days to review or add logs
 - All data stored locally in your browser's LocalStorage (no account required)
 - Dark Mode Only UI (because light mode is banned here)
+- Easily Backup/Restore all of your data (exercises, workout history, categories, EVERYTHING!)
 
 ## Components
 
