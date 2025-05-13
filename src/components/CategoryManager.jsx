@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import { TrashIcon } from "@heroicons/react/24/solid";
 
-export default function CategoryManager({ categories, setCategories, setNotification }) {  
+export default function CategoryManager({ setNotification, setCategories, categories, setCategoryOrder }) {  
   const [newCategoryName, setNewCategoryName] = useState("");
   const [error, setError] = useState("");
   const [hasLoadedCategories, setHasLoadedCategories] = useState(false);  // Flag to prevent premature saving
@@ -77,23 +77,37 @@ const handleRenameCategory = (id, newName) => {
   const targetCategory = categories.find((cat) => cat.id === id);
   if (!targetCategory) return; // Exit if not found
 
+  const oldName = targetCategory.name;
+
+  // 1. Update exerciseCategories
   const updatedCategories = categories.map((cat) =>
     cat.id === id ? { ...cat, name: newName } : cat
   );
   setCategories(updatedCategories);
 
-  // Sync weekly schedule if this category was assigned to any day
+  // 2. Sync weekly schedule if this category was assigned to any day
   const savedSchedule = JSON.parse(localStorage.getItem("weeklySchedule")) || {};
   const updatedSchedule = {};
   for (const [day, assignedCategory] of Object.entries(savedSchedule)) {
     updatedSchedule[day] =
-      assignedCategory === targetCategory.name ? newName : assignedCategory;
+      assignedCategory === oldName ? newName : assignedCategory;
   }
   localStorage.setItem("weeklySchedule", JSON.stringify(updatedSchedule));
 
+  // 3. Sync categoryOrder keys if they exist
+  setCategoryOrder((prevOrder) => {
+    if (!prevOrder[oldName]) return prevOrder; // Skip if category isn't used
+    const updatedOrder = { ...prevOrder };
+    updatedOrder[newName] = updatedOrder[oldName]; // Move exercises to new key
+    delete updatedOrder[oldName]; // Remove old key
+    return updatedOrder;
+  });
+
+  // 4. Notify success
   setNotification(`Category renamed to "${newName}"`);
   setTimeout(() => setNotification(""), 3000);
 };
+
 
 const [renameInput, setRenameInput] = useState("");
 const [renameTargetId, setRenameTargetId] = useState(null);

@@ -185,6 +185,8 @@ function App() {
               setNotification={setNotification}
               setCategories={setExerciseCategories}
               categories={exerciseCategories}
+              categoryOrder={categoryOrder}
+              setCategoryOrder={setCategoryOrder}
             />
           </div>
           <div className="">
