@@ -42,8 +42,27 @@ function App() {
 
   const [categoryOrder, setCategoryOrder] = useState(() => {
   const saved = localStorage.getItem("categoryOrder");
-    return saved ? JSON.parse(saved) : { Rest: [], Push: [], Pull: [], Legs: [], Freestyle: [] };
-  });  
+  if (saved) {
+    const parsed = JSON.parse(saved);
+
+    // ✅ Ensure "Unassigned" exists if not present
+    if (!parsed.Unassigned) {
+      parsed.Unassigned = [];
+    }
+
+    return parsed;
+  }
+
+  // ✅ Default structure with "Unassigned" included
+  return {
+    Unassigned: [],
+    Rest: [],
+    Push: [],
+    Pull: [],
+    Legs: [],
+    Freestyle: [],
+  };
+}); 
 
   
 

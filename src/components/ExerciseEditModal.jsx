@@ -13,6 +13,18 @@ export default function ExerciseEditModal({
   const [types, setTypes] = useState(exercise.type || []);
   const [useBodyweight, setUseBodyweight] = useState(exercise.useBodyweight || false);
 
+  useEffect(() => {
+  // Auto-enable 'Unassigned' if nothing else is selected
+  if (types.length === 0) {
+    setTypes(["Unassigned"]);
+  }
+
+  // Auto-disable 'Unassigned' if any real category is selected
+  if (types.includes("Unassigned") && types.length > 1) {
+    setTypes(types.filter((t) => t !== "Unassigned"));
+  }
+}, [types]);
+
   // Sync categories on mount (if editing an old exercise with no category set)
   useEffect(() => {
   if (exerciseCategories.length > 0 && types.length === 0) {
@@ -21,44 +33,54 @@ export default function ExerciseEditModal({
   }, [exerciseCategories, types]);
 
   const handleSave = () => {
-    const updated = {
-      ...exercise,
-      name,
-      targetSets,
-      type: types,
-      useBodyweight,
-    };
+  let newTypes = types;
 
-    // Update exercises map
-    setExercises((prev) => ({
-      ...prev,
-      [exercise.id]: updated,
-    }));
+  // If no types selected, move to Unassigned
+  if (types.length === 0) {
+    newTypes = ["Unassigned"];
+  }
 
-    // Update categoryOrder: remove ID from removed categories, add to new ones
-    setCategoryOrder((prevOrder) => {
-      const updatedOrder = { ...prevOrder };
+  const updatedTypes = types.length > 0 ? types : ["Unassigned"];
 
-      // Remove from all existing categories
-      for (const category in updatedOrder) {
-        updatedOrder[category] = updatedOrder[category].filter((id) => id !== exercise.id);
+  const updated = {
+    ...exercise,
+    name,
+    targetSets,
+    type: updatedTypes,
+    useBodyweight,
+  };
+
+  // Update exercises map
+  setExercises((prev) => ({
+    ...prev,
+    [exercise.id]: updated,
+  }));
+
+  // Update categoryOrder: remove ID from removed categories, add to new ones
+  setCategoryOrder((prevOrder) => {
+    const updatedOrder = { ...prevOrder };
+
+    // Remove from all existing categories
+    for (const category in updatedOrder) {
+      updatedOrder[category] = updatedOrder[category].filter((id) => id !== exercise.id);
+    }
+
+    // Add back to the selected ones (or Unassigned if empty)
+    newTypes.forEach((cat) => {
+      if (!updatedOrder[cat]) {
+        updatedOrder[cat] = [];
       }
-
-      // Add back to the selected ones
-      types.forEach((cat) => {
-        if (!updatedOrder[cat]) {
-          updatedOrder[cat] = [];
-        }
-        if (!updatedOrder[cat].includes(exercise.id)) {
-          updatedOrder[cat].push(exercise.id);
-        }
-      });
-
-      return updatedOrder;
+      if (!updatedOrder[cat].includes(exercise.id)) {
+        updatedOrder[cat].push(exercise.id);
+      }
     });
 
-    onClose();
-  };
+    return updatedOrder;
+  });
+
+  onClose();
+};
+
 
   return (
     <div className="modal-backdrop fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
@@ -84,20 +106,28 @@ export default function ExerciseEditModal({
 
         <div className="space-y-2">
           {exerciseCategories.map((cat) => (
-            <label key={cat.id} className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                checked={types.includes(cat.name)}
-                onChange={(e) => {
-                  if (e.target.checked) {
-                    setTypes([...types, cat.name]);
-                  } else {
-                    setTypes(types.filter((t) => t !== cat.name));
+            <CategorySwitch
+              key={cat.id}
+              label={cat.name}
+              isChecked={types.includes(cat.name)}
+              onChange={(isChecked) => {
+                let newTypes;
+
+                if (isChecked) {
+                  // Turning ON a category
+                  newTypes = types.includes("Unassigned") 
+                    ? [cat.name] // Replace Unassigned with the real category
+                    : [...types, cat.name];
+                } else {
+                  // Turning OFF a category
+                  newTypes = types.filter((t) => t !== cat.name);
+                  if (newTypes.length === 0) {
+                    newTypes = ["Unassigned"]; // Fallback to Unassigned
                   }
-                }}
-              />
-              <span>{cat.name}</span>
-            </label>
+                }
+                setTypes(newTypes);
+              }}
+            />
           ))}
         </div>
 

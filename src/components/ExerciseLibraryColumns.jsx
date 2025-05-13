@@ -19,18 +19,52 @@ export default function ExerciseLibraryColumns({
   const [editingExercise, setEditingExercise] = useState(null);
   const [notification, setNotification] = useState("");
 
-  // Handle deleting an exercise from all categories
-  const handleDeleteExercise = (id) => {
+// Handle soft or permanent delete
+const handleDeleteExercise = (id) => {
+  const exercise = exercises[id];
+  if (!exercise) return;
+
+  const isUnassigned = exercise.type.length === 1 && exercise.type[0] === "Unassigned";
+
+  if (!isUnassigned) {
+    // Move to Unassigned (soft delete)
+    const updatedExercise = { ...exercise, type: ["Unassigned"] };
+    setExercises({ ...exercises, [id]: updatedExercise });
+
+    // Update categoryOrder: remove from all categories, add to Unassigned
+    const updatedOrder = { ...categoryOrder };
+    Object.keys(updatedOrder).forEach((cat) => {
+      updatedOrder[cat] = updatedOrder[cat].filter((eid) => eid !== id);
+    });
+    if (!updatedOrder["Unassigned"]) {
+      updatedOrder["Unassigned"] = [];
+    }
+    updatedOrder["Unassigned"].push(id);
+
+    setCategoryOrder(updatedOrder);
+    setNotification(`${exercise.name} moved to Unassigned.`);
+    setTimeout(() => setNotification(""), 3000);
+  } else {
+    // Confirm permanent delete
+    const confirmed = window.confirm(`Are you sure you want to permanently delete "${exercise.name}" and all its data? This cannot be undone.`);
+    if (!confirmed) return;
+
+    // Fully remove from exercises and categoryOrder
     const updatedExercises = { ...exercises };
     delete updatedExercises[id];
     setExercises(updatedExercises);
 
-    const updatedOrder = {};
-    Object.keys(categoryOrder).forEach((cat) => {
-      updatedOrder[cat] = categoryOrder[cat].filter((eid) => eid !== id);
+    const updatedOrder = { ...categoryOrder };
+    Object.keys(updatedOrder).forEach((cat) => {
+      updatedOrder[cat] = updatedOrder[cat].filter((eid) => eid !== id);
     });
     setCategoryOrder(updatedOrder);
-  };
+
+    setNotification(`${exercise.name} permanently deleted.`);
+    setTimeout(() => setNotification(""), 3000);
+  }
+};
+
 
   // Handle drag-and-drop reordering within a category
   const handleDragEnd = (result) => {

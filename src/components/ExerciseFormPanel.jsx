@@ -14,46 +14,47 @@ export default function ExerciseFormPanel({
   
   const handleAddExercise = (e) => {
   e.preventDefault();
-  if (!name.trim() || types.length === 0) return;
+  if (!name.trim()) return;
+
+  // ✅ Fallback to Unassigned if no categories are selected
+  const finalTypes = types.length > 0 ? types : ["Unassigned"];
 
   const newExerciseId = crypto.randomUUID();
   const newExercise = {
     id: newExerciseId,
     name: name.trim(),
-    type: types,
+    type: finalTypes,
     targetSets: targetSetsInput || 3,
     useBodyweight,
   };
 
-  // Update exercises
+  // ✅ Update exercises state
   setExercises((prev) => ({
     ...prev,
     [newExerciseId]: newExercise,
   }));
 
-  // Update categoryOrder
+  // ✅ Update categoryOrder
   setCategoryOrder((prevOrder) => {
     const updatedOrder = { ...prevOrder };
-    types.forEach((cat) => {
+
+    finalTypes.forEach((cat) => {
       if (!updatedOrder[cat]) {
         updatedOrder[cat] = [];
       }
-      // Prevent duplicate IDs in the order list
-      if (!updatedOrder[cat].includes(newExerciseId)) {
-        updatedOrder[cat].push(newExerciseId);
-      }
+      updatedOrder[cat].push(newExerciseId);
     });
+
     return updatedOrder;
   });
 
+  // ✅ Clear form and notify
   setName("");
   setTypes([]);
-  setUseBodyweight(false);
-  setTargetSetsInput(3);
-
-  setNotification(`${newExercise.name} added successfully!`);
+  setNotification(`${name.trim()} added successfully!`);
   setTimeout(() => setNotification(""), 3000);
 };
+
 
 
   return (

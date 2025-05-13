@@ -9,22 +9,33 @@ export default function CategoryManager({ setNotification, setCategories, catego
   const [hasLoadedCategories, setHasLoadedCategories] = useState(false);  // Flag to prevent premature saving
 
   // Load or initialize defaults on first mount
-  useEffect(() => {
-    const saved = localStorage.getItem("exerciseCategories");
-    if (saved) {
-      setCategories(JSON.parse(saved));
-    } else {
-      const defaults = [
-        { id: uuidv4(), name: "Push" },
-        { id: uuidv4(), name: "Pull" },
-        { id: uuidv4(), name: "Legs" },
-        { id: uuidv4(), name: "Freestyle" },
-      ];
-      setCategories(defaults);
-      localStorage.setItem("exerciseCategories", JSON.stringify(defaults));
+useEffect(() => {
+  const saved = localStorage.getItem("exerciseCategories");
+  let loadedCategories = [];
+
+  if (saved) {
+    loadedCategories = JSON.parse(saved);
+
+    // ✅ Ensure "Unassigned" exists if it wasn't already saved
+    const hasUnassigned = loadedCategories.some(cat => cat.name === "Unassigned");
+    if (!hasUnassigned) {
+      loadedCategories.unshift({ id: "unassigned", name: "Unassigned" });
     }
-    setHasLoadedCategories(true);  // Now safe to start saving
-  }, []);
+  } else {
+    // ✅ First-time setup with defaults + Unassigned
+    loadedCategories = [
+      { id: "unassigned", name: "Unassigned" },
+      { id: uuidv4(), name: "Push" },
+      { id: uuidv4(), name: "Pull" },
+      { id: uuidv4(), name: "Legs" },
+      { id: uuidv4(), name: "Freestyle" },
+    ];
+  }
+
+  setCategories(loadedCategories);
+  localStorage.setItem("exerciseCategories", JSON.stringify(loadedCategories));
+  setHasLoadedCategories(true);  // Now safe to start saving
+}, []);
 
   // Save only when categories have fully loaded
   useEffect(() => {
