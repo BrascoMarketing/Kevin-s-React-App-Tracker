@@ -7,12 +7,7 @@
 - Enable _real-time_ ProgressRing updates when sets are logged (not just when exercises are marked complete).
 - Ensure updates occur without requiring a page refresh (reference newly created exercises).
 
-### 2. Display Additional Set Data
-
-- In DayView.jsx, display previously logged set numbers for exercises.
-- In DayView.jsx, display expected number of sets to perform (set in exercise).
-
-### 3. Exercise Stats
+### 2. Exercise Stats
 
 - Display history log and stats by exercise (chart)
 
@@ -36,4 +31,4 @@
 
 ---
 
-_Logged on: \[20250511 17:49]_
+_Logged on: \[20250513 14:11]_
