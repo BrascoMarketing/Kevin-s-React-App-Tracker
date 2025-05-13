@@ -178,7 +178,7 @@ function App() {
 
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-              <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4">      
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">      
                 <h2 className="text-white text-xl font-bold mb-4">Workout Log</h2>          
                 <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
               </div>              
