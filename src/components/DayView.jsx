@@ -139,13 +139,13 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
 function Navigation({ viewedDate, setViewedDate }) {
   return (
     <div className="flex items-center justify-center space-x-4 mb-8">
-      <button onClick={() => setViewedDate(new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1))} className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700">
+      <button onClick={() => setViewedDate(new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() - 1))} className="flex items-center text-sm text-white px-2 py-1 rounded hover:bg-gray-700">
         <ChevronDoubleLeftIcon className="h-4 w-4 mr-1" /> Previous
       </button>
-      <button onClick={() => setViewedDate(new Date())} className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700">
+      <button onClick={() => setViewedDate(new Date())} className="flex items-center text-sm text-white px-2 py-1 rounded hover:bg-gray-700">
         <CalendarDaysIcon className="h-4 w-4 mr-1" /> Today
       </button>
-      <button onClick={() => setViewedDate(new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1))} className="flex items-center text-sm text-zinc-500 px-2 py-1 rounded hover:bg-gray-700">
+      <button onClick={() => setViewedDate(new Date(viewedDate.getFullYear(), viewedDate.getMonth(), viewedDate.getDate() + 1))} className="flex items-center text-sm text-white px-2 py-1 rounded hover:bg-gray-700">
         Next <ChevronDoubleRightIcon className="h-4 w-4 ml-1" />
       </button>
     </div>

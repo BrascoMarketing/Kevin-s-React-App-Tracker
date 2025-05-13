@@ -70,7 +70,7 @@ export default function ExerciseFormPanel({
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <div className="space-y-2">
+        <div className="space-y-2 text-white">
           {exerciseCategories.map((cat) => (
             <CategorySwitch
               key={cat.id}
