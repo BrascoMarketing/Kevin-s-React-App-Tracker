@@ -1,4 +1,4 @@
-# Brasco /// Fitness Tracker
+# Fitness Tracker
 
 A simple, fully offline fitness tracker built with React and Tailwind CSS.  
 Log exercises, track progress by day, and build your exercise library — all stored in your browser's LocalStorage.
