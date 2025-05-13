@@ -94,8 +94,8 @@ const handleDeleteExercise = (id) => {
     {Object.keys(categoryOrder)
       .filter((category) => category !== "Rest")
       .map((category) => (
-        <div key={category} className="bg-zinc-900 text-white rounded-xl shadow-md p-4">
-          <h3 className="text-lg font-bold mb-2">{category}</h3>
+        <div key={category} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+          <h3 className="text-white text-lg font-bold mb-2">{category}</h3>
           <Droppable droppableId={category}>
             {(provided) => (
               <ul className="space-y-2" {...provided.droppableProps} ref={provided.innerRef}>
@@ -107,7 +107,7 @@ const handleDeleteExercise = (id) => {
                   const isDraggable = !isMultiCategory;
 
                   const exerciseContent = (
-                    <div className="flex justify-between items-center w-full">
+                    <div className="flex text-white justify-between items-center w-full">
                       <span>{ex.name}</span>
                       <div className="flex space-x-2">
                         {isMultiCategory && <LockClosedIcon className="h-4 w-4 text-yellow-400" />}

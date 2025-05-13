@@ -24,7 +24,7 @@ export default function DailyProgressRing({ targetSets, loggedSets }) {
   };
 
   return (
-    <div className={`relative w-48 h-48 block m-auto ${isOverAchieved ? 'animate-pulse' : ''}`}>
+    <div className={`relative w-48 h-48 block m-auto ${isOverAchieved ? 'animate-pulse' : ''} `}>
       <Doughnut data={data} options={options} />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         <span className="text-2xl font-bold">{Math.round(progressRaw)}%</span>

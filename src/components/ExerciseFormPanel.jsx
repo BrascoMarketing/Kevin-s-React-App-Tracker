@@ -58,8 +58,8 @@ export default function ExerciseFormPanel({
 
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl p-4 w-full mx-auto mb-8">
-      <h2 className="text-xl font-bold mb-4 flex items-center">
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <h2 className="text-white text-xl font-bold mb-4 flex items-center">
         <span>Add New Exercise</span>
       </h2>
       <form onSubmit={handleAddExercise} className="space-y-2">
@@ -103,7 +103,7 @@ export default function ExerciseFormPanel({
             checked={useBodyweight}
             onChange={(e) => setUseBodyweight(e.target.checked)}
           />
-          <span>Use Bodyweight? (No Weight Entry Needed)</span>
+          <span className="text-white">Use Bodyweight? (No Weight Entry Needed)</span>
         </label>
         <button
           className="bg-blue-600 text-white px-2 py-1 rounded w-full"

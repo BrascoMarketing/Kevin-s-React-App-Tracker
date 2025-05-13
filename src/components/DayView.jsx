@@ -49,10 +49,10 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
   }
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 mx-auto">
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
       <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
-      <h2 className="text-xl font-bold mb-4">Workout: {viewedCategory}</h2>
-      <p className="mb-4">{viewedDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
+      <h2 className="text-white text-xl font-bold mb-4">Workout: {viewedCategory}</h2>
+      <p className="text-white mb-4">{viewedDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
 
       {exercisesForToday.length === 0 ? (
         <p>No exercises assigned for today.</p>
@@ -63,7 +63,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
           const lastLog = getLastLogForExercise(ex.id);
 
           return (
-            <div key={ex.id} className="indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
+            <div key={ex.id} className="text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
               <h3 className="font-semibold mb-2">{ex.name}</h3>
               <p className="text-sm text-gray-400 mb-2">Target Sets: {ex.targetSets || 3}</p>
 

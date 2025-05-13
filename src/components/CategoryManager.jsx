@@ -124,8 +124,8 @@ const [renameInput, setRenameInput] = useState("");
 const [renameTargetId, setRenameTargetId] = useState(null);
 
   return (
-    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full mx-auto">
-      <h2 className="text-xl font-bold mb-4">Manage Categories</h2>
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <h2 className="text-white text-xl font-bold mb-4">Manage Categories</h2>
       
       <ul className="space-y-2">
   {categories.map((cat) => (

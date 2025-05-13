@@ -129,7 +129,11 @@ function App() {
           </div>
         )}    
     <div>      
-      <div className="p-12 space-y-4">
+      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-zinc-800 to-black"></div>
+
+
+
+      <div className="relative z-10 p-12 space-y-4">
         <div className="flex justify-end text-gray-200 mb-4">
           <button onClick={() => setIsProfileOpen(true)} className="absolute top-4 right-4">
             <UserCircleIcon className="h-6 w-6 text-white" />
@@ -158,14 +162,14 @@ function App() {
           <div className="lg:col-span-4">
           
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
                 <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
                 <DailyProgressRing
                   targetSets={targetSets}
                   loggedSets={totalLoggedSetsForViewedDay}
                 />
               </div>
-              <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
                 <h2 className="text-white text-xl font-bold">Total Volume</h2>
                 <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
                 <VolumeChart logs={exerciseLogs} />
