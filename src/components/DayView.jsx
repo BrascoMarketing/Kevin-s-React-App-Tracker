@@ -16,11 +16,20 @@ function getCategoryForDate(date) {
   return savedSchedule[dayName] || "Rest";
 }
 
-export default function DayView({ library, viewedDate, setViewedDate, setExerciseLogs }) {
+export default function DayView({
+  exercises,
+  categoryOrder,
+  viewedDate,
+  setViewedDate,
+  setExerciseLogs
+}) {
   const [exerciseStates, setExerciseStates] = useState({});
 
-  const viewedCategory = getCategoryForDate(viewedDate);  // Get the active category first
-  const exercisesForToday = library.filter((ex) => ex.type.includes(viewedCategory));  // Filter exercises for that category
+  const viewedCategory = getCategoryForDate(viewedDate);
+  const exerciseIdsForToday = categoryOrder[viewedCategory] || [];
+  const exercisesForToday = exerciseIdsForToday
+  .map((id) => exercises[id])
+  .filter(Boolean); // Filter out any missing exercises
 
   useEffect(() => {
     const savedLogs = loadExerciseLogs();
@@ -231,6 +240,7 @@ export default function DayView({ library, viewedDate, setViewedDate, setExercis
     </div>
   );
 }
+
 
 function SetLogger({ onAddSet, useBodyweight, userBodyWeight }) {
   const [reps, setReps] = useState("");

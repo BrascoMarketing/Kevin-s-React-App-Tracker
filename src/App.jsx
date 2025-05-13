@@ -11,40 +11,63 @@ import UserProfileModal from "./components/UserProfileModal";
 import CategoryManager from "./components/CategoryManager";
 import WeeklyScheduleBuilder from "./components/WeeklyScheduleBuilder";
 
+
 function App() {
-  const [weeklySchedule] = useState(() => {
+  const [weeklySchedule, setWeeklySchedule] = useState(() => {
   const saved = localStorage.getItem("weeklySchedule");
-  return saved
-    ? JSON.parse(saved)
-    : {
-        Sunday: "Rest",
-        Monday: "Rest",
-        Tuesday: "Rest",
-        Wednesday: "Rest",
-        Thursday: "Rest",
-        Friday: "Rest",
-        Saturday: "Rest",
-      };
+  return saved ? JSON.parse(saved) : {
+    Sunday: "Rest",
+    Monday: "Rest",
+    Tuesday: "Rest",
+    Wednesday: "Rest",
+    Thursday: "Rest",
+    Friday: "Rest",
+    Saturday: "Rest",
+  };
 });
-  const [exerciseLibrary, setExerciseLibrary] = useState(() => {
-  const saved = localStorage.getItem("exerciseLibrary");
-    return saved ? JSON.parse(saved) : [];
-  });
-  useEffect(() => {
-    localStorage.setItem("exerciseLibrary", JSON.stringify(exerciseLibrary));
-  }, [exerciseLibrary]);
+
+  
   const [exerciseLogs, setExerciseLogs] = useState(loadExerciseLogs());
   const [viewedDate, setViewedDate] = useState(new Date());
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [notification, setNotification] = useState("");
   const [exerciseCategories, setExerciseCategories] = useState([]);
   const viewedKey = viewedDate.toDateString();
+  
+  
+  const [exercises, setExercises] = useState(() => {
+  const saved = localStorage.getItem("exercises");
+    return saved ? JSON.parse(saved) : {};
+  });
+
+  const [categoryOrder, setCategoryOrder] = useState(() => {
+  const saved = localStorage.getItem("categoryOrder");
+    return saved ? JSON.parse(saved) : { Rest: [], Push: [], Pull: [], Legs: [], Freestyle: [] };
+  });  
+
+  
+
+  useEffect(() => {
+    localStorage.setItem("exercises", JSON.stringify(exercises));
+  }, [exercises]);
 
   useEffect(() => {
     if (exerciseCategories.length > 0) {
       localStorage.setItem("exerciseCategories", JSON.stringify(exerciseCategories));
     }
   }, [exerciseCategories]);
+
+  useEffect(() => {
+    localStorage.setItem("categoryOrder", JSON.stringify(categoryOrder));
+  }, [categoryOrder]);
+
+  useEffect(() => {
+    console.log("Loaded categoryOrder:", categoryOrder);
+  }, [categoryOrder]);
+
+  useEffect(() => {
+      console.log("Loaded exercises:", exercises);
+    }, [exercises]);
 
   const viewedLogs = exerciseLogs.filter(log =>
     new Date(log.date).toDateString() === viewedKey
@@ -55,9 +78,9 @@ function App() {
   const viewedDayName = viewedDate.toLocaleDateString("en-US", { weekday: "long" });
   const viewedCategory = weeklySchedule[viewedDayName];
 
-  const todayExerciseObjects = exerciseLibrary.filter(
-    (ex) => ex.type.includes(viewedCategory)
-  );
+  const todayExerciseObjects = (categoryOrder[viewedCategory] || [])
+  .map((id) => exercises[id])
+  .filter((ex) => ex); // Filter out any undefined (safety)
   const targetSets = todayExerciseObjects.reduce(
     (sum, ex) => sum + (ex.targetSets || 3),
     0
@@ -106,7 +129,11 @@ function App() {
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-4">
           
           <div className="lg:col-span-2 space-y-4">
-            <DayView library={exerciseLibrary} viewedDate={viewedDate} setViewedDate={setViewedDate} setExerciseLogs={setExerciseLogs} weeklySchedule={weeklySchedule} />
+            <DayView exercises={exercises}
+              categoryOrder={categoryOrder} // <- this must exist
+              viewedDate={viewedDate}
+              setViewedDate={setViewedDate}
+              setExerciseLogs={setExerciseLogs} />
           </div>
 
           <div className="lg:col-span-4">
@@ -141,7 +168,15 @@ function App() {
         
         {/* Second Row */}
         <div className="pt-4 space-y-4">
-          <ExerciseLibraryColumns library={exerciseLibrary} setLibrary={setExerciseLibrary} />
+          <ExerciseLibraryColumns
+            exercises={exercises}
+            setExercises={setExercises}
+            categoryOrder={categoryOrder}
+            setCategoryOrder={setCategoryOrder}
+            setNotification={setNotification}
+            exerciseCategories={exerciseCategories}
+          />
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -154,16 +189,18 @@ function App() {
           </div>
           <div className="">
             <WeeklyScheduleBuilder
-              categories={exerciseCategories}
-              setNotification={setNotification}
+              exerciseCategories={exerciseCategories}
+              setWeeklySchedule={setWeeklySchedule}
             />
           </div>
           <div className="">
               <ExerciseFormPanel
-                library={exerciseLibrary}
-                setLibrary={setExerciseLibrary}
-                setNotification={setNotification}
-                exerciseCategories={exerciseCategories} 
+                exercises={exercises}
+                setExercises={setExercises}
+                categoryOrder={categoryOrder}
+                setCategoryOrder={setCategoryOrder}
+                exerciseCategories={exerciseCategories}
+                setNotification={setNotification} 
               />
             </div>
         </div>

@@ -2,6 +2,11 @@
 
 ## To-Do List
 
+### 1. Default/Uncategorized Exercise
+
+- Add fallback category, that exercises are added to if main toggles are disabled.
+- Troubleshoot reordering
+
 ### 1. Live Progress Ring Update Improvements
 
 - Enable _real-time_ ProgressRing updates when sets are logged (not just when exercises are marked complete).

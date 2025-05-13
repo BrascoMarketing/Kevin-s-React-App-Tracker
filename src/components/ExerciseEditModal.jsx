@@ -1,31 +1,62 @@
 import React, { useState, useEffect } from "react";
-import CategorySwitch from './CategorySwitch';
+import CategorySwitch from "./CategorySwitch";
 
 export default function ExerciseEditModal({
   exercise,
   onClose,
-  onSave,
+  setExercises,
+  setCategoryOrder,
+  exerciseCategories,
 }) {
   const [name, setName] = useState(exercise.name);
   const [targetSets, setTargetSets] = useState(exercise.targetSets || 3);
   const [types, setTypes] = useState(exercise.type || []);
   const [useBodyweight, setUseBodyweight] = useState(exercise.useBodyweight || false);
-  const [availableCategories, setAvailableCategories] = useState([]);
 
-  // Load categories from LocalStorage on mount
+  // Sync categories on mount (if editing an old exercise with no category set)
   useEffect(() => {
-    const savedCategories = JSON.parse(localStorage.getItem("exerciseCategories")) || [];
-    setAvailableCategories(savedCategories);
-  }, []);
+  if (exerciseCategories.length > 0 && types.length === 0) {
+      setTypes(exerciseCategories.map((cat) => cat.name));
+    }
+  }, [exerciseCategories, types]);
 
   const handleSave = () => {
-    onSave({
+    const updated = {
       ...exercise,
       name,
       targetSets,
       type: types,
       useBodyweight,
+    };
+
+    // Update exercises map
+    setExercises((prev) => ({
+      ...prev,
+      [exercise.id]: updated,
+    }));
+
+    // Update categoryOrder: remove ID from removed categories, add to new ones
+    setCategoryOrder((prevOrder) => {
+      const updatedOrder = { ...prevOrder };
+
+      // Remove from all existing categories
+      for (const category in updatedOrder) {
+        updatedOrder[category] = updatedOrder[category].filter((id) => id !== exercise.id);
+      }
+
+      // Add back to the selected ones
+      types.forEach((cat) => {
+        if (!updatedOrder[cat]) {
+          updatedOrder[cat] = [];
+        }
+        if (!updatedOrder[cat].includes(exercise.id)) {
+          updatedOrder[cat].push(exercise.id);
+        }
+      });
+
+      return updatedOrder;
     });
+
     onClose();
   };
 
@@ -52,19 +83,21 @@ export default function ExerciseEditModal({
         />
 
         <div className="space-y-2">
-          {availableCategories.map((cat) => (
-            <CategorySwitch
-              key={cat.id}
-              label={cat.name}
-              isChecked={types.includes(cat.name)}
-              onChange={(isChecked) => {
-                if (isChecked) {
-                  setTypes([...types, cat.name]);
-                } else {
-                  setTypes(types.filter((t) => t !== cat.name));
-                }
-              }}
-            />
+          {exerciseCategories.map((cat) => (
+            <label key={cat.id} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={types.includes(cat.name)}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    setTypes([...types, cat.name]);
+                  } else {
+                    setTypes(types.filter((t) => t !== cat.name));
+                  }
+                }}
+              />
+              <span>{cat.name}</span>
+            </label>
           ))}
         </div>
 

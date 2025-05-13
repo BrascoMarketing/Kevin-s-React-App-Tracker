@@ -1,34 +1,60 @@
 import { useState } from "react";
-import { saveLastUsedType, loadLastUsedType } from "../utils/storage";
 import CategorySwitch from './CategorySwitch';
 
-export default function ExerciseFormPanel({ library, setLibrary, setNotification, exerciseCategories }) {
+export default function ExerciseFormPanel({
+  setExercises,
+  setCategoryOrder,
+  exerciseCategories,
+  setNotification
+}) {
   const [name, setName] = useState("");
-  const [types, setTypes] = useState(loadLastUsedType());
+  const [types, setTypes] = useState([]);
   const [targetSetsInput, setTargetSetsInput] = useState(3);
   const [useBodyweight, setUseBodyweight] = useState(false);
   
   const handleAddExercise = (e) => {
-    e.preventDefault();
-    if (!name.trim() || types.length === 0) return;
+  e.preventDefault();
+  if (!name.trim() || types.length === 0) return;
 
-    const newExercise = {
-      id: crypto.randomUUID(),
-      name: name.trim(),
-      type: types,
-      targetSets: targetSetsInput || 3,
-      useBodyweight,
-      history: [],
-    };
-
-    setLibrary([...library, newExercise]);
-    setName("");
-    saveLastUsedType(types);
-    setTypes(types);
-    
-    setNotification(`${name.trim()} added successfully!`);
-    setTimeout(() => setNotification(""), 3000);
+  const newExerciseId = crypto.randomUUID();
+  const newExercise = {
+    id: newExerciseId,
+    name: name.trim(),
+    type: types,
+    targetSets: targetSetsInput || 3,
+    useBodyweight,
   };
+
+  // Update exercises
+  setExercises((prev) => ({
+    ...prev,
+    [newExerciseId]: newExercise,
+  }));
+
+  // Update categoryOrder
+  setCategoryOrder((prevOrder) => {
+    const updatedOrder = { ...prevOrder };
+    types.forEach((cat) => {
+      if (!updatedOrder[cat]) {
+        updatedOrder[cat] = [];
+      }
+      // Prevent duplicate IDs in the order list
+      if (!updatedOrder[cat].includes(newExerciseId)) {
+        updatedOrder[cat].push(newExerciseId);
+      }
+    });
+    return updatedOrder;
+  });
+
+  setName("");
+  setTypes([]);
+  setUseBodyweight(false);
+  setTargetSetsInput(3);
+
+  setNotification(`${newExercise.name} added successfully!`);
+  setTimeout(() => setNotification(""), 3000);
+};
+
 
   return (
     <div className="bg-zinc-900 text-white rounded-xl p-4 w-full mx-auto mb-8">
