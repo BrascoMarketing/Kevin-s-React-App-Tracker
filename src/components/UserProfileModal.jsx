@@ -1,11 +1,12 @@
 import { useState } from "react";
- import { XCircleIcon } from '@heroicons/react/24/outline';
+import { XCircleIcon } from '@heroicons/react/24/outline';
 
-export default function UserProfileModal({ userBodyWeight, setUserBodyWeight, onClose, setNotification }) {
-  const [inputWeight, setInputWeight] = useState(userBodyWeight);
+export default function UserProfileModal({ onClose, setNotification }) {
+   const [inputWeight, setInputWeight] = useState(() => {
+    return localStorage.getItem("userBodyWeight") || "";
+  });  
 
   const handleSave = () => {
-    setUserBodyWeight(inputWeight);
     localStorage.setItem("userBodyWeight", inputWeight);
     setNotification("Profile updated successfully!");
     setTimeout(() => setNotification(""), 3000);
