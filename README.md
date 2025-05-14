@@ -82,6 +82,3 @@ A component displaying every day of the week, allowing the user to assign what c
 
 ## Screenshot
 ![screenshot](https://github.com/user-attachments/assets/6495b9ea-f188-4ef1-abf9-3b38f52e39f0)
-
-
-![Fitness Tracker Screenshot](..\src\assets\screenshot.jpg "Fitness Tracker Screenshot")
