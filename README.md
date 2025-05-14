@@ -79,3 +79,7 @@ A component displaying every day of the week, allowing the user to assign what c
 - AI Integration
 - Scalable Data Management
 - App store versions
+
+## Screenshot
+
+![Fitness Tracker Screenshot](src\assets\screenshot.jpg "Fitness Tracker Screenshot")
