@@ -4,7 +4,7 @@ A simple, fully offline fitness tracker built with React and Tailwind CSS.
 Log exercises, track progress by day, and build your exercise library — all stored in your browser's LocalStorage.
 
 ## DEMO
-[Demo](https://reactjs.org/](https://brascomarketing.github.io/Kevin-s-React-App-Tracker/)
+[Demo](https://brascomarketing.github.io/Kevin-s-React-App-Tracker/)
 
 ## Features
 
