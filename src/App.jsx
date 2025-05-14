@@ -45,7 +45,7 @@ function App() {
   if (saved) {
     const parsed = JSON.parse(saved);
 
-    // ✅ Ensure "Unassigned" exists if not present
+    // Ensure "Unassigned" exists if not present
     if (!parsed.Unassigned) {
       parsed.Unassigned = [];
     }
@@ -53,7 +53,7 @@ function App() {
     return parsed;
   }
 
-  // ✅ Default structure with "Unassigned" included
+  // Default structure with "Unassigned" included
   return {
     Unassigned: [],
     Rest: [],
@@ -63,7 +63,6 @@ function App() {
     Freestyle: [],
   };
 }); 
-
   
 
   useEffect(() => {
@@ -131,8 +130,6 @@ function App() {
     <div>      
       <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-zinc-800 to-black"></div>
 
-
-
       <div className="relative z-10 p-12 space-y-4">
         <div className="flex justify-end text-gray-200 mb-4">
           <button onClick={() => setIsProfileOpen(true)} className="absolute top-4 right-4">
@@ -160,7 +157,7 @@ function App() {
           </div>
 
           <div className="lg:col-span-4">
-          
+            
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
                 <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
