@@ -7,11 +7,16 @@
 - Enable _real-time_ ProgressRing updates when sets are logged (not just when exercises are marked complete).
 - Ensure updates occur without requiring a page refresh (reference newly created exercises).
 
-### 2. Exercise Stats
+### 2. Exercise Stats / Weekly Summary on Rest Day
 
 - Display history log and stats by exercise (chart)
 
-### 3. Reorganize Management Tools into Dedicated Settings View
+### 3. Onboarding Screen
+
+- Option to upload saved json file
+- Offer a startup file prepopulated with exercises
+
+### 4. Reorganize Management Tools into Dedicated Settings View
 
 - Move the following into a single "Settings" or "Management" section:
 
@@ -31,4 +36,4 @@
 
 ---
 
-_Logged on: \[20250513 14:11]_
+_Logged on: \[20250513 20:18]_
