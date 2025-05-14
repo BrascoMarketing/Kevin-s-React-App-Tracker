@@ -128,9 +128,9 @@ const handleDeleteExercise = (id) => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className="p-2 border border-gray-700 rounded bg-zinc-800 shadow hover:bg-gray-700 transition-colors w-full"
+                          className="flex p-2 border border-gray-700 rounded bg-zinc-800 shadow hover:bg-gray-700 transition-colors w-full"
                         >
-                          {exerciseContent}
+                          <span className="text-white mr-2">⋮⋮ </span> {exerciseContent}
                         </li>
                       )}
                     </Draggable>
