@@ -95,3 +95,7 @@ button.completion {
 label.target-label {
     margin-top: 18px !important;
 }
+.draggable {
+  top: auto !important;
+  left: auto !important;
+}
