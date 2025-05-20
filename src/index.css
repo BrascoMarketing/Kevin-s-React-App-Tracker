@@ -107,8 +107,7 @@ label.target-label {
     overflow-y: auto;   
 }
 .exercises-wrapper.active .scroll-window {
-    padding-right: 1rem;  
-    padding-top: 1.5rem;      
+    padding-right: 1rem;      
 }
 
 /* Hide Certain Elements on Completed Exercises */
@@ -116,4 +115,9 @@ label.target-label {
 .completed-exercise .last-logged,
 .completed-exercise ul.sets-done {
     display: none;
+}
+.exercises-wrapper.showsetsYes .completed-exercise p.target-sets,
+.exercises-wrapper.showsetsYes .completed-exercise .last-logged,
+.exercises-wrapper.showsetsYes .completed-exercise ul.sets-done {
+    display: block;
 }
