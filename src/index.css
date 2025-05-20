@@ -99,3 +99,13 @@ label.target-label {
   top: auto !important;
   left: auto !important;
 }
+
+/* CSS to Make DayView Exercises Scrollable */
+.exercises-wrapper {
+    position: relative;
+    height: calc(70vh - 3rem); 
+    overflow-y: auto;   
+}
+.exercises-wrapper .scroll-window {
+    padding-right: 1rem;        
+}
