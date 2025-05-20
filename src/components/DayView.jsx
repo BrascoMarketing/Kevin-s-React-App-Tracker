@@ -65,12 +65,17 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
       const lastLog = getLastLogForExercise(ex.id);
 
       return (
-        <div key={ex.id} className="text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800">
+        <div
+          key={ex.id}
+          className={`text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800 ${
+            currentState.completed ? 'completed-exercise' : ''
+          }`}
+        >
           <h3 className="font-semibold mb-2">{ex.name}</h3>
-          <p className="text-sm text-gray-400 mb-2">Target Sets: {ex.targetSets || 3}</p>
+          <p className="text-sm text-gray-400 mb-2 target-sets">Target Sets: {ex.targetSets || 3}</p>
 
           {lastLog && lastLog.sets.length > 0 && (
-            <div className="text-sm text-gray-400 mb-2">
+            <div className="text-sm text-gray-400 mb-2 last-logged">
               <strong>Last Logged:</strong>{" "}
               {lastLog.sets.map((set, i) => (
                 <span key={i}>
@@ -91,7 +96,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
             />
           )}
 
-          <ul className="list-disc list-inside mb-2">
+          <ul className="list-disc list-inside mb-2 sets-done">
             {currentState.sets.map((set, i) => (
               <li key={i} className="flex items-center space-x-2 mb-1">
                 <span>

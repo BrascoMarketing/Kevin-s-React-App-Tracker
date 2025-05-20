@@ -109,3 +109,10 @@ label.target-label {
 .exercises-wrapper .scroll-window {
     padding-right: 1rem;        
 }
+
+/* Hide Certain Elements on Completed Exercises */
+.completed-exercise p.target-sets,
+.completed-exercise .last-logged,
+.completed-exercise ul.sets-done {
+    display: none;
+}
