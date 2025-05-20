@@ -184,7 +184,7 @@ const [renameTargetId, setRenameTargetId] = useState(null);
 </ul>
 <div className="flex space-x-2 mt-6">
         <input
-          className="flex-1 bg-zinc-800 text-white border border-gray-600 p-1 rounded"
+          className="flex-1 bg-zinc-800 text-white border border-gray-600 p-2 rounded"
           type="text"
           placeholder="New Category Name"
           value={newCategoryName}

@@ -90,15 +90,15 @@ const handleDeleteExercise = (id) => {
       )}
 
       <DragDropContext onDragEnd={handleDragEnd}>
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
     {Object.keys(categoryOrder)
       .filter((category) => category !== "Rest")
       .map((category) => (
-        <div key={category} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+        <div key={category} className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
           <h3 className="text-white text-lg font-bold mb-2">{category}</h3>
           <Droppable droppableId={category}>
             {(provided) => (
-              <ul className="space-y-2" {...provided.droppableProps} ref={provided.innerRef}>
+              <ul className="relative space-y-2" {...provided.droppableProps} ref={provided.innerRef}>
                 {(categoryOrder[category] || []).map((id, index) => {
                   const ex = exercises[id];
                   if (!ex) return null;
