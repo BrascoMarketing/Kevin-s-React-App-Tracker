@@ -2,6 +2,97 @@ import { loadExerciseLogs } from "../utils/storage";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, CalendarDaysIcon, PlusIcon, TrashIcon, ArrowUturnLeftIcon, CheckBadgeIcon, ArrowsPointingOutIcon, ArrowsPointingInIcon, EyeIcon, EyeSlashIcon } from "@heroicons/react/24/solid";
+import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+
+// Register Chart.js components
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+// Process logs to get volume data for charting
+function getVolumeDataForExercise(exerciseId, savedLogs) {
+  const volumeByDate = {};
+
+  // Filter logs for the specific exercise
+  const exerciseLogs = savedLogs.filter((log) => log.exerciseId === exerciseId);
+
+  // Calculate total volume (sum of reps * weight) per date
+  exerciseLogs.forEach((log) => {
+    const date = new Date(log.date);
+    // Format date as MM-DD-YY
+    const formattedDate = `${date.getMonth() + 1}-${date.getDate()}-${String(date.getFullYear()).slice(-2)}`;
+    const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
+    volumeByDate[formattedDate] = totalVolume;
+  });
+
+  // Sort dates and prepare chart data
+  const sortedDates = Object.keys(volumeByDate).sort((a, b) => new Date(a) - new Date(b));
+  const volumes = sortedDates.map((date) => volumeByDate[date]);
+
+  return {
+    labels: sortedDates,
+    volumes,
+  };
+}
+
+// Line chart component
+function LineChart({ exerciseId, exerciseName, savedLogs }) {
+  const { labels, volumes } = getVolumeDataForExercise(exerciseId, savedLogs);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: `Volume (Reps * Weight)`,
+        data: volumes,
+        borderColor: '#10B981',
+        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+        fill: false,
+        tension: 0.3,
+        pointRadius: 4,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      title: {
+        display: false,
+        text: `${exerciseName} Volume Over Time`,
+        color: '#fff',
+        font: { size: 14 },
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) => `${context.raw} lbs`,
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: { color: '#fff', maxRotation: 0, minRotation: 0 },
+        grid: { display: false },
+      },
+      y: {
+        ticks: { color: '#fff', maxTicksLimit: 4, },
+        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+        title: {
+          display: true,
+          text: 'Volume (lbs)',
+          color: '#fff',
+        },
+      },
+    },
+  };
+
+  return (
+    <div className="chart-holder h-32 mb-4">
+      <Line data={data} options={options} />
+    </div>
+  );
+}
 
 // Generate unique key for each exercise on a specific day
 function getExerciseDayKey(exerciseId, date) {
@@ -18,12 +109,11 @@ function getCategoryForDate(date) {
 
 export default function DayView({ exercises, categoryOrder, viewedDate, setViewedDate, setExerciseLogs }) {
   const [exerciseStates, setExerciseStates] = useState({});
-
   const viewedCategory = getCategoryForDate(viewedDate);
   const exerciseIdsForToday = categoryOrder[viewedCategory] || [];
   const exercisesForToday = exerciseIdsForToday.map((id) => exercises[id]).filter(Boolean);
-
   const savedLogs = loadExerciseLogs();
+
   const getLastLogForExercise = (exerciseId) => {
     const logs = savedLogs.filter((log) => log.exerciseId === exerciseId).sort((a, b) => b.date - a.date);
     return logs[0] || null;
@@ -61,7 +151,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
   return (
     <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
       <button className="text-white absolute right-4" onClick={toggleClass}>
-        {!isToggled ? <ArrowsPointingOutIcon className="h-4 w-4" /> : <ArrowsPointingInIcon className="h-4 w-4" />}        
+        {!isToggled ? <ArrowsPointingOutIcon className="h-4 w-4" /> : <ArrowsPointingInIcon className="h-4 w-4" />}
       </button>
       
       <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
@@ -70,131 +160,132 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
 
       <div className="flex justify-end mb-2">
         <button className="text-white" onClick={toggleShowSets}>
-          {!isShowSets ? <div className="flex items-center"><EyeIcon className="h-4 w-4 mr-2" />Show Sets</div> : <div className="flex items-center"><EyeSlashIcon className="h-4 w-4 mr-2" />Hide Sets</div>}        
+          {!isShowSets ? <div className="flex items-center"><EyeIcon className="h-4 w-4 mr-2" />Show Sets</div> : <div className="flex items-center"><EyeSlashIcon className="h-4 w-4 mr-2" />Hide Sets</div>}
         </button>
       </div>
 
       {exercisesForToday.length === 0 ? (
-  <p>No exercises assigned for today.</p>
-) : (
-  <div className={`${!isToggled ? 'exercises-wrapper active' : 'exercises-wrapper' }  ${!isShowSets ? 'showsetsNo' : 'showsetsYes' }`}>
-    
-      <div className="scroll-window">
-          
-    {exercisesForToday.map((ex) => {
-      const stateKey = getExerciseDayKey(ex.id, viewedDate);
-      const currentState = exerciseStates[stateKey] || { sets: [], completed: false };
-      const lastLog = getLastLogForExercise(ex.id);
+        <p>No exercises assigned for today.</p>
+      ) : (
+        <div className={`${!isToggled ? 'exercises-wrapper active' : 'exercises-wrapper'} ${!isShowSets ? 'showsetsNo' : 'showsetsYes'}`}>
+          <div className="scroll-window">
+            {exercisesForToday.map((ex) => {
+              const stateKey = getExerciseDayKey(ex.id, viewedDate);
+              const currentState = exerciseStates[stateKey] || { sets: [], completed: false };
+              const lastLog = getLastLogForExercise(ex.id);
 
-      return (
-        <div
-          key={ex.id}
-          className={`text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800 ${
-            currentState.completed ? 'completed-exercise' : ''
-          }`}
-        >
-          <h3 className="font-semibold mb-2">{ex.name}</h3>
-          <p className="text-sm text-gray-400 mb-2 target-sets">Target Sets: {ex.targetSets || 3}</p>
-
-          {lastLog && lastLog.sets.length > 0 && (
-            <div className="text-sm text-gray-400 mb-2 last-logged">
-              <strong>Last Logged:</strong>{" "}
-              {lastLog.sets.map((set, i) => (
-                <span key={i}>
-                  {set.reps} reps @ {set.weight} lbs{i < lastLog.sets.length - 1 ? ", " : ""}
-                </span>
-              ))}
-            </div>
-          )}
-
-          {!currentState.completed && (
-            <SetLogger
-              onAddSet={(reps, weight) => {
-                const updatedSets = [...currentState.sets, { reps, weight }];
-                setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, sets: updatedSets } });
-              }}
-              useBodyweight={ex.useBodyweight}
-              userBodyWeight={parseFloat(localStorage.getItem("userBodyWeight") || 0)}
-            />
-          )}
-
-          <ul className="list-disc list-inside mb-2 sets-done">
-            {currentState.sets.map((set, i) => (
-              <li key={i} className="flex items-center space-x-2 mb-1">
-                <span>
-                  {set.reps} reps @ {set.weight} lbs
-                </span>
-                <button
-                  onClick={() => {
-                    const updatedSets = currentState.sets.filter((_, index) => index !== i);
-                    setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, sets: updatedSets } });
-                  }}
-                  className="text-red-400 hover:underline"
+              return (
+                <div
+                  key={ex.id}
+                  className={`text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800 ${
+                    currentState.completed ? 'completed-exercise' : ''
+                  }`}
                 >
-                  <TrashIcon className="h-4 w-4" />
-                </button>
-              </li>
-            ))}
-          </ul>
+                  <h3 className="font-semibold mb-2 text-xl">{ex.name}</h3>
+                  <p className="text-sm text-gray-400 mb-2 target-sets">Target Sets: {ex.targetSets || 3}</p>                
+                  <LineChart exerciseId={ex.id} exerciseName={ex.name} savedLogs={savedLogs} />
+                  
 
-          {!currentState.completed ? (
-            <button
-              onClick={() => {
-                const newCompleted = !currentState.completed;
-                setExerciseStates({
-                  ...exerciseStates,
-                  [stateKey]: { ...currentState, completed: newCompleted, completedDate: Date.now() },
-                });
+                  {lastLog && lastLog.sets.length > 0 && (
+                    <div className="text-sm text-gray-400 mb-4 last-logged">
+                      <strong>Last Logged:</strong>{" "}
+                      {lastLog.sets.map((set, i) => (
+                        <span key={i}>
+                          {set.reps} reps @ {set.weight} lbs{i < lastLog.sets.length - 1 ? ", " : ""}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
-                if (newCompleted) {
-                  const updatedLogs = loadExerciseLogs().filter(
-                    (log) =>
-                      !(log.exerciseId === ex.id && new Date(log.date).toDateString() === viewedDate.toDateString())
-                  );
-                  const logEntry = {
-                    id: uuidv4(),
-                    exerciseId: ex.id,
-                    name: ex.name,
-                    type: viewedCategory,
-                    date: viewedDate.getTime(),
-                    sets: currentState.sets,
-                    completed: newCompleted,
-                    completedDate: Date.now(),
-                  };
-                  updatedLogs.push(logEntry);
-                  localStorage.setItem("exerciseLogs", JSON.stringify(updatedLogs));
-                  setExerciseLogs(updatedLogs);
-                }
-              }}
-              className="completion bg-green-600 text-white px-2 py-1 rounded"
-            >
-              Mark as Done
-            </button>
-          ) : (
-            <div className="flex items-center space-x-2">
-              <p className="flex items-center text-green-400">
-                <CheckBadgeIcon className="h-4 w-4 mr-1" /> Completed on{" "}
-                {new Date(currentState.completedDate).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
-              <button
-                onClick={() => {
-                  setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, completed: false } });
-                }}
-                className="text-yellow-400 hover:underline"
-              >
-                <ArrowUturnLeftIcon className="h-4 w-4" />
-              </button>
-            </div>
-          )}
+                  {!currentState.completed && (
+                    <SetLogger
+                      onAddSet={(reps, weight) => {
+                        const updatedSets = [...currentState.sets, { reps, weight }];
+                        setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, sets: updatedSets } });
+                      }}
+                      useBodyweight={ex.useBodyweight}
+                      userBodyWeight={parseFloat(localStorage.getItem("userBodyWeight") || 0)}
+                    />
+                  )}
+
+                  <ul className="list-disc list-inside mb-2 sets-done">
+                    {currentState.sets.map((set, i) => (
+                      <li key={i} className="flex items-center space-x-2 mb-1">
+                        <span>
+                          {set.reps} reps @ {set.weight} lbs
+                        </span>
+                        <button
+                          onClick={() => {
+                            const updatedSets = currentState.sets.filter((_, index) => index !== i);
+                            setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, sets: updatedSets } });
+                          }}
+                          className="text-red-400 hover:underline"
+                        >
+                          <TrashIcon className="h-4 w-4" />
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {!currentState.completed ? (
+                    <button
+                      onClick={() => {
+                        const newCompleted = !currentState.completed;
+                        setExerciseStates({
+                          ...exerciseStates,
+                          [stateKey]: { ...currentState, completed: newCompleted, completedDate: Date.now() },
+                        });
+
+                        if (newCompleted) {
+                          const updatedLogs = loadExerciseLogs().filter(
+                            (log) =>
+                              !(log.exerciseId === ex.id && new Date(log.date).toDateString() === viewedDate.toDateString())
+                          );
+                          const logEntry = {
+                            id: uuidv4(),
+                            exerciseId: ex.id,
+                            name: ex.name,
+                            type: viewedCategory,
+                            date: viewedDate.getTime(),
+                            sets: currentState.sets,
+                            completed: newCompleted,
+                            completedDate: Date.now(),
+                          };
+                          updatedLogs.push(logEntry);
+                          localStorage.setItem("exerciseLogs", JSON.stringify(updatedLogs));
+                          setExerciseLogs(updatedLogs);
+                        }
+                      }}
+                      className="completion bg-green-600 text-white px-2 py-1 rounded"
+                    >
+                      Mark as Done
+                    </button>
+                  ) : (
+                    <div className="flex items-center space-x-2">
+                      <p className="flex items-center text-green-400">
+                        <CheckBadgeIcon className="h-4 w-4 mr-1" /> Completed on{" "}
+                        {new Date(currentState.completedDate).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </p>
+                      <button
+                        onClick={() => {
+                          setExerciseStates({ ...exerciseStates, [stateKey]: { ...currentState, completed: false } });
+                        }}
+                        className="text-yellow-400 hover:underline"
+                      >
+                        <ArrowUturnLeftIcon className="h-4 w-4" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      );
-    })}
-  </div></div>
-)}
+      )}
     </div>
   );
 }

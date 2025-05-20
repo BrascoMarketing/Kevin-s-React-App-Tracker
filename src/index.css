@@ -113,11 +113,13 @@ label.target-label {
 /* Hide Certain Elements on Completed Exercises */
 .completed-exercise p.target-sets,
 .completed-exercise .last-logged,
+.completed-exercise .chart-holder,
 .completed-exercise ul.sets-done {
     display: none;
 }
 .exercises-wrapper.showsetsYes .completed-exercise p.target-sets,
 .exercises-wrapper.showsetsYes .completed-exercise .last-logged,
+.exercises-wrapper.showsetsYes .completed-exercise .chart-holder,
 .exercises-wrapper.showsetsYes .completed-exercise ul.sets-done {
     display: block;
 }
