@@ -84,9 +84,7 @@ A component displaying every day of the week, allowing the user to assign what c
 - App store versions
 
 ## Screenshot
-![screenshot](https://github.com/user-attachments/assets/6495b9ea-f188-4ef1-abf9-3b38f52e39f0)
+![dashboard_snap](https://github.com/user-attachments/assets/fc36f21e-5a2f-40f1-941b-5c8b9de570a2)
 
-
-![screenshot2](https://github.com/user-attachments/assets/17ac12e6-371d-4b04-9898-d25bf36c0567)
 
 
