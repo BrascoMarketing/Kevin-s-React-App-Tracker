@@ -1,7 +1,7 @@
 import { loadExerciseLogs } from "../utils/storage";
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, CalendarDaysIcon, PlusIcon, TrashIcon, ArrowUturnLeftIcon, CheckBadgeIcon } from "@heroicons/react/24/solid";
+import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon, CalendarDaysIcon, PlusIcon, TrashIcon, ArrowUturnLeftIcon, CheckBadgeIcon, ArrowsPointingOutIcon, ArrowsPointingInIcon } from "@heroicons/react/24/solid";
 
 // Generate unique key for each exercise on a specific day
 function getExerciseDayKey(exerciseId, date) {
@@ -29,6 +29,12 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
     return logs[0] || null;
   };
 
+  const [isToggled, setIsToggled] = useState(false);
+
+  const toggleClass = () => {
+    setIsToggled(!isToggled);
+  };
+
   useEffect(() => {
     const initialStates = {};
     savedLogs.forEach((log) => {
@@ -50,6 +56,10 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
 
   return (
     <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <button className="text-white absolute right-4" onClick={toggleClass}>
+        {!isToggled ? <ArrowsPointingOutIcon className="h-4 w-4" /> : <ArrowsPointingInIcon className="h-4 w-4" />}
+        
+      </button>
       <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
       <h2 className="text-white text-xl font-bold mb-4">Workout: {viewedCategory}</h2>
       <p className="text-white mb-4">{viewedDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
@@ -57,8 +67,10 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
       {exercisesForToday.length === 0 ? (
   <p>No exercises assigned for today.</p>
 ) : (
-  <div className="exercises-wrapper">
+  <div className={`${!isToggled ? 'exercises-wrapper active' : 'exercises-wrapper' }`}>
+    
       <div className="scroll-window">
+          
     {exercisesForToday.map((ex) => {
       const stateKey = getExerciseDayKey(ex.id, viewedDate);
       const currentState = exerciseStates[stateKey] || { sets: [], completed: false };
