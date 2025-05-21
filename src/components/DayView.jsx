@@ -76,7 +76,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
     plugins: {
       legend: { display: false },
       title: {
-        display: true,
+        display: false,
         text: `${exerciseName} Volume Over Time`,
         color: '#fff',
         font: { size: 14 },
@@ -91,8 +91,8 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
       x: {
         ticks: {
           color: '#fff',
-          maxRotation: 45,
-          minRotation: 45,
+          maxRotation: 0,
+          minRotation: 0,
         },
         grid: { display: false },
       },
@@ -112,7 +112,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
   };
 
   return (
-    <div className="w-64 h-64">
+    <div className="h-50 mb-4">
       <Line data={data} options={options} />
     </div>
   );
@@ -206,7 +206,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                   }`}
                 >
                   <h3 className="font-semibold mb-2 text-xl">{ex.name}</h3>
-                  <p className="text-sm text-gray-400 mb-2 target-sets">Target Sets: {ex.targetSets || 3}</p>                
+                  <p className="text-sm text-gray-400 mb-4 target-sets">Target Sets: {ex.targetSets || 3}</p>                
                   <LineChart exerciseId={ex.id} exerciseName={ex.name} savedLogs={savedLogs} />
                   
 
