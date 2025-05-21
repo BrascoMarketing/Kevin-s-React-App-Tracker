@@ -38,14 +38,31 @@ function getVolumeDataForExercise(exerciseId, savedLogs) {
 function LineChart({ exerciseId, exerciseName, savedLogs }) {
   const { labels, volumes } = getVolumeDataForExercise(exerciseId, savedLogs);
 
+  // Find the type from the most recent log for this exercise
+  const exerciseLog = savedLogs
+    .filter((log) => log.exerciseId === exerciseId)
+    .sort((a, b) => b.date - a.date)[0]; // Get the most recent log
+  const exerciseType = exerciseLog ? exerciseLog.type : "UNKNOWN"; // Fallback if no log exists
+
+  // Map exercise type to a color
+  const typeToColorMap = {
+    Pull: "#10B981", // Green (already used)
+    Push: "#EF4444", // Red
+    Legs: "#3B82F6", // Blue
+    Freestyle: "#F59E0B", // Yellow
+    UNKNOWN: "#6B7280", // Gray (fallback for unknown types)
+  };
+
+  const lineColor = typeToColorMap[exerciseType] || typeToColorMap.UNKNOWN;
+
   const data = {
     labels,
     datasets: [
       {
         label: `Volume (Reps * Weight)`,
         data: volumes,
-        borderColor: '#10B981',
-        backgroundColor: 'rgba(16, 185, 129, 0.2)',
+        borderColor: lineColor, // Use the dynamic color based on type
+        backgroundColor: lineColor.replace(/[^,]+(?=\))/, "0.2"), // Adjust opacity for background
         fill: false,
         tension: 0.3,
         pointRadius: 4,
@@ -59,7 +76,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
     plugins: {
       legend: { display: false },
       title: {
-        display: false,
+        display: true,
         text: `${exerciseName} Volume Over Time`,
         color: '#fff',
         font: { size: 14 },
@@ -72,11 +89,18 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
     },
     scales: {
       x: {
-        ticks: { color: '#fff', maxRotation: 0, minRotation: 0 },
+        ticks: {
+          color: '#fff',
+          maxRotation: 45,
+          minRotation: 45,
+        },
         grid: { display: false },
       },
       y: {
-        ticks: { color: '#fff', maxTicksLimit: 4, },
+        ticks: {
+          color: '#fff',
+          maxTicksLimit: 4,
+        },
         grid: { color: 'rgba(255, 255, 255, 0.1)' },
         title: {
           display: true,
@@ -88,7 +112,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
   };
 
   return (
-    <div className="chart-holder h-32 mb-4">
+    <div className="w-64 h-64">
       <Line data={data} options={options} />
     </div>
   );
