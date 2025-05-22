@@ -287,16 +287,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                   ) : (
                     <div className="flex items-center space-x-2">
                       <p className="flex items-center text-green-400">
-                        <CheckBadgeIcon className="h-4 w-4 mr-1" /> Completed on{" "}
-                        {new Date(currentState.completedDate).toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })} @ {new Date(currentState.completedDate).toLocaleTimeString("en-US", {
-                          hour: "numeric",
-                          minute: "2-digit",
-                          hour12: false,
-                        })}
+                        <CheckBadgeIcon className="h-4 w-4 mr-1" /> Completed
                       </p>
                       <button
                         onClick={() => {
