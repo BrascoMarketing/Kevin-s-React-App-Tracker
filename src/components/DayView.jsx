@@ -184,7 +184,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
 
       <div className="flex justify-end mb-2">
         <button className="text-white" onClick={toggleShowSets}>
-          {!isShowSets ? <div className="flex items-center"><EyeIcon className="h-4 w-4 mr-2" />Show Sets</div> : <div className="flex items-center"><EyeSlashIcon className="h-4 w-4 mr-2" />Hide Sets</div>}
+          {!isShowSets ? <div className="flex items-center"><EyeIcon className="h-4 w-4 mr-2" />Show Stats</div> : <div className="flex items-center"><EyeSlashIcon className="h-4 w-4 mr-2" />Hide Sets</div>}
         </button>
       </div>
 
