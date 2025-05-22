@@ -112,7 +112,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
   };
 
   return (
-    <div className="h-50 mb-4">
+    <div className="chart-holder h-50 mb-4">
       <Line data={data} options={options} />
     </div>
   );
