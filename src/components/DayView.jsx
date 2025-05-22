@@ -215,7 +215,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                       <strong>Last Logged:</strong>{" "}
                       {lastLog.sets.map((set, i) => (
                         <span key={i}>
-                          {set.reps} reps @ {set.weight} lbs{i < lastLog.sets.length - 1 ? ", " : ""}
+                          {set.reps} reps @ {set.weight} lbs{i < lastLog.sets.length - 1 ? " " : ""}
                         </span>
                       ))}
                     </div>

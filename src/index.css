@@ -100,6 +100,11 @@ label.target-label {
   left: auto !important;
 }
 
+.exercises-wrapper .last-logged strong,
+.exercises-wrapper .last-logged span {
+    display: block;
+}
+
 /* CSS to Make DayView Exercises Scrollable */
 .exercises-wrapper.active {
     position: relative;
