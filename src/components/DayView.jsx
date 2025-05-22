@@ -292,6 +292,10 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                           year: "numeric",
                           month: "long",
                           day: "numeric",
+                        })} @ {new Date(currentState.completedDate).toLocaleTimeString("en-US", {
+                          hour: "numeric",
+                          minute: "2-digit",
+                          hour12: false,
                         })}
                       </p>
                       <button
