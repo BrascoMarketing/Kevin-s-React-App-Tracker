@@ -63,7 +63,7 @@ export default function UserProfileModal({ onClose, setNotification }) {
 
   return (
     <div className="modal-backdrop fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-      <div className="relative bg-zinc-900 text-white p-6 rounded-lg space-y-4 w-full max-w-md">    
+      <div className="relative bg-zinc-900 text-white p-6 rounded-lg space-y-4 w-full max-w-3xl">    
 
         <button 
           onClick={onClose} 
@@ -73,42 +73,59 @@ export default function UserProfileModal({ onClose, setNotification }) {
           <XCircleIcon className="h-6 w-6" />
         </button>
 
-        <h2 className="text-xl font-bold mb-2">Your Profile</h2>
+        
         <div>
-          <label className="block mb-1 font-semibold">Body Weight (lbs)</label>
-          <input
-            type="number"
-            value={inputWeight}
-            onChange={(e) => setInputWeight(e.target.value)}
-            className="w-full bg-gray-700 text-white border border-gray-600 rounded p-2"
-          />
-          <div className="flex justify-end space-x-2 mt-2">
-            <button onClick={onClose} className="px-3 py-1 rounded bg-gray-600 hover:bg-gray-500">
-              Cancel
-            </button>
-            <button onClick={handleSave} className="px-3 py-1 rounded bg-green-600 hover:bg-green-500">
-              Save
-            </button>
+
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-20">
+
+          <div className="lg:col-span-1 space-y-4">
+            <h2 className="text-xl font-bold mb-2">Your Profile</h2>
+            <label className="block mb-1 font-semibold">Body Weight (lbs)</label>
+            <input
+              type="number"
+              value={inputWeight}
+              onChange={(e) => setInputWeight(e.target.value)}
+              className="w-full bg-gray-700 text-white border border-gray-600 rounded p-2"
+            />
+            <div className="flex justify-end space-x-2 mt-2">
+              <button onClick={onClose} className="px-3 py-1 rounded bg-gray-600 hover:bg-gray-500">
+                Cancel
+              </button>
+              <button onClick={handleSave} className="px-3 py-1 rounded bg-green-600 hover:bg-green-500">
+                Save
+              </button>
+            </div>
           </div>
+
+
+          <div className="lg:col-span-1 space-y-4">
+            <div>
+              <h2 className="text-xl font-bold mb-2">Data</h2>
+              <h3 className="text-sm font-semibold mb-1 mt-4">Backup Your Data</h3>
+              <button onClick={handleExport} className="w-full bg-blue-600 hover:bg-blue-500 text-white p-2 mt-2 rounded">
+                Download Backup
+              </button>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-semibold mb-1">Restore from Backup</h3>
+              <input
+                type="file"
+                accept=".json"
+                onChange={handleImport}
+                className="w-full bg-gray-700 text-white border border-gray-600 rounded p-2 mt-2"
+              />
+            </div>
+          </div>
+
         </div>
 
-        <div>
-          <h2 className="text-xl font-bold mb-2">Data</h2>
-          <h3 className="text-sm font-semibold mb-1">Backup Your Data</h3>
-          <button onClick={handleExport} className="w-full bg-blue-600 hover:bg-blue-500 text-white p-2 rounded">
-            Download Backup
-          </button>
+
+          
         </div>
 
-        <div>
-          <h3 className="text-sm font-semibold mb-1">Restore from Backup</h3>
-          <input
-            type="file"
-            accept=".json"
-            onChange={handleImport}
-            className="w-full bg-gray-700 text-white border border-gray-600 rounded p-2"
-          />
-        </div>
+        
+
       </div>
     </div>
   );
