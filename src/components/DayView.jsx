@@ -163,14 +163,18 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
   }, [viewedDate]);
 
   if (viewedCategory === "Rest") {
-    return (
-      <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
-        <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
-        <h2 className="text-xl font-bold">Rest Day</h2>
-        <p>Enjoy your recovery!</p>
-      </div>
-    );
-  }
+  return (
+    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
+      <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
+      <h2 className="text-xl font-bold mb-4">Rest Day - Weekly Summary</h2>
+      {savedLogs.length > 0 ? (
+        <WeeklySummary savedLogs={savedLogs} viewedDate={viewedDate} />
+      ) : (
+        <p>No workout data available for this week. Enjoy your rest day!</p>
+      )}
+    </div>
+  );
+}
 
   return (
     <div className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
@@ -345,5 +349,126 @@ function SetLogger({ onAddSet, useBodyweight, userBodyWeight }) {
         <PlusIcon className="h-4 w-4 mr-1" /> Add Set
       </button>
     </form>
+  );
+}
+
+// Calculate weekly volume data for the past week (Monday to Saturday)
+function getWeeklyVolumeData(savedLogs, viewedDate) {
+  const volumeByDate = {};
+
+  // Get the start of the week (Monday) and end (Saturday) relative to the viewedDate (Sunday)
+  const dayOfWeek = viewedDate.getDay();
+  const daysToMonday = (dayOfWeek === 0 ? 6 : dayOfWeek - 1); // If Sunday, go back 6 days to Monday
+  const startOfWeek = new Date(viewedDate);
+  startOfWeek.setDate(viewedDate.getDate() - daysToMonday); // Set to Monday
+
+  // Initialize the 6 days (Monday to Saturday)
+  for (let i = 0; i < 6; i++) {
+    const currentDay = new Date(startOfWeek);
+    currentDay.setDate(startOfWeek.getDate() + i);
+    const formattedDate = `${currentDay.getMonth() + 1}-${currentDay.getDate()}`;
+    volumeByDate[formattedDate] = 0; // Initialize to 0
+  }
+
+  // Filter logs for the past week (Monday to Saturday)
+  const weekStartTimestamp = startOfWeek.getTime();
+  const weekEndTimestamp = new Date(startOfWeek);
+  weekEndTimestamp.setDate(startOfWeek.getDate() + 5); // Saturday
+  const weeklyLogs = savedLogs.filter((log) => {
+    const logDate = new Date(log.date);
+    return logDate >= weekStartTimestamp && logDate <= weekEndTimestamp;
+  });
+
+  // Sum the volume for each day
+  weeklyLogs.forEach((log) => {
+    const date = new Date(log.date);
+    const formattedDate = `${date.getMonth() + 1}-${date.getDate()}`;
+    const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
+    volumeByDate[formattedDate] = (volumeByDate[formattedDate] || 0) + totalVolume;
+  });
+
+  // Prepare chart data
+  const sortedDates = Object.keys(volumeByDate).sort((a, b) => {
+    const [monthA, dayA] = a.split('-').map(Number);
+    const [monthB, dayB] = b.split('-').map(Number);
+    return new Date(startOfWeek.getFullYear(), monthA - 1, dayA) - new Date(startOfWeek.getFullYear(), monthB - 1, dayB);
+  });
+  const volumes = sortedDates.map((date) => volumeByDate[date]);
+
+  return {
+    labels: sortedDates,
+    volumes,
+  };
+}
+
+// Weekly summary chart component
+function WeeklySummary({ savedLogs, viewedDate }) {
+  const { labels, volumes } = getWeeklyVolumeData(savedLogs, viewedDate);
+
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: `Total Volume (Reps * Weight)`,
+        data: volumes,
+        borderColor: "#F59E0B", // Yellow for a neutral, summary vibe
+        backgroundColor: "rgba(245, 158, 11, 0.2)", // Adjust opacity
+        fill: false,
+        tension: 0.3,
+        pointRadius: 4,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      title: {
+        display: false,
+        text: `Weekly Volume (Monday - Saturday)`,
+        color: '#fff',
+        font: { size: 16 },
+      },
+      tooltip: {
+        callbacks: {
+          label: (context) => `${context.raw} lbs`,
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: '#fff',
+          maxRotation: 0,
+          minRotation: 0,
+        },
+        grid: { display: false },
+      },
+      y: {
+        ticks: {
+          color: '#fff',
+          maxTicksLimit: 4,
+        },
+        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+        title: {
+          display: true,
+          text: 'Volume (lbs)',
+          color: '#fff',
+        },
+      },
+    },
+  };
+
+  return (
+    <div className="bg-zinc-800 rounded-lg p-4">
+      <div className="chart-holder h-50 mb-4">
+        <Line data={data} options={options} />
+      </div>
+      <p className="text-gray-400 text-sm text-center">
+        Total volume lifted this week: {volumes.reduce((sum, vol) => sum + vol, 0)} lbs
+      </p>
+    </div>
   );
 }
