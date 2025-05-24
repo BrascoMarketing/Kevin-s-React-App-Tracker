@@ -94,7 +94,7 @@ export default function ExerciseFormPanel({
           min="1"
           value={targetSetsInput}
           onChange={(e) => setTargetSetsInput(parseInt(e.target.value))}
-          className="bg-zinc-800 text-white border border-gray-700 p-1 pl-2 w-full rounded-md"
+          className="bg-zinc-800 text-white border border-gray-700 p-2 pl-2 w-full rounded-md"
           placeholder="e.g., 3"
         />
         <label className="flex items-center space-x-2 mt-2">
