@@ -56,12 +56,14 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
         <span className="text-2xl font-bold">{Math.round(progressRaw)}%</span>
         <span className="text-sm">of expected sets</span>
+        <div className="mt-8 text-center text-white">
+          <span className="text-sm">Total Volume Today<br /></span>
+          <span className="text-xl font-semibold">
+             {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
+          </span>
+        </div>
       </div>
-      <div className="mt-4 text-center text-white">
-        <span className="text-lg font-semibold">
-          Total Volume Today: {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
-        </span>
-      </div>
+      
     </div>
   );
 }
