@@ -282,6 +282,8 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                           updatedLogs.push(logEntry);
                           localStorage.setItem("exerciseLogs", JSON.stringify(updatedLogs));
                           setExerciseLogs(updatedLogs);
+                          // Dispatch custom event
+                          window.dispatchEvent(new Event('exerciseLogsUpdated'));
                         }
                       }}
                       className="completion bg-green-600 text-white px-2 py-1 rounded"

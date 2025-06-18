@@ -164,6 +164,8 @@ function App() {
                 <DailyProgressRing
                   targetSets={targetSets}
                   loggedSets={totalLoggedSetsForViewedDay}
+                  exerciseLogs={exerciseLogs}
+                  viewedDate={viewedDate}
                 />
               </div>
               <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
