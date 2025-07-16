@@ -3,8 +3,15 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
-  // Filter logs by workout type only (no time frame filtering)
+export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
+  // Safely get the weekly schedule from localStorage
+  const weeklySchedule = JSON.parse(localStorage.getItem('weeklySchedule') || '{}');
+
+  // Determine workout type based on the viewedDate
+  const dayName = viewedDate.toLocaleDateString("en-US", { weekday: "long" });
+  const workoutType = weeklySchedule[dayName] || "Rest";
+
+  // Filter logs by workout type only
   const filteredLogs = logs.filter((log) => {
     return log.type === workoutType;
   });
@@ -88,8 +95,6 @@ export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
           ({(totalVolume / 2000).toFixed(2).toLocaleString()} tons)
         </span>
       </div>
-
-      {/* Removed time frame buttons */}
       <Line data={data} options={options} />
     </div>
   );
