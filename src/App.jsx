@@ -3,6 +3,7 @@ import ExerciseFormPanel from "./components/ExerciseFormPanel";
 import ExerciseLibraryColumns from "./components/ExerciseLibraryColumns";
 import DayView from "./components/DayView";
 import VolumeChart from "./components/VolumeChart";
+import WorkoutTypeVolumeChart from "./components/WorkoutTypeVolumeChart";
 import { loadExerciseLogs } from "./utils/storage";
 import CalendarPanel from "./components/CalendarPanel";
 import DailyProgressRing from './components/DailyProgressRing';
@@ -33,6 +34,24 @@ function App() {
   const [notification, setNotification] = useState("");
   const [exerciseCategories, setExerciseCategories] = useState([]);
   const viewedKey = viewedDate.toDateString();
+  const [currentWorkoutType, setCurrentWorkoutType] = useState("");
+
+  // Safely get the category assigned for a given date
+  function getCategoryForDate(date) {
+    const dayName = date.toLocaleDateString("en-US", { weekday: "long" });
+    const savedSchedule = JSON.parse(localStorage.getItem("weeklySchedule") || '{}');
+    return savedSchedule[dayName] || "Rest";
+  }
+  useEffect(() => {
+    // Load exercise logs
+    const logs = loadExerciseLogs();
+    setExerciseLogs(logs);
+
+    // Set current workout type based on today's date
+    const today = new Date();
+    const workoutType = getCategoryForDate(today);
+    setCurrentWorkoutType(workoutType);
+  }, []);
   
   
   const [exercises, setExercises] = useState(() => {
@@ -157,33 +176,40 @@ function App() {
           </div>
 
           <div className="lg:col-span-4">
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
-                <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
-                <DailyProgressRing
-                  targetSets={targetSets}
-                  loggedSets={totalLoggedSetsForViewedDay}
-                  exerciseLogs={exerciseLogs}
-                  viewedDate={viewedDate}
-                />
-              </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
-                <h2 className="text-white text-xl font-bold">Total Volume</h2>
-                <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
-                <VolumeChart logs={exerciseLogs} />
-              </div>
-            </div>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    {/* Box 1 */}
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
+      <DailyProgressRing
+        targetSets={targetSets}
+        loggedSets={totalLoggedSetsForViewedDay}
+        exerciseLogs={exerciseLogs}
+        viewedDate={viewedDate}
+      />
+    </div>
 
+    {/* Box 2 */}
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <h2 className="text-white text-xl font-bold">Category Volume</h2>
+      <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
+      <WorkoutTypeVolumeChart logs={exerciseLogs} workoutType={currentWorkoutType}/>
+    </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">      
-                <h2 className="text-white text-xl font-bold mb-4">Workout Log</h2>          
-                <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
-              </div>              
-            </div>
+    {/* Box 3 */}
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
+      <h2 className="text-white text-xl font-bold">Total Volume</h2>
+      <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
+      <VolumeChart logs={exerciseLogs} />
+    </div>
 
-          </div>
+    {/* Box 4 */}
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">      
+      <h2 className="text-white text-xl font-bold mb-4">Workout Log</h2>          
+      <CalendarPanel viewedDate={viewedDate} setViewedDate={setViewedDate} logs={exerciseLogs} />
+    </div>
+  </div>
+</div>
+
           
           
         </div>
