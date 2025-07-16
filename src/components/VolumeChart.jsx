@@ -8,7 +8,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const timeFrames = ["Week", "Month", "All-Time"];
 
 export default function VolumeChart() {
-  const [timeFrame, setTimeFrame] = useState("Week");
+  const [timeFrame, setTimeFrame] = useState("All-Time");
   const logs = loadExerciseLogs();
 
   // Filter logs based on selected time frame
