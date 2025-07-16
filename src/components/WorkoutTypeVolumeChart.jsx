@@ -32,6 +32,17 @@ export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
     return new Date(2025, monthA - 1, dayA) - new Date(2025, monthB - 1, dayB);
   });
 
+  // Map exercise type to a color
+  const typeToColorMap = {
+    Pull: "#10B981", // Green (already used)
+    Push: "#EF4444", // Red
+    Legs: "#3B82F6", // Blue
+    Freestyle: "#F59E0B", // Yellow
+    UNKNOWN: "#6B7280", // Gray (fallback for unknown types)
+  };
+
+  const lineColor = typeToColorMap[workoutType] || typeToColorMap.UNKNOWN;
+
   const data = {
     labels: sortedDates,
     datasets: [
@@ -39,7 +50,7 @@ export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
         label: `${workoutType} Volume (Reps × Weight)`,
         data: sortedDates.map((date) => volumeByDate[date]),
         fill: false,
-        borderColor: "#4ade80",
+        borderColor: lineColor,
         tension: 0.3,
       },
     ],
