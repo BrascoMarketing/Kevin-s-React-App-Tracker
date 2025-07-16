@@ -190,8 +190,6 @@ function App() {
 
     {/* Box 2 */}
     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
-      <h2 className="text-white text-xl font-bold">Category All-Time Volume</h2>
-      <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
       <WorkoutTypeVolumeChart logs={exerciseLogs} workoutType={currentWorkoutType} viewedDate={viewedDate}/>
     </div>
 

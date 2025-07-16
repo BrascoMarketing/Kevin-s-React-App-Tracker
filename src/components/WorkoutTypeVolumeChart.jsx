@@ -87,15 +87,19 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
   };
 
   return (
-    <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-bold">{workoutType} Volume</span>
-        <span className="text-sm text-green-400 font-bold">
-          {totalVolume.toLocaleString()} lbs{" "}
-          ({(totalVolume / 2000).toFixed(2).toLocaleString()} tons)
-        </span>
+    <div>
+      <h2 className="text-white text-xl font-bold">{workoutType} All-Time Volume</h2>
+      <h3 className="text-gray-500 text-xs font-bold mb-4">(Reps x Weight)</h3>
+      <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
+        <div className="flex justify-between items-center mb-2">
+          <span className="text-sm font-bold">{workoutType} Volume</span>
+          <span className="text-sm text-green-400 font-bold">
+            {totalVolume.toLocaleString()} lbs{" "}
+            ({(totalVolume / 2000).toFixed(2).toLocaleString()} tons)
+          </span>
+        </div>
+        <Line data={data} options={options} />
       </div>
-      <Line data={data} options={options} />
     </div>
   );
 }
