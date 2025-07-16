@@ -1,32 +1,12 @@
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import { useState } from 'react';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const timeFrames = ["Week", "Month", "All-Time"];
-
 export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
-  const [timeFrame, setTimeFrame] = useState("Week");
-
-  // Filter logs by workout type (using 'type' field) and time frame
+  // Filter logs by workout type only (no time frame filtering)
   const filteredLogs = logs.filter((log) => {
-    const logDate = new Date(log.date);
-    const now = new Date();
-
-    // Filter by workout type (using 'type' instead of 'workoutType')
-    if (log.type !== workoutType) return false;
-
-    // Filter by time frame
-    if (timeFrame === 'Week') {
-      const sevenDaysAgo = new Date();
-      sevenDaysAgo.setDate(now.getDate() - 7);
-      return logDate >= sevenDaysAgo;
-    } else if (timeFrame === 'Month') {
-      return logDate.getMonth() === now.getMonth() && logDate.getFullYear() === now.getFullYear();
-    } else {
-      return true; // All-Time
-    }
+    return log.type === workoutType;
   });
 
   // Calculate total volume for filtered logs
@@ -98,20 +78,7 @@ export default function WorkoutTypeVolumeChart({ logs, workoutType }) {
         </span>
       </div>
 
-      <div className="flex space-x-2 mb-2">
-        {timeFrames.map((frame) => (
-          <button
-            key={frame}
-            onClick={() => setTimeFrame(frame)}
-            className={`px-2 py-1 rounded ${
-              timeFrame === frame ? "bg-blue-600" : "bg-gray-700"
-            } hover:bg-blue-500`}
-          >
-            {frame}
-          </button>
-        ))}
-      </div>
-
+      {/* Removed time frame buttons */}
       <Line data={data} options={options} />
     </div>
   );
