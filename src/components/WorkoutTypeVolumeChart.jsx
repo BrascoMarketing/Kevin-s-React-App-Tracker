@@ -33,6 +33,10 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
     return acc;
   }, {});
 
+  // Calculate average volume
+  const uniqueDates = Object.keys(volumeByDate).length;
+  const averageVolume = uniqueDates > 0 ? (totalVolume / uniqueDates).toFixed(2) : 0;
+
   const sortedDates = Object.keys(volumeByDate).sort((a, b) => {
     const [monthA, dayA] = a.split("/");
     const [monthB, dayB] = b.split("/");
@@ -41,7 +45,7 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
 
   // Map exercise type to a color
   const typeToColorMap = {
-    Pull: "#10B981", // Green (already used)
+    Pull: "#10B981", // Green
     Push: "#EF4444", // Red
     Legs: "#3B82F6", // Blue
     Freestyle: "#F59E0B", // Yellow
@@ -99,6 +103,9 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
           </span>
         </div>
         <Line data={data} options={options} />
+        <div className="text-sm text-white font-bold mt-6">
+        Average Volume per Workout: <span className="text-sm text-green-400 font-bold">{Number(averageVolume).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} lbs</span>
+      </div>
       </div>
     </div>
   );
