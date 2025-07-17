@@ -58,7 +58,7 @@ const data = {
       label: "Total Volume (Reps × Weight)",
       data: sortedDates.map((date) => volumeByDate[date]),
       fill: false,
-      borderColor: "#4ade80",
+      borderColor: "#f0b100",
       tension: 0.3,
     },
   ],
@@ -90,7 +90,7 @@ const options = {
 return (
   <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
     <div className="flex justify-end items-center mb-2">
-      <span className="text-sm text-green-400 font-bold">
+      <span className="text-sm text-yellow-500 font-bold">
         {totalVolume.toLocaleString()} lbs{" "}
         ({(totalVolume / 2000).toFixed(2).toLocaleString()} tons)
       </span>
