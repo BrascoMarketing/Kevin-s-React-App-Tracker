@@ -19,7 +19,7 @@ function getVolumeDataForExercise(exerciseId, savedLogs) {
   exerciseLogs.forEach((log) => {
     const date = new Date(log.date);
     // Format date as MM-DD-YY
-    const formattedDate = `${date.getMonth() + 1}-${date.getDate()}-${String(date.getFullYear()).slice(-2)}`;
+    const formattedDate = `${date.getMonth() + 1}/${date.getDate()}`;
     const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
     volumeByDate[formattedDate] = totalVolume;
   });
