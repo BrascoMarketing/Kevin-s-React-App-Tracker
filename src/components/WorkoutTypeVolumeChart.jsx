@@ -103,7 +103,7 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
           </span>
         </div>
         <Line data={data} options={options} />
-        <div className="text-sm text-white font-bold mt-6">
+        <div className="text-center text-sm text-white font-bold mt-6 bg-slate-800 p-2 rounded-md">
         Average Volume per <span className="text-sm font-bold" style={{ color: lineColor }}>{workoutType}</span> Workout: <span className="text-sm font-bold" style={{ color: lineColor }}>{Number(averageVolume).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} lbs</span>
       </div>
       </div>
