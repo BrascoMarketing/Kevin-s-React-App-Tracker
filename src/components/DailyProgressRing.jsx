@@ -54,11 +54,11 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
     <div className={`relative w-45 h-45 block m-auto ${isOverAchieved ? 'animate-pulse' : ''}`}>
       <Doughnut data={data} options={options} />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-        <span className="text-2xl font-bold">{Math.round(progressRaw)}%</span>
+        <span className="text-5xl font-bold text-green-400">{Math.round(progressRaw)}%</span>
         <span className="text-sm">of expected sets</span>
         <div className="mt-8 text-center text-white">
           <span className="text-sm">Total Volume Today<br /></span>
-          <span className="text-xl font-semibold">
+          <span className="text-2xl font-semibold text-green-400">
              {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
           </span>
         </div>
