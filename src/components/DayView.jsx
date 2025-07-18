@@ -47,7 +47,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
   // Map exercise type to a color
   const typeToColorMap = {
     Pull: "#10B981", // Green (already used)
-    Push: "#EF4444", // Red
+    Push: "#ff6467", // Red
     Legs: "#3B82F6", // Blue
     Freestyle: "#F59E0B", // Yellow
     UNKNOWN: "#6B7280", // Gray (fallback for unknown types)
