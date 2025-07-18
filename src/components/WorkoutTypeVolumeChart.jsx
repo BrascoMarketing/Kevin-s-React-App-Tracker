@@ -97,7 +97,7 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
       <div className="bg-gray-900 text-white rounded-xl p-4 space-y-4">
         <div className="flex justify-between items-center mb-2">
           <span className="text-sm font-bold">{workoutType} Volume</span>
-          <span className="text-sm text-green-400 font-bold">
+          <span className="text-sm font-bold" style={{ color: lineColor }}>
             {totalVolume.toLocaleString()} lbs{" "}
             ({(totalVolume / 2000).toFixed(2).toLocaleString()} tons)
           </span>
