@@ -205,7 +205,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
               return (
                 <div
                   key={ex.id}
-                  className={`text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-zinc-800 ${
+                  className={`text-white indi-exercise border border-gray-700 rounded p-2 mb-4 bg-gray-900 ${
                     currentState.completed ? 'completed-exercise' : ''
                   }`}
                 >
