@@ -358,27 +358,30 @@ function SetLogger({ onAddSet, useBodyweight, userBodyWeight }) {
 function getWeeklyVolumeData(savedLogs, viewedDate) {
   const volumeByDate = {};
 
-  // Get the start of the week (Monday) and end (Saturday) relative to the viewedDate (Sunday)
+  // Get the start of the week (Monday) relative to viewedDate (Sunday)
   const dayOfWeek = viewedDate.getDay();
-  const daysToMonday = (dayOfWeek === 0 ? 6 : dayOfWeek - 1); // If Sunday, go back 6 days to Monday
+  const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
   const startOfWeek = new Date(viewedDate);
-  startOfWeek.setDate(viewedDate.getDate() - daysToMonday); // Set to Monday
+  startOfWeek.setDate(viewedDate.getDate() - daysToMonday);
+  startOfWeek.setHours(0, 0, 0, 0); // Start at midnight
 
   // Initialize the 6 days (Monday to Saturday)
   for (let i = 0; i < 6; i++) {
     const currentDay = new Date(startOfWeek);
     currentDay.setDate(startOfWeek.getDate() + i);
     const formattedDate = `${currentDay.getMonth() + 1}-${currentDay.getDate()}`;
-    volumeByDate[formattedDate] = 0; // Initialize to 0
+    volumeByDate[formattedDate] = 0;
   }
 
   // Filter logs for the past week (Monday to Saturday)
   const weekStartTimestamp = startOfWeek.getTime();
   const weekEndTimestamp = new Date(startOfWeek);
-  weekEndTimestamp.setDate(startOfWeek.getDate() + 5); // Saturday
+  weekEndTimestamp.setDate(startOfWeek.getDate() + 5);
+  weekEndTimestamp.setHours(23, 59, 59, 999); // End at the last moment of Saturday
+
   const weeklyLogs = savedLogs.filter((log) => {
     const logDate = new Date(log.date);
-    return logDate >= weekStartTimestamp && logDate <= weekEndTimestamp;
+    return logDate.getTime() >= weekStartTimestamp && logDate.getTime() <= weekEndTimestamp.getTime();
   });
 
   // Sum the volume for each day
