@@ -75,7 +75,7 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
     },
     scales: {
       x: {
-        grid: { color: "#53607dcc" },
+        grid: { display: false },
         ticks: {
           color: "#efefef",
           maxTicksLimit: 7,
