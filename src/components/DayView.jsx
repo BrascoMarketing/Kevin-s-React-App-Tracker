@@ -409,6 +409,7 @@ function getWeeklyVolumeData(savedLogs, viewedDate) {
 // Weekly summary chart component
 function WeeklySummary({ savedLogs, viewedDate }) {
   const { labels, volumes } = getWeeklyVolumeData(savedLogs, viewedDate);
+  const topExercises = getTopExercises(savedLogs, viewedDate);
 
   const data = {
     labels,
@@ -416,8 +417,8 @@ function WeeklySummary({ savedLogs, viewedDate }) {
       {
         label: `Total Volume (Reps * Weight)`,
         data: volumes,
-        borderColor: "#F59E0B", // Yellow for a neutral, summary vibe
-        backgroundColor: "rgba(245, 158, 11, 0.2)", // Adjust opacity
+        borderColor: "#F59E0B",
+        backgroundColor: "rgba(245, 158, 11, 0.2)",
         fill: false,
         tension: 0.3,
         pointRadius: 4,
@@ -467,14 +468,78 @@ function WeeklySummary({ savedLogs, viewedDate }) {
   };
 
   return (
-    <div className="bg-gray-900 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
-      <div className="chart-holder h-50 mb-4 min-h-[200px]">
+    <div className="bg-gray-900 rounded-lg p-4">
+      <div className="chart-holder h-50 mb-4">
         <Line data={data} options={options} />
       </div>
       <p className="text-gray-400 text-sm text-center">
-        Total volume lifted this week: {Number(volumes.reduce((sum, vol) => sum + vol, 0)).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} lbs
-        
+        Total volume lifted this week: {volumes.reduce((sum, vol) => sum + vol, 0)} lbs
       </p>
+      <div className="mt-4">
+        <h3 className="text-white font-semibold mb-2">Top 10 Exercises This Week</h3>
+        {topExercises.length > 0 ? (
+          <table className="w-full text-white text-sm">
+            <thead>
+              <tr className="border-b border-gray-600">
+              <th className="text-left py-2">Exercise</th>
+              <th className="text-right py-2">Total Volume (lbs)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topExercises.map((exercise, index) => (
+                <tr key={index} className="border-b border-gray-700">
+                  <td className="py-2">{exercise.name}</td>
+                  <td className="text-right py-2">{exercise.volume.toLocaleString()} lbs</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p className="text-gray-400 text-sm">No exercise data available for this week.</p>
+        )}
+      </div>
     </div>
   );
+}
+
+function getTopExercises(savedLogs, viewedDate) {
+  const volumeByExercise = {};
+
+  // Get the start of the week (Monday) and end (Saturday)
+  const dayOfWeek = viewedDate.getDay();
+  const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+  const startOfWeek = new Date(viewedDate);
+  startOfWeek.setDate(viewedDate.getDate() - daysToMonday);
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  const weekStartTimestamp = startOfWeek.getTime();
+  const weekEndTimestamp = new Date(startOfWeek);
+  weekEndTimestamp.setDate(startOfWeek.getDate() + 5);
+  weekEndTimestamp.setHours(23, 59, 59, 999);
+
+  // Filter logs for the week
+  const weeklyLogs = savedLogs.filter((log) => {
+    const logDate = new Date(log.date);
+    return logDate.getTime() >= weekStartTimestamp && logDate.getTime() <= weekEndTimestamp.getTime();
+  });
+
+  // Sum volume by exercise
+  weeklyLogs.forEach((log) => {
+    const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
+    const exerciseKey = `${log.exerciseId}-${log.name}`; // Unique key to avoid name collisions
+    if (!volumeByExercise[exerciseKey]) {
+      volumeByExercise[exerciseKey] = {
+        name: log.name,
+        volume: 0,
+      };
+    }
+    volumeByExercise[exerciseKey].volume += totalVolume;
+  });
+
+  // Convert to array, sort by volume, and take top 10
+  const topExercises = Object.values(volumeByExercise)
+    .sort((a, b) => b.volume - a.volume)
+    .slice(0, 10);
+
+  return topExercises;
 }
