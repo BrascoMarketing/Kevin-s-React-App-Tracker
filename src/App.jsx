@@ -139,7 +139,7 @@ function App() {
   }
 }, []);
 
-  return (
+return (
     <>
       {notification && (
           <div className="fixed top-0 left-0 w-full bg-green-600 text-white text-center py-2 z-50 shadow-md">
@@ -178,6 +178,7 @@ function App() {
           <div className="lg:col-span-4">
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
     {/* Box 1 */}
+    {viewedCategory !== 'Rest' && (
     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
       <h2 className="text-white text-xl font-bold mb-4">Today's Progress</h2>
       <DailyProgressRing
@@ -187,11 +188,14 @@ function App() {
         viewedDate={viewedDate}
       />
     </div>
+    )}
 
     {/* Box 2 */}
+    {viewedCategory !== 'Rest' && (
     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
       <WorkoutTypeVolumeChart logs={exerciseLogs} workoutType={currentWorkoutType} viewedDate={viewedDate}/>
     </div>
+    )}
 
     {/* Box 3 */}
     <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
