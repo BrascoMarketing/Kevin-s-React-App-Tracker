@@ -164,7 +164,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
 
   if (viewedCategory === "Rest") {
   return (
-    <div className="bg-zinc-900 text-white rounded-xl shadow-md p-4 w-full max-w-md mx-auto">
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg text-white">
       <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
       <h2 className="text-xl font-bold mb-4">Rest Day - Weekly Summary</h2>
       {savedLogs.length > 0 ? (
@@ -467,12 +467,13 @@ function WeeklySummary({ savedLogs, viewedDate }) {
   };
 
   return (
-    <div className="bg-zinc-800 rounded-lg p-4">
+    <div className="bg-gray-900 backdrop-blur-md border border-white/20 rounded-xl p-4 shadow-lg">
       <div className="chart-holder h-50 mb-4">
         <Line data={data} options={options} />
       </div>
       <p className="text-gray-400 text-sm text-center">
-        Total volume lifted this week: {volumes.reduce((sum, vol) => sum + vol, 0)} lbs
+        Total volume lifted this week: {Number(volumes.reduce((sum, vol) => sum + vol, 0)).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })} lbs
+        
       </p>
     </div>
   );
