@@ -472,11 +472,11 @@ function WeeklySummary({ savedLogs, viewedDate }) {
       <div className="chart-holder h-50 mb-4">
         <Line data={data} options={options} />
       </div>
-      <p className="text-gray-400 text-sm text-center">
-        Total volume lifted this week: {volumes.reduce((sum, vol) => sum + vol, 0)} lbs
+      <p className="text-gray-400 text-sm text-center text-yellow-500">
+        Total volume lifted this week: <strong className="text-green-400">{volumes.reduce((sum, vol) => sum + vol, 0).toLocaleString()} lbs</strong>
       </p>
-      <div className="mt-4">
-        <h3 className="text-white font-semibold mb-2">Top 10 Exercises This Week</h3>
+      <div className="mt-8">
+        <h2 className="text-white font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
         {topExercises.length > 0 ? (
           <table className="w-full text-white text-sm">
             <thead>
