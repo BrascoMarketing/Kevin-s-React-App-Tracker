@@ -417,7 +417,7 @@ function WeeklySummary({ savedLogs, viewedDate }) {
       {
         label: `Total Volume (Reps * Weight)`,
         data: volumes,
-        borderColor: "#F59E0B",
+        borderColor: "#10B981",
         backgroundColor: "rgba(245, 158, 11, 0.2)",
         fill: false,
         tension: 0.3,
