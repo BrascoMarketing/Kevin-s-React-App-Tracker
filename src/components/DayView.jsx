@@ -100,7 +100,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
       y: {
         ticks: {
           color: '#fff',
-          maxTicksLimit: 4,
+          maxTicksLimit: 5,
         },
         grid: { color: 'rgba(255, 255, 255, 0.1)' },
         title: {
