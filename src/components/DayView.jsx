@@ -93,6 +93,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
           color: '#fff',
           maxRotation: 0,
           minRotation: 0,
+          maxTicksLimit: 6,
         },
         grid: { display: false },
       },
