@@ -355,7 +355,7 @@ function SetLogger({ onAddSet, useBodyweight, userBodyWeight }) {
   );
 }
 
-// Calculate weekly volume data for the past week (Monday to Saturday)
+// Calculate weekly volume data for a given week (Monday to Saturday)
 function getWeeklyVolumeData(savedLogs, viewedDate) {
   const volumeByDate = {};
 
@@ -407,10 +407,45 @@ function getWeeklyVolumeData(savedLogs, viewedDate) {
   };
 }
 
+// Calculate total volume for a specific week
+function getTotalVolumeForWeek(savedLogs, startOfWeek) {
+  const weekStartTimestamp = startOfWeek.getTime();
+  const weekEndTimestamp = new Date(startOfWeek);
+  weekEndTimestamp.setDate(startOfWeek.getDate() + 5);
+  weekEndTimestamp.setHours(23, 59, 59, 999);
+
+  const weeklyLogs = savedLogs.filter((log) => {
+    const logDate = new Date(log.date);
+    return logDate.getTime() >= weekStartTimestamp && logDate.getTime() <= weekEndTimestamp.getTime();
+  });
+
+  return weeklyLogs.reduce((sum, log) => {
+    const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
+    return sum + totalVolume;
+  }, 0);
+}
+
 // Weekly summary chart component
 function WeeklySummary({ savedLogs, viewedDate }) {
   const { labels, volumes } = getWeeklyVolumeData(savedLogs, viewedDate);
   const topExercises = getTopExercises(savedLogs, viewedDate);
+
+  // Calculate total volume for this week
+  const thisWeekVolume = volumes.reduce((sum, vol) => sum + vol, 0);
+
+  // Calculate total volume for previous week
+  const dayOfWeek = viewedDate.getDay();
+  const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+  const startOfThisWeek = new Date(viewedDate);
+  startOfThisWeek.setDate(viewedDate.getDate() - daysToMonday);
+  startOfThisWeek.setHours(0, 0, 0, 0);
+  const startOfLastWeek = new Date(startOfThisWeek);
+  startOfLastWeek.setDate(startOfThisWeek.getDate() - 7);
+  const lastWeekVolume = getTotalVolumeForWeek(savedLogs, startOfLastWeek);
+
+  // Calculate volume difference
+  const volumeDifference = thisWeekVolume - lastWeekVolume;
+  const differenceText = volumeDifference >= 0 ? `+${volumeDifference.toLocaleString()}` : volumeDifference.toLocaleString();
 
   const data = {
     labels,
@@ -474,7 +509,10 @@ function WeeklySummary({ savedLogs, viewedDate }) {
         <Line data={data} options={options} />
       </div>
       <p className="text-gray-400 text-sm text-center text-yellow-500">
-        Total volume lifted this week: <strong className="text-green-400">{volumes.reduce((sum, vol) => sum + vol, 0).toLocaleString()} lbs</strong>
+        Total volume lifted this week: <strong className="text-green-400">{thisWeekVolume.toLocaleString()} lbs</strong>
+      </p>
+      <p className="text-gray-400 text-sm text-center">
+        Compared to last week: <strong className={volumeDifference >= 0 ? "text-green-400" : "text-red-400"}>{differenceText} lbs</strong>
       </p>
       <div className="mt-8">
         <h2 className="text-white font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
