@@ -98,7 +98,6 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
             const setsForDate = sets[dateIndex] || [];
             const tooltipLines = [`Volume: ${volume} lbs`];
             if (setsForDate.length > 0) {
-              tooltipLines.push('Sets:');
               setsForDate.forEach((set) => {
                 tooltipLines.push(`  ${set.reps} reps @ ${set.weight} lbs`);
               });
