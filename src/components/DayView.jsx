@@ -11,46 +11,50 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 // Process logs to get volume data for charting
 function getVolumeDataForExercise(exerciseId, savedLogs) {
   const volumeByDate = {};
+  const setsByDate = {};
 
   // Filter logs for the specific exercise
   const exerciseLogs = savedLogs.filter((log) => log.exerciseId === exerciseId);
 
-  // Calculate total volume (sum of reps * weight) per date
+  // Calculate total volume and store sets per date
   exerciseLogs.forEach((log) => {
     const date = new Date(log.date);
-    // Format date as MM-DD-YY
+    // Format date as MM-DD
     const formattedDate = `${date.getMonth() + 1}/${date.getDate()}`;
     const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
     volumeByDate[formattedDate] = totalVolume;
+    setsByDate[formattedDate] = log.sets; // Store the sets for this date
   });
 
   // Sort dates and prepare chart data
   const sortedDates = Object.keys(volumeByDate).sort((a, b) => new Date(a) - new Date(b));
   const volumes = sortedDates.map((date) => volumeByDate[date]);
+  const sets = sortedDates.map((date) => setsByDate[date] || []);
 
   return {
     labels: sortedDates,
     volumes,
+    sets, // Include sets in the returned object
   };
 }
 
 // Line chart component
 function LineChart({ exerciseId, exerciseName, savedLogs }) {
-  const { labels, volumes } = getVolumeDataForExercise(exerciseId, savedLogs);
+  const { labels, volumes, sets } = getVolumeDataForExercise(exerciseId, savedLogs);
 
   // Find the type from the most recent log for this exercise
   const exerciseLog = savedLogs
     .filter((log) => log.exerciseId === exerciseId)
-    .sort((a, b) => b.date - a.date)[0]; // Get the most recent log
-  const exerciseType = exerciseLog ? exerciseLog.type : "UNKNOWN"; // Fallback if no log exists
+    .sort((a, b) => b.date - a.date)[0];
+  const exerciseType = exerciseLog ? exerciseLog.type : "UNKNOWN";
 
   // Map exercise type to a color
   const typeToColorMap = {
-    Pull: "#10B981", // Green (already used)
-    Push: "#ff6467", // Red
-    Legs: "#3B82F6", // Blue
-    Freestyle: "#F59E0B", // Yellow
-    UNKNOWN: "#6B7280", // Gray (fallback for unknown types)
+    Pull: "#10B981",
+    Push: "#ff6467",
+    Legs: "#3B82F6",
+    Freestyle: "#F59E0B",
+    UNKNOWN: "#6B7280",
   };
 
   const lineColor = typeToColorMap[exerciseType] || typeToColorMap.UNKNOWN;
@@ -61,8 +65,8 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
       {
         label: `Volume (Reps * Weight)`,
         data: volumes,
-        borderColor: lineColor, // Use the dynamic color based on type
-        backgroundColor: lineColor.replace(/[^,]+(?=\))/, "0.2"), // Adjust opacity for background
+        borderColor: lineColor,
+        backgroundColor: lineColor.replace(/[^,]+(?=\))/, "0.2"),
         fill: false,
         tension: 0.3,
         pointRadius: 4,
@@ -83,7 +87,21 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
       },
       tooltip: {
         callbacks: {
-          label: (context) => `${context.raw} lbs`,
+          label: (context) => {
+            const volume = context.raw;
+            const dateIndex = context.dataIndex;
+            const setsForDate = sets[dateIndex] || [];
+            const tooltipLines = [`Volume: ${volume} lbs`];
+            if (setsForDate.length > 0) {
+              tooltipLines.push('Sets:');
+              setsForDate.forEach((set) => {
+                tooltipLines.push(`  ${set.reps} reps @ ${set.weight} lbs`);
+              });
+            } else {
+              tooltipLines.push('No sets logged');
+            }
+            return tooltipLines;
+          },
         },
       },
     },
