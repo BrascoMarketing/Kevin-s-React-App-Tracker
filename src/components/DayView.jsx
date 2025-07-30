@@ -86,11 +86,11 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
         font: { size: 14 },
       },
       tooltip: {
-        enabled: true, // Default tooltip enabled
-        padding: 12, // Increase padding for more internal space
-        yAlign: 'top', // Align tooltip to the top to avoid clipping at chart bottom
-        caretPadding: 2, // Add space between tooltip and data point
-        usePointStyle: false, // Ensure consistent tooltip background
+        enabled: true,
+        padding: 12,
+        yAlign: 'top',
+        caretPadding: 2,
+        usePointStyle: false,
         displayColors: false,
         callbacks: {
           label: (context) => {
