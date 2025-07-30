@@ -89,8 +89,9 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
         enabled: true, // Default tooltip enabled
         padding: 12, // Increase padding for more internal space
         yAlign: 'top', // Align tooltip to the top to avoid clipping at chart bottom
-        caretPadding: 10, // Add space between tooltip and data point
+        caretPadding: 2, // Add space between tooltip and data point
         usePointStyle: false, // Ensure consistent tooltip background
+        displayColors: false,
         callbacks: {
           label: (context) => {
             const volume = context.raw;
@@ -99,7 +100,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
             const tooltipLines = [`Volume: ${volume} lbs`];
             if (setsForDate.length > 0) {
               setsForDate.forEach((set) => {
-                tooltipLines.push(`  ${set.reps} reps @ ${set.weight} lbs`);
+                tooltipLines.push(`${set.reps} reps @ ${set.weight} lbs`);
               });
             } else {
               tooltipLines.push('No sets logged');
