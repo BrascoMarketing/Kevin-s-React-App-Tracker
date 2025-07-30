@@ -86,6 +86,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
         font: { size: 14 },
       },
       tooltip: {
+        position: 'nearest',
         enabled: true,
         padding: 12,
         yAlign: 'top',
