@@ -4,6 +4,7 @@ A simple, fully offline fitness tracker built with React and Tailwind CSS.
 Log exercises, track progress by day, and build your exercise library — all stored in your browser's LocalStorage.
 
 ## DEMO
+
 [Demo](https://brascomarketing.github.io/Kevin-s-React-App-Tracker/)
 
 ## Features
@@ -65,6 +66,10 @@ Line chart displaying the accumulated Volume (reps x weight) over the course of 
 ### WeeklyScheduleBuilder
 
 A component displaying every day of the week, allowing the user to assign what category of exercises should be done on that day.
+
+### WorkoutTypeVolumeChart
+
+Displays a progress chart based on the current day's exercise type for a better gauge of progress that the Total Volume Chart doesn't provide.
 
 ## Built With
 
