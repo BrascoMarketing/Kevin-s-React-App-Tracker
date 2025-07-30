@@ -59,7 +59,6 @@ button.completion {
 .calendar-wrapper .react-calendar__tile .indicator {
     position: absolute;
     bottom: 2px;
-    left: calc(50% -10px);
     opacity: .6;
     width: 6px;
     height: 6px;
