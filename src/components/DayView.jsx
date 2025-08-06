@@ -234,8 +234,8 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                     currentState.completed ? 'completed-exercise' : ''
                   }`}
                 >
-                  <h3 className="font-semibold mb-2 text-xl">{ex.name}</h3>
-                  <p className="text-sm text-gray-400 mb-4 target-sets">Target Sets: {ex.targetSets || 3}</p>                
+                  <h3 className="font-semibold mb-1 text-xl">{ex.name}</h3>
+                  <p className="text-md text-green-400 mb-4 target-sets">Target Sets: {ex.targetSets || 3}</p>                
                   <LineChart exerciseId={ex.id} exerciseName={ex.name} savedLogs={savedLogs} />
                   
 
