@@ -235,7 +235,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                   }`}
                 >
                   <h3 className="font-semibold mb-1 text-xl">{ex.name}</h3>
-                  <p className="text-md text-green-400 mb-4 target-sets">Target Sets: {ex.targetSets || 3}</p>                
+                  <p className="text-md  mb-4 target-sets">Target Sets: <span className="text-green-400"><strong>{ex.targetSets || 3}</strong></span></p>                
                   <LineChart exerciseId={ex.id} exerciseName={ex.name} savedLogs={savedLogs} />
                   
 
