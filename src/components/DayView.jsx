@@ -539,7 +539,7 @@ function WeeklySummary({ savedLogs, viewedDate }) {
         Compared to last week: <strong className={volumeDifference >= 0 ? "text-green-400" : "text-red-400"}>{differenceText} lbs</strong>
       </p>
       <div className="mt-8">
-        <h2 className="text-white font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
+        <h2 className="text-green-400 font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
         {topExercises.length > 0 ? (
           <table className="w-full text-white text-sm">
             <thead>
