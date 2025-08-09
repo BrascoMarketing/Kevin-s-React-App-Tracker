@@ -208,7 +208,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
       </button>
       
       <Navigation viewedDate={viewedDate} setViewedDate={setViewedDate} />
-      <h2 className="text-white text-xl font-bold mb-4">Workout: {viewedCategory}</h2>
+      <h2 className="text-white text-xl font-bold mb-4">Workout: <span className="text-green-400">{viewedCategory}</span></h2>
       <p className="text-white mb-4">{viewedDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}</p>
 
       <div className="flex justify-end mb-2">
@@ -234,7 +234,7 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
                     currentState.completed ? 'completed-exercise' : ''
                   }`}
                 >
-                  <h3 className="font-semibold mb-1 text-xl">{ex.name}</h3>
+                  <h3 className="font-semibold mb-1 text-xl text-green-400">{ex.name}</h3>
                   <p className="text-md  mb-4 target-sets">Target Sets: <span className="text-green-400"><strong>{ex.targetSets || 3}</strong></span></p>                
                   <LineChart exerciseId={ex.id} exerciseName={ex.name} savedLogs={savedLogs} />
                   
