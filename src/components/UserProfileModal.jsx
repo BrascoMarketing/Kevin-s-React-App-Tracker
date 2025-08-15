@@ -14,25 +14,32 @@ export default function UserProfileModal({ onClose, setNotification }) {
   };
 
   const handleExport = () => {
-    const data = {
-      exercises: JSON.parse(localStorage.getItem("exercises") || "{}"),
-      categoryOrder: JSON.parse(localStorage.getItem("categoryOrder") || "{}"),
-      weeklySchedule: JSON.parse(localStorage.getItem("weeklySchedule") || "{}"),
-      exerciseCategories: JSON.parse(localStorage.getItem("exerciseCategories") || "[]"),
-      exerciseLogs: JSON.parse(localStorage.getItem("exerciseLogs") || "[]"),
-      userBodyWeight: localStorage.getItem("userBodyWeight") || ""
-    };
-
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "workout-tracker-backup.json";
-    link.click();
-
-    URL.revokeObjectURL(url);
+  const data = {
+    exercises: JSON.parse(localStorage.getItem("exercises") || "{}"),
+    categoryOrder: JSON.parse(localStorage.getItem("categoryOrder") || "{}"),
+    weeklySchedule: JSON.parse(localStorage.getItem("weeklySchedule") || "{}"),
+    exerciseCategories: JSON.parse(localStorage.getItem("exerciseCategories") || "[]"),
+    exerciseLogs: JSON.parse(localStorage.getItem("exerciseLogs") || "[]"),
+    userBodyWeight: localStorage.getItem("userBodyWeight") || ""
   };
+
+  // Get current date in YYYYMMDD format
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, '0'); // Months are 0-based, so add 1
+  const day = String(today.getDate()).padStart(2, '0');
+  const dateString = `${year}${month}${day}`;
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `workout-tracker-backup-${dateString}.json`; // Updated filename
+  link.click();
+
+  URL.revokeObjectURL(url);
+};
 
   const handleImport = (e) => {
     const file = e.target.files[0];
