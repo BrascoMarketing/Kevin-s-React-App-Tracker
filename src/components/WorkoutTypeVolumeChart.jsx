@@ -45,15 +45,16 @@ export default function WorkoutTypeVolumeChart({ logs, viewedDate }) {
 
   // Map exercise type to a color
   const typeToColorMap = {
-    Pull: "#10B981", // Green
-    "Pull Day 1": "#10B981", // Green
-    "Pull Day 2": "#10B981", // Green
-    Push: "#ff6467", // Red
-    "Push Day 1": "#ff6467", // Red
-    "Push Day 2": "#ff6467", // Red
-    Legs: "#3B82F6", // Blue
-    Freestyle: "#F59E0B", // Yellow
-    UNKNOWN: "#6B7280", // Gray (fallback for unknown types)
+    Pull: "#10B981",
+    "Pull Day 1": "#10B981",
+    "Pull Day 2": "#10B981",
+    Push: "#ff6467",
+    "Push Day 1": "#ff6467",
+    "Push Day 2": "#ff6467",
+    Legs: "#3B82F6",
+    "Arms": "#3B82F6",
+    Freestyle: "#F59E0B",
+    UNKNOWN: "#6B7280",
   };
 
   const lineColor = typeToColorMap[workoutType] || typeToColorMap.UNKNOWN;

@@ -57,6 +57,7 @@ function LineChart({ exerciseId, exerciseName, savedLogs }) {
     "Push Day 1": "#ff6467",
     "Push Day 2": "#ff6467",
     Legs: "#3B82F6",
+    "Arms": "#3B82F6",
     Freestyle: "#F59E0B",
     UNKNOWN: "#6B7280",
   };
