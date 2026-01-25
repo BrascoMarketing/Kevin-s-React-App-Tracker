@@ -569,7 +569,7 @@ function WeeklySummary({ savedLogs, viewedDate }) {
               <td className="py-2.5 pl-1">{ex.name}</td>
               <td className="text-right py-2.5 font-medium">{ex.volume.toLocaleString()} lbs</td>
               <td className={`text-right py-2.5 pr-2 font-medium ${colorClass}`}>
-                {arrow} {deltaText} lbs
+                 {deltaText} lbs {arrow}
               </td>
             </tr>
           );
