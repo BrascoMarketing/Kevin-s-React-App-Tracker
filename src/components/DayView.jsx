@@ -544,70 +544,101 @@ function WeeklySummary({ savedLogs, viewedDate }) {
         Compared to last week: <strong className={volumeDifference >= 0 ? "text-green-400" : "text-red-400"}>{differenceText} lbs</strong>
       </p>
       <div className="mt-8">
-        <h2 className="text-green-400 font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
-        {topExercises.length > 0 ? (
-          <table className="w-full text-white text-sm">
-            <thead>
-              <tr className="border-b border-gray-600">
-              <th className="text-left py-2">Exercise</th>
-              <th className="text-right py-2">Total Volume (lbs)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {topExercises.map((exercise, index) => (
-                <tr key={index} className="border-b border-gray-700">
-                  <td className="py-2">{exercise.name}</td>
-                  <td className="text-right py-2">{exercise.volume.toLocaleString()} lbs</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <p className="text-gray-400 text-sm">No exercise data available for this week.</p>
-        )}
-      </div>
+  <h2 className="text-green-400 font-bold mb-2 text-lg">Top 10 Exercises This Week</h2>
+
+  {topExercises.length > 0 ? (
+    <table className="w-full text-white text-sm">
+      <thead>
+        <tr className="border-b border-gray-600">
+          <th className="text-left py-2 pl-1">Exercise</th>
+          <th className="text-right py-2">Volume</th>
+          <th className="text-right py-2 pr-2">Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        {topExercises.map((ex, i) => {
+          const isUp   = ex.delta > 0;
+          const isDown = ex.delta < 0;
+          const colorClass = isUp ? "text-green-400" : isDown ? "text-red-400" : "text-gray-500";
+          const arrow      = isUp ? "↑" : isDown ? "↓" : "→";
+          const sign       = isUp ? "+" : isDown ? "−" : "";
+          const deltaText  = ex.delta === 0 ? "—" : `${sign}${ex.deltaAbs.toLocaleString()}`;
+
+          return (
+            <tr key={i} className="border-b border-gray-700/70 hover:bg-gray-800/40">
+              <td className="py-2.5 pl-1">{ex.name}</td>
+              <td className="text-right py-2.5 font-medium">{ex.volume.toLocaleString()} lbs</td>
+              <td className={`text-right py-2.5 pr-2 font-medium ${colorClass}`}>
+                {arrow} {deltaText} lbs
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  ) : (
+    <p className="text-gray-400 text-sm mt-2">No exercises logged this week yet.</p>
+  )}
+</div>
     </div>
   );
 }
 
 function getTopExercises(savedLogs, viewedDate) {
-  const volumeByExercise = {};
+  const thisWeekByName = {};
+  const prevWeekByName  = {};
 
-  // Get the start of the week (Monday) and end (Saturday)
+  // ── This week (Mon–Sat) ───────────────────────────────────
   const dayOfWeek = viewedDate.getDay();
   const daysToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
-  const startOfWeek = new Date(viewedDate);
-  startOfWeek.setDate(viewedDate.getDate() - daysToMonday);
-  startOfWeek.setHours(0, 0, 0, 0);
+  const startThis = new Date(viewedDate);
+  startThis.setDate(viewedDate.getDate() - daysToMonday);
+  startThis.setHours(0, 0, 0, 0);
 
-  const weekStartTimestamp = startOfWeek.getTime();
-  const weekEndTimestamp = new Date(startOfWeek);
-  weekEndTimestamp.setDate(startOfWeek.getDate() + 5);
-  weekEndTimestamp.setHours(23, 59, 59, 999);
+  const thisStart = startThis.getTime();
+  const thisEnd   = new Date(startThis);
+  thisEnd.setDate(startThis.getDate() + 5);
+  thisEnd.setHours(23, 59, 59, 999);
 
-  // Filter logs for the week
-  const weeklyLogs = savedLogs.filter((log) => {
-    const logDate = new Date(log.date);
-    return logDate.getTime() >= weekStartTimestamp && logDate.getTime() <= weekEndTimestamp.getTime();
+  // ── Previous week ─────────────────────────────────────────
+  const startPrev = new Date(startThis);
+  startPrev.setDate(startThis.getDate() - 7);
+  const prevStart = startPrev.getTime();
+  const prevEnd   = new Date(startPrev);
+  prevEnd.setDate(startPrev.getDate() + 5);
+  prevEnd.setHours(23, 59, 59, 999);
+
+  // Helper to accumulate volume by exercise **name**
+  const accumulate = (map, log, startTs, endTs) => {
+    const ts = new Date(log.date).getTime();
+    if (ts < startTs || ts > endTs) return;
+    const name = log.name.trim();           // ← normalize a bit
+    const vol  = log.sets.reduce((sum, s) => sum + (s.reps * s.weight), 0);
+
+    if (!map[name]) map[name] = 0;
+    map[name] += vol;
+  };
+
+  savedLogs.forEach(log => {
+    accumulate(thisWeekByName, log, thisStart, thisEnd);
+    accumulate(prevWeekByName,  log, prevStart, prevEnd);
   });
 
-  // Sum volume by exercise
-  weeklyLogs.forEach((log) => {
-    const totalVolume = log.sets.reduce((sum, set) => sum + set.reps * set.weight, 0);
-    const exerciseKey = `${log.exerciseId}-${log.name}`; // Unique key to avoid name collisions
-    if (!volumeByExercise[exerciseKey]) {
-      volumeByExercise[exerciseKey] = {
-        name: log.name,
-        volume: 0,
-      };
-    }
-    volumeByExercise[exerciseKey].volume += totalVolume;
+  // Build result list
+  const result = Object.entries(thisWeekByName).map(([name, thisVol]) => {
+    const prevVol = prevWeekByName[name] || 0;
+    const delta   = thisVol - prevVol;
+
+    return {
+      name,
+      volume: thisVol,
+      delta,
+      deltaAbs: Math.abs(delta),
+    };
   });
 
-  // Convert to array, sort by volume, and take top 10
-  const topExercises = Object.values(volumeByExercise)
+  // Sort by this-week volume descending, take top 10
+  return result
     .sort((a, b) => b.volume - a.volume)
     .slice(0, 10);
-
-  return topExercises;
 }
