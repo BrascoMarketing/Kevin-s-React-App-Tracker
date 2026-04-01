@@ -1,0 +1,7710 @@
+{
+  "exercises": {
+    "e23b3d00-7103-4f3c-9c4e-181e5a865025": {
+      "id": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": [
+        "Push"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "6b30d3bc-d979-4f36-a359-463daee2f01e": {
+      "id": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": [
+        "Push"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "4e8c8653-47c8-40cf-869c-aabfb9d280b2": {
+      "id": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": [
+        "Push"
+      ],
+      "targetSets": 3,
+      "useBodyweight": true
+    },
+    "52f008ba-1af5-4eea-8b42-a0431c557786": {
+      "id": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": [
+        "Push"
+      ],
+      "targetSets": 1,
+      "useBodyweight": true
+    },
+    "f36b407b-6aee-4972-aa10-e90f8f8ecf51": {
+      "id": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": [
+        "Pull"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "ba93be48-d512-4ed5-acf8-004e3353676e": {
+      "id": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": [
+        "Pull"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "4564060d-7255-443d-98b4-529fbc12aeec": {
+      "id": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": [
+        "Pull"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "7ecee161-2750-47bc-8c2b-fa9ee471c2a8": {
+      "id": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": [
+        "Unassigned"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b": {
+      "id": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": [
+        "Arms"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "d739f0c6-5271-436f-bb4d-7dcffc97303c": {
+      "id": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": [
+        "Arms"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "a48250c2-52af-4755-8614-23ed74f69630": {
+      "id": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": [
+        "Arms"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "0acb6a4e-6dae-4180-8f59-ba4e3842e707": {
+      "id": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": [
+        "Push"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "81d61504-aebb-486d-8f98-f6b4082fb411": {
+      "id": "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "name": "Shrugs (Bonus)",
+      "type": [
+        "Unassigned"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "af2ad289-6e7a-4795-946a-e874939f00ec": {
+      "id": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": [
+        "Arms"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "2f2ba574-7d45-44e7-932c-f108d8ae647e": {
+      "id": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": [
+        "Pull"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    },
+    "046ce7ec-0820-4ede-87b2-99826ed70b3c": {
+      "id": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": [
+        "Unassigned"
+      ],
+      "targetSets": 2,
+      "useBodyweight": true
+    },
+    "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f": {
+      "id": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": [
+        "Pull"
+      ],
+      "targetSets": 3,
+      "useBodyweight": false
+    }
+  },
+  "categoryOrder": {
+    "Unassigned": [
+      "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "046ce7ec-0820-4ede-87b2-99826ed70b3c"
+    ],
+    "Rest": [],
+    "Push": [
+      "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "0acb6a4e-6dae-4180-8f59-ba4e3842e707"
+    ],
+    "Pull": [
+      "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "4564060d-7255-443d-98b4-529fbc12aeec",
+      "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "2f2ba574-7d45-44e7-932c-f108d8ae647e"
+    ],
+    "Legs": [],
+    "Freestyle": [],
+    "Arms": [
+      "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "a48250c2-52af-4755-8614-23ed74f69630",
+      "af2ad289-6e7a-4795-946a-e874939f00ec"
+    ]
+  },
+  "weeklySchedule": {
+    "Sunday": "Rest",
+    "Monday": "Push",
+    "Tuesday": "Pull",
+    "Wednesday": "Arms",
+    "Thursday": "Push",
+    "Friday": "Pull",
+    "Saturday": "Arms"
+  },
+  "exerciseCategories": [
+    {
+      "id": "unassigned",
+      "name": "Unassigned"
+    },
+    {
+      "id": "d2243984-6ef5-415e-a65f-8a28b49daaf1",
+      "name": "Push"
+    },
+    {
+      "id": "237680b5-b619-45af-bdc7-639c015da2d6",
+      "name": "Pull"
+    },
+    {
+      "id": "53ba7cd7-f6ae-44ea-ad88-dcbfc7c88cad",
+      "name": "Legs"
+    },
+    {
+      "id": "00fce45b-6b0c-4ba5-a4e1-543b4551f1f6",
+      "name": "Freestyle"
+    },
+    {
+      "id": "c89b6828-3b02-4f67-a5dd-803a6c4a808e",
+      "name": "Arms"
+    }
+  ],
+  "exerciseLogs": [
+    {
+      "id": "2cd03b28-fef7-4d0b-92cb-4048ca62bce0",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1767613378918,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 14,
+          "weight": 80
+        },
+        {
+          "reps": 10,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767616250618
+    },
+    {
+      "id": "512168fb-d075-432b-884e-2e8508971836",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1767613378918,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 120
+        },
+        {
+          "reps": 12,
+          "weight": 120
+        },
+        {
+          "reps": 12,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767616589329
+    },
+    {
+      "id": "622086e0-e068-45b9-a50c-34519f8bd4ae",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1767613378918,
+      "sets": [
+        {
+          "reps": 6,
+          "weight": 180
+        },
+        {
+          "reps": 5,
+          "weight": 180
+        },
+        {
+          "reps": 4,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767616933879
+    },
+    {
+      "id": "79730e0b-7a0b-414b-8f9d-9cec9b6be8de",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1767613378918,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767617096406
+    },
+    {
+      "id": "4151dc11-fcea-4125-8fba-45d8ee88014b",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1767701471425,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 14,
+          "weight": 90
+        },
+        {
+          "reps": 12,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767702773116
+    },
+    {
+      "id": "2564b167-3372-4d76-adca-5ba2a7fa57cd",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1767701471425,
+      "sets": [
+        {
+          "reps": 10,
+          "weight": 70
+        },
+        {
+          "reps": 9,
+          "weight": 70
+        },
+        {
+          "reps": 9,
+          "weight": 70
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767703092681
+    },
+    {
+      "id": "f560f523-141f-4e34-84ed-afcd0baebdf6",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1767701471425,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767703709896
+    },
+    {
+      "id": "1c9d62be-df3b-48e4-8b7c-37dcd5594eb1",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1767701471425,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 50
+        },
+        {
+          "reps": 25,
+          "weight": 50
+        },
+        {
+          "reps": 20,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767704097835
+    },
+    {
+      "id": "c363ae3e-d5f0-46ec-af0a-38484ad4e9f3",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1767765600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 20
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767790621195
+    },
+    {
+      "id": "f6964ebf-aa1e-471b-b772-dd99735af258",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1767765600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 15,
+          "weight": 45
+        },
+        {
+          "reps": 10,
+          "weight": 45
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767791139436
+    },
+    {
+      "id": "3dd0f13c-6bd8-4e05-8af2-01ac850f5cc3",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1767765600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 12,
+          "weight": 30
+        },
+        {
+          "reps": 10,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767791546631
+    },
+    {
+      "id": "1c0623f4-d804-4505-ad3d-37f259968899",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1767852000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 16,
+          "weight": 60
+        },
+        {
+          "reps": 16,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767876657753
+    },
+    {
+      "id": "33f1c14a-1538-46e5-9183-67f4faea28bf",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1767852000000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 120
+        },
+        {
+          "reps": 14,
+          "weight": 120
+        },
+        {
+          "reps": 14,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767877021921
+    },
+    {
+      "id": "fddbeb20-9f57-4262-b3d9-4c62bb440584",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1767852000000,
+      "sets": [
+        {
+          "reps": 8,
+          "weight": 180
+        },
+        {
+          "reps": 6,
+          "weight": 180
+        },
+        {
+          "reps": 6,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767877396207
+    },
+    {
+      "id": "b947fe8e-7656-4185-b4d2-77a335ea7714",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1767852000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767877577185
+    },
+    {
+      "id": "f2954d70-5334-4209-b687-78e41487d942",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1767938400000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 90
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        },
+        {
+          "reps": 14,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767963057047
+    },
+    {
+      "id": "0d5ce2e2-45b4-4cf4-9dad-4d4b0529dcc4",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1767938400000,
+      "sets": [
+        {
+          "reps": 12,
+          "weight": 70
+        },
+        {
+          "reps": 10,
+          "weight": 70
+        },
+        {
+          "reps": 12,
+          "weight": 70
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767963456649
+    },
+    {
+      "id": "180650bd-77d2-46fa-885a-6fe2c99f707b",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1767938400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767963956973
+    },
+    {
+      "id": "02323777-8e12-4a8d-a928-f652926b052d",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1767938400000,
+      "sets": [
+        {
+          "reps": 32,
+          "weight": 50
+        },
+        {
+          "reps": 26,
+          "weight": 50
+        },
+        {
+          "reps": 22,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1767964360145
+    },
+    {
+      "id": "d6364370-5058-4e4d-bc3e-7e2007f0550c",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1768024800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 20
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768044933480
+    },
+    {
+      "id": "26d975ae-8ce9-40e4-8f89-46b960d424bf",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1768024800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 11,
+          "weight": 40
+        },
+        {
+          "reps": 15,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768045479940
+    },
+    {
+      "id": "a8f1a955-fd23-40ff-bdda-25b46d26eed5",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1768024800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        },
+        {
+          "reps": 10,
+          "weight": 30
+        },
+        {
+          "reps": 12,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768045973742
+    },
+    {
+      "id": "09cd7f41-46f5-44c9-9d80-2cbae957f633",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1768197600000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 12,
+          "weight": 80
+        },
+        {
+          "reps": 12,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768222943342
+    },
+    {
+      "id": "be188b2d-7c77-428c-ac49-1bcddd3d0d27",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1768197600000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 120
+        },
+        {
+          "reps": 15,
+          "weight": 120
+        },
+        {
+          "reps": 15,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768223313524
+    },
+    {
+      "id": "f63367c0-53e2-47f6-8de0-9aaad1093051",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1768197600000,
+      "sets": [
+        {
+          "reps": 9,
+          "weight": 180
+        },
+        {
+          "reps": 7,
+          "weight": 180
+        },
+        {
+          "reps": 9,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768223722015
+    },
+    {
+      "id": "57ea9539-3f50-40a3-8618-b5d2fbd874c5",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1768197600000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768223876590
+    },
+    {
+      "id": "ae689202-fb4e-4462-ad8c-b98970c49f54",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Push Day)",
+      "type": "Push",
+      "date": 1768244963544,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 20
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768245228708
+    },
+    {
+      "id": "4795ebad-966d-49d9-b039-c29f21589e6f",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1768284000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 100
+        },
+        {
+          "reps": 15,
+          "weight": 100
+        },
+        {
+          "reps": 14,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768304606252
+    },
+    {
+      "id": "5e3d7921-c9e5-4659-abc9-baf0733cbc3d",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1768284000000,
+      "sets": [
+        {
+          "reps": 12,
+          "weight": 70
+        },
+        {
+          "reps": 10,
+          "weight": 70
+        },
+        {
+          "reps": 12,
+          "weight": 70
+        },
+        {
+          "reps": 14,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768305085710
+    },
+    {
+      "id": "8c869f3f-bc43-42a8-80e9-f5f4d0dcaefd",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1768284000000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768305719381
+    },
+    {
+      "id": "6b9be891-2bc9-4716-a9f4-f3d617372521",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1768284000000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 60
+        },
+        {
+          "reps": 17,
+          "weight": 60
+        },
+        {
+          "reps": 17,
+          "weight": 60
+        },
+        {
+          "reps": 26,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768306236502
+    },
+    {
+      "id": "fe8d6ee7-2f07-4181-9c30-c63bdaec295c",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1768370400000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 15,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768390268810
+    },
+    {
+      "id": "e2ff05f9-94d9-489d-97ae-7fc564d9c9c2",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1768370400000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 45
+        },
+        {
+          "reps": 16,
+          "weight": 45
+        },
+        {
+          "reps": 14,
+          "weight": 45
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768390914343
+    },
+    {
+      "id": "9bfe9ff6-112c-4f50-85b2-606f099450b8",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1768370400000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        },
+        {
+          "reps": 11,
+          "weight": 30
+        },
+        {
+          "reps": 15,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768391385246
+    },
+    {
+      "id": "6a2178b7-0aec-433d-81eb-4da12c5b8cf4",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1768469287420,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 14,
+          "weight": 80
+        },
+        {
+          "reps": 12,
+          "weight": 80
+        },
+        {
+          "reps": 14,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768477201597
+    },
+    {
+      "id": "d6a9f327-70ef-45bf-b6b6-4ea8b0e95282",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1768469287420,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 120
+        },
+        {
+          "reps": 16,
+          "weight": 120
+        },
+        {
+          "reps": 18,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768477618935
+    },
+    {
+      "id": "920a2ce2-59bf-4cc0-914b-4e9904f5e517",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1768469287420,
+      "sets": [
+        {
+          "reps": 10,
+          "weight": 180
+        },
+        {
+          "reps": 8,
+          "weight": 180
+        },
+        {
+          "reps": 10,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768477975291
+    },
+    {
+      "id": "1c63758a-ba0c-419a-b588-ecfa49ae7c5b",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1768469287420,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768478156313
+    },
+    {
+      "id": "a6b7e135-dfdc-4ab5-9331-1ded0cf41e77",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Push Day)",
+      "type": "Push",
+      "date": 1768469287420,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 20
+        },
+        {
+          "reps": 25,
+          "weight": 20
+        },
+        {
+          "reps": 27,
+          "weight": 20
+        },
+        {
+          "reps": 26,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768505236175
+    },
+    {
+      "id": "cd691386-d741-41e0-a256-8884e205b929",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1768543200000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 100
+        },
+        {
+          "reps": 15,
+          "weight": 100
+        },
+        {
+          "reps": 14,
+          "weight": 100
+        },
+        {
+          "reps": 12,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768561806906
+    },
+    {
+      "id": "cda98cbc-94f4-4aa7-a731-0aba3d2d0d2b",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1768543200000,
+      "sets": [
+        {
+          "reps": 13,
+          "weight": 70
+        },
+        {
+          "reps": 13,
+          "weight": 70
+        },
+        {
+          "reps": 12,
+          "weight": 70
+        },
+        {
+          "reps": 16,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768562405406
+    },
+    {
+      "id": "d61eb3a7-418d-4fd8-bd23-c76e611247c5",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1768543200000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768563107028
+    },
+    {
+      "id": "17c74ffd-cc36-4057-9bf4-17402dac5f48",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1768543200000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 60
+        },
+        {
+          "reps": 19,
+          "weight": 60
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 28,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768563699985
+    },
+    {
+      "id": "b07ee4e7-b09a-4cf3-ad1e-764eb7fe4147",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1768629600000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768650571638
+    },
+    {
+      "id": "dedd0b74-b9dc-4fc9-8652-24e0c6e5baf0",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1768629600000,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 50
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768651267173
+    },
+    {
+      "id": "8eaf81df-515f-4e7f-af0b-342f3b9ed1d7",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1768629600000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 15,
+          "weight": 30
+        },
+        {
+          "reps": 12,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768651906743
+    },
+    {
+      "id": "160f2d3e-06da-4d50-bc0a-65af78bc96f8",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1768819280039,
+      "sets": [
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 12,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768820731171
+    },
+    {
+      "id": "e0cc4aa2-5458-4452-8a56-5acb31891a71",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1768819280039,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 120
+        },
+        {
+          "reps": 18,
+          "weight": 120
+        },
+        {
+          "reps": 20,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768821300026
+    },
+    {
+      "id": "8d757207-fc82-4b30-9ae8-7a1fa917f4f8",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1768819280039,
+      "sets": [
+        {
+          "reps": 11,
+          "weight": 180
+        },
+        {
+          "reps": 9,
+          "weight": 180
+        },
+        {
+          "reps": 12,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768821902681
+    },
+    {
+      "id": "62b7af5c-b4ec-41cd-b059-7f733cdc25ce",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1768819280039,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768822105569
+    },
+    {
+      "id": "2ecabf23-0d92-4551-b19a-07d271efb79b",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Push Day)",
+      "type": "Push",
+      "date": 1768819280039,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        },
+        {
+          "reps": 28,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768849157898
+    },
+    {
+      "id": "08789581-c272-44d0-81e1-d29687fb03e8",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1768888800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 15,
+          "weight": 100
+        },
+        {
+          "reps": 14,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768906996972
+    },
+    {
+      "id": "f727ffad-bd61-4f7d-bc48-d44c97133fa2",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1768888800000,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 70
+        },
+        {
+          "reps": 14,
+          "weight": 70
+        },
+        {
+          "reps": 13,
+          "weight": 70
+        },
+        {
+          "reps": 18,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768907632652
+    },
+    {
+      "id": "4a0319b0-e73b-4e3f-a76e-572186fb5674",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1768888800000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768908487447
+    },
+    {
+      "id": "d3cd120e-eaa0-437c-ad8b-e169fd2c2c46",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1768888800000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 60
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 32,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768909205230
+    },
+    {
+      "id": "ad25598a-d877-4f95-9ab9-868cea7742f4",
+      "exerciseId": "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "name": "Shrugs (Bonus)",
+      "type": "Pull",
+      "date": 1768918848776,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 24,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768935970769
+    },
+    {
+      "id": "e030a37d-1513-4d51-8b04-c0e03b577e72",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1768988114218,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        },
+        {
+          "reps": 20,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768993538374
+    },
+    {
+      "id": "842e0a40-92b9-45c7-a958-61fbe940bef3",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1768988114218,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 22,
+          "weight": 35
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768994323122
+    },
+    {
+      "id": "28a82697-895b-44d3-bd3f-6c78161d3d3a",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1768988114218,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 14,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1768995110784
+    },
+    {
+      "id": "623e7765-36dd-420b-8d13-29a4c5742c0c",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1769003913882,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769024245721
+    },
+    {
+      "id": "789709f0-1b26-446f-b524-dcc3a58b2d20",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1769078436463,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769080086697
+    },
+    {
+      "id": "a1fe3ebb-8457-476d-aebd-7dcf5b17fe62",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1769078436463,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 120
+        },
+        {
+          "reps": 20,
+          "weight": 120
+        },
+        {
+          "reps": 20,
+          "weight": 120
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769080631118
+    },
+    {
+      "id": "04e26d9f-8a39-4fe7-b6c7-607af6fec80d",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1769078436463,
+      "sets": [
+        {
+          "reps": 12,
+          "weight": 180
+        },
+        {
+          "reps": 11,
+          "weight": 180
+        },
+        {
+          "reps": 14,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769081352176
+    },
+    {
+      "id": "80e43fbb-658b-4b2f-970b-9fe330f4896b",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1769078436463,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769081564432
+    },
+    {
+      "id": "c7fa576f-1a20-411b-8833-634ef1eee909",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1769078436463,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769110130189
+    },
+    {
+      "id": "a420c3a7-b286-48f8-b2c9-8b55681c7cb3",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1769148000000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 100
+        },
+        {
+          "reps": 17,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769169240781
+    },
+    {
+      "id": "856c06cf-a841-40be-a902-1a49bd04ea62",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1769148000000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 70
+        },
+        {
+          "reps": 15,
+          "weight": 70
+        },
+        {
+          "reps": 14,
+          "weight": 70
+        },
+        {
+          "reps": 20,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769169920552
+    },
+    {
+      "id": "22196072-5613-492d-8a38-6c099d6c871e",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1769148000000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769170595262
+    },
+    {
+      "id": "0b5b9a8c-4d89-4dee-aeb5-e157c85094d2",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1769148000000,
+      "sets": [
+        {
+          "reps": 29,
+          "weight": 60
+        },
+        {
+          "reps": 21,
+          "weight": 60
+        },
+        {
+          "reps": 21,
+          "weight": 60
+        },
+        {
+          "reps": 33,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769171260423
+    },
+    {
+      "id": "caee658c-42ab-4bd7-b010-a9e8a5e59d2b",
+      "exerciseId": "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "name": "Shrugs (Bonus)",
+      "type": "Pull",
+      "date": 1769148000000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 100
+        },
+        {
+          "reps": 22,
+          "weight": 100
+        },
+        {
+          "reps": 25,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769197495919
+    },
+    {
+      "id": "cefd5196-fd34-437c-a4a6-8c0707eba45a",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1769234400000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 19,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 20
+        },
+        {
+          "reps": 24,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769253687611
+    },
+    {
+      "id": "9412bb33-638c-4d88-8c89-7c66d1e8cc83",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1769234400000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 50
+        },
+        {
+          "reps": 18,
+          "weight": 50
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769254595632
+    },
+    {
+      "id": "473bfc46-ddf0-4774-9fee-a8aa6ecb9818",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1769234400000,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769255306593
+    },
+    {
+      "id": "2223a959-3ffb-4390-95e1-55bd8a6dc54a",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1769234400000,
+      "sets": [
+        {
+          "reps": 33,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769255922367
+    },
+    {
+      "id": "499ac617-291e-4973-b111-ef61557418b2",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1769407200000,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 115
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 22,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769429506743
+    },
+    {
+      "id": "8c99b422-0cd1-496c-8840-658aaf9eb5a3",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1769407200000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 140
+        },
+        {
+          "reps": 20,
+          "weight": 140
+        },
+        {
+          "reps": 20,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769430065195
+    },
+    {
+      "id": "7b3e0fda-8998-4f65-80a2-55b40aa3662d",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1769407200000,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 180
+        },
+        {
+          "reps": 14,
+          "weight": 180
+        },
+        {
+          "reps": 14,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769430708033
+    },
+    {
+      "id": "52de5250-2ca8-4bd6-8851-c68846b5cacd",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1769407200000,
+      "sets": [
+        {
+          "reps": 32,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769430899383
+    },
+    {
+      "id": "05b12831-d12d-41e2-ac76-263dadf4ef1c",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1769407200000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 32,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769455596093
+    },
+    {
+      "id": "b4733aa3-03e1-4249-8566-96f31997f1f5",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1769510128982,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 105
+        },
+        {
+          "reps": 17,
+          "weight": 105
+        },
+        {
+          "reps": 16,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769512790501
+    },
+    {
+      "id": "edaab3bb-9047-441b-9018-66da0365142d",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1769510128982,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 22,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769513728938
+    },
+    {
+      "id": "475356dc-6fc5-4cd4-9ec4-604a3a40b986",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1769510128982,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769514598038
+    },
+    {
+      "id": "e413d043-d084-4771-9dbd-4c748dfd4e09",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1769510128982,
+      "sets": [
+        {
+          "reps": 31,
+          "weight": 60
+        },
+        {
+          "reps": 23,
+          "weight": 60
+        },
+        {
+          "reps": 23,
+          "weight": 60
+        },
+        {
+          "reps": 35,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769515295530
+    },
+    {
+      "id": "c8b00140-31a1-4cf7-bbc2-20c657e75dd2",
+      "exerciseId": "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "name": "Shrugs (Bonus)",
+      "type": "Pull",
+      "date": 1769518732473,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 100
+        },
+        {
+          "reps": 24,
+          "weight": 100
+        },
+        {
+          "reps": 28,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769541596557
+    },
+    {
+      "id": "f900d178-0d2e-4d91-a5b3-e422de2d7823",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1769580000000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 27,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769598722610
+    },
+    {
+      "id": "eb220cc1-3341-49cd-ba11-09b9e22dd55c",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1769580000000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 45
+        },
+        {
+          "reps": 22,
+          "weight": 45
+        },
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 18,
+          "weight": 45
+        },
+        {
+          "reps": 24,
+          "weight": 35
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769599766855
+    },
+    {
+      "id": "2c3d44c3-5f37-478c-ba98-911bda54ed9a",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1769580000000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 19,
+          "weight": 30
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769600441232
+    },
+    {
+      "id": "8b96a356-8e6c-45c8-b550-260629a38cfa",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1769629344103,
+      "sets": [
+        {
+          "reps": 35,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769630032556
+    },
+    {
+      "id": "97c95edd-1100-43e4-be01-75912d769485",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1769666400000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769684504190
+    },
+    {
+      "id": "4a421926-41fb-436e-8c5d-45aa387fd204",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1769666400000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 140
+        },
+        {
+          "reps": 21,
+          "weight": 140
+        },
+        {
+          "reps": 21,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769685097939
+    },
+    {
+      "id": "7e79b1f1-29f5-4b06-a60b-925c74ef33bf",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1769666400000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 16,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769685795937
+    },
+    {
+      "id": "6cab9fbb-e409-4c24-9907-cc805d4ca1f9",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1769666400000,
+      "sets": [
+        {
+          "reps": 34,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769686139323
+    },
+    {
+      "id": "8383f62b-85b5-4ff8-89bd-037276180596",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1769666400000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 31,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 34,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769714165250
+    },
+    {
+      "id": "290bb773-c91e-452a-ad16-50abbfd86622",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1769752800000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 105
+        },
+        {
+          "reps": 17,
+          "weight": 105
+        },
+        {
+          "reps": 20,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769770325740
+    },
+    {
+      "id": "f8c8b69e-5926-4160-9121-9bf9e36a417a",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1769752800000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 70
+        },
+        {
+          "reps": 16,
+          "weight": 70
+        },
+        {
+          "reps": 17,
+          "weight": 70
+        },
+        {
+          "reps": 24,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769771121097
+    },
+    {
+      "id": "47514ef2-0196-464f-8d8c-f8b9e732dd51",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1769752800000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769772126836
+    },
+    {
+      "id": "2ae47fa8-e948-47ef-9dfa-1030cd4b008b",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1769752800000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 70
+        },
+        {
+          "reps": 25,
+          "weight": 60
+        },
+        {
+          "reps": 25,
+          "weight": 60
+        },
+        {
+          "reps": 40,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769772933388
+    },
+    {
+      "id": "45a8560f-d4ba-4130-a517-be809e95df04",
+      "exerciseId": "81d61504-aebb-486d-8f98-f6b4082fb411",
+      "name": "Shrugs (Bonus)",
+      "type": "Pull",
+      "date": 1769752800000,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 100
+        },
+        {
+          "reps": 24,
+          "weight": 100
+        },
+        {
+          "reps": 30,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769800801372
+    },
+    {
+      "id": "41e954ff-0460-4879-b105-840018adbdd6",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1769839200000,
+      "sets": [
+        {
+          "reps": 10,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769858563965
+    },
+    {
+      "id": "02709cb0-cc28-4e50-9308-0e21bcaca44f",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1769839200000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 50
+        },
+        {
+          "reps": 18,
+          "weight": 50
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 35
+        },
+        {
+          "reps": 20,
+          "weight": 35
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769859737881
+    },
+    {
+      "id": "134b81f7-758a-4f05-9308-440b0a9a8d87",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1769839200000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769860477328
+    },
+    {
+      "id": "50410d4d-c0c3-4cb8-b9c4-b0ed0ceb494c",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1769839200000,
+      "sets": [
+        {
+          "reps": 36,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 35,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1769861174435
+    },
+    {
+      "id": "b00025b5-42f2-4180-9bd0-19c9cb1cfd29",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1770012000000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 115
+        },
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770030097939
+    },
+    {
+      "id": "2be16da0-edfb-4eb6-be64-07df672f3b74",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1770012000000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 140
+        },
+        {
+          "reps": 22,
+          "weight": 140
+        },
+        {
+          "reps": 22,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770030664530
+    },
+    {
+      "id": "7ecbdfc8-fa56-4d34-8377-6522788b501b",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1770012000000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 180
+        },
+        {
+          "reps": 16,
+          "weight": 180
+        },
+        {
+          "reps": 17,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770031402270
+    },
+    {
+      "id": "a6023608-540c-4099-a910-3f5ee66181c4",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1770012000000,
+      "sets": [
+        {
+          "reps": 35,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770031662064
+    },
+    {
+      "id": "88e5d7c7-b2f7-42fb-b5c5-cee7bbcb0d85",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1770012000000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 35,
+          "weight": 20
+        },
+        {
+          "reps": 35,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770061303662
+    },
+    {
+      "id": "7cdfe768-995e-40dc-92ca-09d8d2ed7e5e",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1770098400000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 20,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770116588214
+    },
+    {
+      "id": "6cad22e9-26a8-49f7-9da1-32755c90d2c6",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1770098400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 70
+        },
+        {
+          "reps": 26,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770117522600
+    },
+    {
+      "id": "632f2992-a942-4a5c-85a5-b70f772d6d94",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1770098400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770118414504
+    },
+    {
+      "id": "c1225dc1-2f8b-4ade-a363-eddd6da660fd",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1770098400000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 70
+        },
+        {
+          "reps": 26,
+          "weight": 60
+        },
+        {
+          "reps": 26,
+          "weight": 60
+        },
+        {
+          "reps": 42,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770119220276
+    },
+    {
+      "id": "f6be05ac-8a5f-49d5-b385-6f3a64cbb788",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1770098400000,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 80
+        },
+        {
+          "reps": 14,
+          "weight": 80
+        },
+        {
+          "reps": 14,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770148234388
+    },
+    {
+      "id": "e9f51ed8-bd65-4e33-8eca-f1beab1a3c96",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1770184800000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 31,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770202945822
+    },
+    {
+      "id": "7321a305-48c1-485b-8261-96ce3704b5df",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1770184800000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 45
+        },
+        {
+          "reps": 25,
+          "weight": 45
+        },
+        {
+          "reps": 20,
+          "weight": 45
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770204194450
+    },
+    {
+      "id": "fa55eacd-b29b-481b-9ad8-6ae9ca9f45fc",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1770184800000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 18,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770204892279
+    },
+    {
+      "id": "6254ce50-2df6-4140-ac47-a081e4fb419a",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1770184800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770234376888
+    },
+    {
+      "id": "28ca3ea8-9551-4943-893a-8cce683bd23a",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1770271200000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770289516073
+    },
+    {
+      "id": "72ed7019-bd7a-40c1-9be6-329ca593d310",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1770271200000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 140
+        },
+        {
+          "reps": 24,
+          "weight": 140
+        },
+        {
+          "reps": 24,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770290186329
+    },
+    {
+      "id": "afc92328-f9f3-41c6-8a57-3400cad8c39d",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1770271200000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 180
+        },
+        {
+          "reps": 17,
+          "weight": 180
+        },
+        {
+          "reps": 17,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770290862456
+    },
+    {
+      "id": "1f439d09-7bd8-4e86-90ac-3a296f7c932b",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1770271200000,
+      "sets": [
+        {
+          "reps": 36,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770291127032
+    },
+    {
+      "id": "cbee4825-481b-4ea3-8d2c-13591a00d582",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1770271200000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 36,
+          "weight": 20
+        },
+        {
+          "reps": 36,
+          "weight": 20
+        },
+        {
+          "reps": 36,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770326928116
+    },
+    {
+      "id": "7ddc0206-395a-48d4-9c26-9731bec8f9ea",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1770357600000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 90
+        },
+        {
+          "reps": 21,
+          "weight": 90
+        },
+        {
+          "reps": 21,
+          "weight": 90
+        },
+        {
+          "reps": 24,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770375269996
+    },
+    {
+      "id": "a3bb3c2d-3e25-4a20-9dd6-e4414be12f91",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1770357600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 70
+        },
+        {
+          "reps": 20,
+          "weight": 70
+        },
+        {
+          "reps": 18,
+          "weight": 70
+        },
+        {
+          "reps": 28,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770376195964
+    },
+    {
+      "id": "6f14c070-4f01-4c52-8637-24126b7ea143",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1770357600000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770377108681
+    },
+    {
+      "id": "c8504fa6-8fc6-44a3-baab-c819c0c0c56d",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1770357600000,
+      "sets": [
+        {
+          "reps": 29,
+          "weight": 70
+        },
+        {
+          "reps": 27,
+          "weight": 60
+        },
+        {
+          "reps": 27,
+          "weight": 60
+        },
+        {
+          "reps": 43,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770377957204
+    },
+    {
+      "id": "0c05b656-d896-4e79-87e8-03c929d0b1bc",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1770382279572,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 80
+        },
+        {
+          "reps": 15,
+          "weight": 80
+        },
+        {
+          "reps": 15,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770407539531
+    },
+    {
+      "id": "4b5d9ff6-2cd7-4861-891b-8a23b4baf4dc",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1770444000000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770463821936
+    },
+    {
+      "id": "28dbccbc-e02f-4c0b-9483-75b5e4e4b363",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1770444000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 50
+        },
+        {
+          "reps": 18,
+          "weight": 50
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770464868480
+    },
+    {
+      "id": "86c8de04-7414-43ed-8a4f-a35250f83a6a",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1770444000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 35,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770465569064
+    },
+    {
+      "id": "c9f9263f-e088-4220-bce6-3731beaddec0",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1770634733812,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 115
+        },
+        {
+          "reps": 13,
+          "weight": 115
+        },
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 22,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770638259574
+    },
+    {
+      "id": "228a7173-0e38-4036-a2d2-7881b2d34006",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1770634733812,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 140
+        },
+        {
+          "reps": 25,
+          "weight": 140
+        },
+        {
+          "reps": 25,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770638881505
+    },
+    {
+      "id": "1df3d39c-b0bf-463d-9c12-39d5de0f6f42",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1770634733812,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 17,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770639675638
+    },
+    {
+      "id": "c59af66a-907d-4a6b-b52f-b7156327ffb5",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1770634733812,
+      "sets": [
+        {
+          "reps": 37,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770639969423
+    },
+    {
+      "id": "f9a17c71-f168-4c17-8597-84451554a58c",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Push",
+      "date": 1770634733812,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 14,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770671459237
+    },
+    {
+      "id": "b216dd90-c055-4e5f-8502-14ef6b30e091",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1770703200000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 90
+        },
+        {
+          "reps": 22,
+          "weight": 90
+        },
+        {
+          "reps": 22,
+          "weight": 90
+        },
+        {
+          "reps": 25,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770721030144
+    },
+    {
+      "id": "b79e45ef-c2bf-451f-8ee9-91951b13afce",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1770703200000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 70
+        },
+        {
+          "reps": 21,
+          "weight": 70
+        },
+        {
+          "reps": 19,
+          "weight": 70
+        },
+        {
+          "reps": 32,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770721918981
+    },
+    {
+      "id": "d47cf4fa-0224-427e-9131-4dd3d82cb4f9",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1770703200000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770722818630
+    },
+    {
+      "id": "f3b26291-2004-4b2a-868d-c4ac1dd0d0da",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1770703200000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 70
+        },
+        {
+          "reps": 29,
+          "weight": 60
+        },
+        {
+          "reps": 29,
+          "weight": 60
+        },
+        {
+          "reps": 45,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770723664992
+    },
+    {
+      "id": "ae3e80c4-72de-4442-902e-017f3faa4f44",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1770703200000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770750363106
+    },
+    {
+      "id": "088ccfc6-b746-47c2-b8cd-edb3457b33c2",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1770803241187,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770807807754
+    },
+    {
+      "id": "ea28e4c0-3526-4941-a94a-d64348d04ff3",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1770803241187,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 55
+        },
+        {
+          "reps": 19,
+          "weight": 55
+        },
+        {
+          "reps": 16,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 33,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770809125760
+    },
+    {
+      "id": "e860638b-5808-4040-a5a5-2033655d7759",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1770803241187,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 37,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770809954424
+    },
+    {
+      "id": "372e56ae-30cf-4ea5-881a-7fc780245797",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Arms",
+      "date": 1770803241187,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770837546191
+    },
+    {
+      "id": "8e7f4bb5-af40-403b-b072-a83b3b3d8826",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1770888875059,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 14,
+          "weight": 100
+        },
+        {
+          "reps": 24,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770894066127
+    },
+    {
+      "id": "bf6e0d76-3d44-4897-9eb3-39da36d26264",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1770888875059,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 140
+        },
+        {
+          "reps": 27,
+          "weight": 140
+        },
+        {
+          "reps": 26,
+          "weight": 140
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770894816938
+    },
+    {
+      "id": "fd4b3bb8-f5b6-4b02-89b8-92a9004ee6d0",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1770888875059,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770895606416
+    },
+    {
+      "id": "ae04f1c2-c5ec-4d53-a9c4-60a356f37a19",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1770888875059,
+      "sets": [
+        {
+          "reps": 38,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770895875767
+    },
+    {
+      "id": "7c41ac59-6d62-4705-9779-c0a378b12097",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Push",
+      "date": 1770888875059,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770926621158
+    },
+    {
+      "id": "e269bb12-97ab-4d09-b3fe-dc8d4438c6d7",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1770962400000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 105
+        },
+        {
+          "reps": 20,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770980205244
+    },
+    {
+      "id": "beaf1de7-e583-456f-804d-007052c9b58b",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1770962400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 15,
+          "weight": 80
+        },
+        {
+          "reps": 15,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 70
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770981074628
+    },
+    {
+      "id": "2ea16594-8d07-4709-8ad6-762536e5e490",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1770962400000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770982004715
+    },
+    {
+      "id": "dbf17fa8-9f18-41a2-a156-c41c380eced6",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1770962400000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 80
+        },
+        {
+          "reps": 22,
+          "weight": 70
+        },
+        {
+          "reps": 25,
+          "weight": 60
+        },
+        {
+          "reps": 48,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1770982862349
+    },
+    {
+      "id": "dc8f6015-a50b-430f-a0d5-e0c7fc925122",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1770962400000,
+      "sets": [
+        {
+          "reps": 12,
+          "weight": 100
+        },
+        {
+          "reps": 9,
+          "weight": 100
+        },
+        {
+          "reps": 9,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771010748992
+    },
+    {
+      "id": "cf20173a-9dc9-473f-9f30-25d848b160ce",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1771062096143,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771065425012
+    },
+    {
+      "id": "d5ac67ac-2567-4d3d-bc5a-6dfb641a1598",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1771062096143,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 55
+        },
+        {
+          "reps": 21,
+          "weight": 55
+        },
+        {
+          "reps": 18,
+          "weight": 55
+        },
+        {
+          "reps": 18,
+          "weight": 55
+        },
+        {
+          "reps": 18,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771066635116
+    },
+    {
+      "id": "f83183cc-94bb-4add-9770-7466f30c3bef",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1771062096143,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 40,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771067524162
+    },
+    {
+      "id": "adf3b088-493f-417d-a153-6bb2513212a7",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1771221600000,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 115
+        },
+        {
+          "reps": 14,
+          "weight": 115
+        },
+        {
+          "reps": 13,
+          "weight": 115
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771238274772
+    },
+    {
+      "id": "ff24f08b-b349-4a4a-8791-e262053a20a1",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1771221600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 160
+        },
+        {
+          "reps": 20,
+          "weight": 160
+        },
+        {
+          "reps": 20,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771238987370
+    },
+    {
+      "id": "5eace339-2bce-4740-9276-1cb85424247e",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1771221600000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771239761203
+    },
+    {
+      "id": "39a52e39-1de8-4163-9e9d-cfd990f7066c",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1771221600000,
+      "sets": [
+        {
+          "reps": 39,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771240083101
+    },
+    {
+      "id": "471172a2-6353-4985-8b9a-a04ebc272f08",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Push",
+      "date": 1771221600000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 180
+        },
+        {
+          "reps": 21,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771270379051
+    },
+    {
+      "id": "c6b30177-a2f9-42e5-b15a-620ac99516f8",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1771322002684,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 105
+        },
+        {
+          "reps": 19,
+          "weight": 105
+        },
+        {
+          "reps": 19,
+          "weight": 105
+        },
+        {
+          "reps": 22,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771324732828
+    },
+    {
+      "id": "4ef79b97-8afc-43ed-ad17-0983b28863e3",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1771322002684,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 70
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771325713943
+    },
+    {
+      "id": "d5ae5978-d529-42b7-9991-ca97b2be123e",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1771322002684,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771326727835
+    },
+    {
+      "id": "977fbaa3-24c1-4523-b2bc-9f198f3faec1",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1771322002684,
+      "sets": [
+        {
+          "reps": 31,
+          "weight": 80
+        },
+        {
+          "reps": 25,
+          "weight": 70
+        },
+        {
+          "reps": 30,
+          "weight": 60
+        },
+        {
+          "reps": 50,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771327678008
+    },
+    {
+      "id": "d11a60cb-4d57-4ab9-aa9e-5c1616a17807",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1771322002684,
+      "sets": [
+        {
+          "reps": 13,
+          "weight": 100
+        },
+        {
+          "reps": 10,
+          "weight": 100
+        },
+        {
+          "reps": 10,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771356130945
+    },
+    {
+      "id": "cdae4679-9fa6-4669-86b6-d30cd1f6c55e",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1771394400000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 35,
+          "weight": 20
+        },
+        {
+          "reps": 36,
+          "weight": 20
+        },
+        {
+          "reps": 40,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771412594208
+    },
+    {
+      "id": "004bace4-d5fe-426e-ba1c-60879466d644",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1771394400000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 55
+        },
+        {
+          "reps": 19,
+          "weight": 55
+        },
+        {
+          "reps": 19,
+          "weight": 55
+        },
+        {
+          "reps": 19,
+          "weight": 55
+        },
+        {
+          "reps": 24,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771413901969
+    },
+    {
+      "id": "7719638c-bbab-4f9f-a4ae-160a8b2365f9",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1771394400000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 41,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771414800869
+    },
+    {
+      "id": "b0b6dd64-5651-4458-ae27-a7b41e655c81",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Arms",
+      "date": 1771394400000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771444367997
+    },
+    {
+      "id": "1de3704e-7908-47b7-8af7-5748ebf579f0",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1771480800000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 26,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771498533850
+    },
+    {
+      "id": "60034dee-11d5-4372-b9d1-879da8a2720b",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1771480800000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 160
+        },
+        {
+          "reps": 24,
+          "weight": 160
+        },
+        {
+          "reps": 24,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771499361345
+    },
+    {
+      "id": "83921312-f9a0-42cb-b34a-58a720947986",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1771480800000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771500216121
+    },
+    {
+      "id": "4e02aa68-932a-49ac-b7c3-d04e8e63da77",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1771480800000,
+      "sets": [
+        {
+          "reps": 40,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771500517014
+    },
+    {
+      "id": "c3c33a12-f4c3-4091-84e4-0eff0aacfcd5",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Push",
+      "date": 1771528406865,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771529241958
+    },
+    {
+      "id": "3eb2cb12-ab85-4432-9b20-28bee02399b9",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1771583899227,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 105
+        },
+        {
+          "reps": 20,
+          "weight": 105
+        },
+        {
+          "reps": 20,
+          "weight": 105
+        },
+        {
+          "reps": 24,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771584981924
+    },
+    {
+      "id": "c6aaf85b-d6d0-40db-83c1-2a51959006de",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1771583899227,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771586851564
+    },
+    {
+      "id": "06a58172-b36d-4d9e-9be6-f5b435ca9da2",
+      "exerciseId": "7ecee161-2750-47bc-8c2b-fa9ee471c2a8",
+      "name": "Band Pull-Aparts",
+      "type": "Pull",
+      "date": 1771583899227,
+      "sets": [
+        {
+          "reps": 29,
+          "weight": 80
+        },
+        {
+          "reps": 24,
+          "weight": 70
+        },
+        {
+          "reps": 35,
+          "weight": 60
+        },
+        {
+          "reps": 51,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771587710069
+    },
+    {
+      "id": "c7e8aa72-f3cc-4295-8d4e-85156df2f75c",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1771583899227,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 100
+        },
+        {
+          "reps": 12,
+          "weight": 100
+        },
+        {
+          "reps": 11,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771619375414
+    },
+    {
+      "id": "e1f7e52d-bd8e-485e-94c9-6616a98cd5eb",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1771583899227,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 23,
+          "weight": 70
+        },
+        {
+          "reps": 25,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771619507619
+    },
+    {
+      "id": "3a188742-bc64-4d90-a1d3-881c4e65a2f3",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1771674025203,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 36,
+          "weight": 20
+        },
+        {
+          "reps": 40,
+          "weight": 20
+        },
+        {
+          "reps": 42,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771678879667
+    },
+    {
+      "id": "0d314a8a-539f-4b63-ba3a-87dd976b8595",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1771674025203,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 43,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771681125683
+    },
+    {
+      "id": "3902cc74-7824-48cd-833c-b63426a89371",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1771674025203,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 55
+        },
+        {
+          "reps": 23,
+          "weight": 55
+        },
+        {
+          "reps": 16,
+          "weight": 55
+        },
+        {
+          "reps": 19,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 40
+        },
+        {
+          "reps": 40,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771681293917
+    },
+    {
+      "id": "755e6429-52c0-4d16-b40a-25509c4f9816",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1771845680044,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 115
+        },
+        {
+          "reps": 15,
+          "weight": 115
+        },
+        {
+          "reps": 16,
+          "weight": 115
+        },
+        {
+          "reps": 19,
+          "weight": 100
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771847931417
+    },
+    {
+      "id": "6bf8a885-f84c-443d-be89-a92c7750d842",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1771845680044,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 160
+        },
+        {
+          "reps": 25,
+          "weight": 160
+        },
+        {
+          "reps": 25,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771848545754
+    },
+    {
+      "id": "ebe3a64b-af8f-4bcc-84dc-b3de3d73c1d1",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1771845680044,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771849196981
+    },
+    {
+      "id": "d7092d92-4c91-432f-b3ce-d914052ee967",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1771845680044,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771849384363
+    },
+    {
+      "id": "fff26bb8-38c5-45a5-8cae-8059d82a17dc",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Push",
+      "date": 1771873728119,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 180
+        },
+        {
+          "reps": 21,
+          "weight": 180
+        },
+        {
+          "reps": 21,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771875444727
+    },
+    {
+      "id": "d3ad6027-9c30-42e0-8256-a65f3ddd7c2c",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1771912800000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 105
+        },
+        {
+          "reps": 21,
+          "weight": 105
+        },
+        {
+          "reps": 21,
+          "weight": 105
+        },
+        {
+          "reps": 25,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771930419607
+    },
+    {
+      "id": "5838dc4f-7b9e-488b-b470-2765adc416df",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1771912800000,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 23,
+          "weight": 70
+        },
+        {
+          "reps": 20,
+          "weight": 70
+        },
+        {
+          "reps": 27,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771931740171
+    },
+    {
+      "id": "e015e917-e998-453e-923c-37b8eb046fbf",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1771912800000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771932855691
+    },
+    {
+      "id": "e85b0a7a-b58b-4f7a-a459-22aefb405aea",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1771912800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 25
+        },
+        {
+          "reps": 20,
+          "weight": 25
+        },
+        {
+          "reps": 20,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771933411820
+    },
+    {
+      "id": "bb39e915-73e8-4069-8b9b-90c139554b29",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1771975099475,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1771975208630
+    },
+    {
+      "id": "deb7b4f0-d4fa-4eda-9f03-c2d1edd01858",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1772690400000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 115
+        },
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 11,
+          "weight": 100
+        }
+      ],
+      "completed": true,
+      "completedDate": 1772893688722
+    },
+    {
+      "id": "7a476ae8-e84b-48c8-87f8-8a50c43e6b10",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1772690400000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 160
+        },
+        {
+          "reps": 20,
+          "weight": 160
+        },
+        {
+          "reps": 20,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1772894171691
+    },
+    {
+      "id": "166fa329-b3d6-410c-b0fd-43c3160dd01f",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1772690400000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1772894773229
+    },
+    {
+      "id": "517482fd-558a-4135-8d4d-3115a80b2343",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1772690400000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1772894993637
+    },
+    {
+      "id": "bddf6c99-6848-4737-b43e-48fb5e8691b4",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1773032400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 115
+        },
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 12,
+          "weight": 115
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773050670278
+    },
+    {
+      "id": "066095f1-3a51-4017-a1ff-2b6c2be8a099",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1773032400000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 160
+        },
+        {
+          "reps": 21,
+          "weight": 160
+        },
+        {
+          "reps": 21,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773051295969
+    },
+    {
+      "id": "f0b2199d-c0b3-440c-a865-eb34c9cc705f",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1773032400000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 180
+        },
+        {
+          "reps": 16,
+          "weight": 180
+        },
+        {
+          "reps": 16,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773051994846
+    },
+    {
+      "id": "7af1ba8e-3c63-4a5e-b296-144dcdba6cf3",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1773032400000,
+      "sets": [
+        {
+          "reps": 34,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773052227137
+    },
+    {
+      "id": "9d83d8d6-81f7-446d-b0c5-471a1831c969",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1773032400000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        },
+        {
+          "reps": 36,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773083037066
+    },
+    {
+      "id": "3d1c9d2b-97a2-44ac-b636-1a165b367099",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1773118800000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 105
+        },
+        {
+          "reps": 21,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 105
+        },
+        {
+          "reps": 18,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773136611504
+    },
+    {
+      "id": "c1e66058-1d7b-4e63-b725-c21ad7312226",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1773118800000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 70
+        },
+        {
+          "reps": 18,
+          "weight": 70
+        },
+        {
+          "reps": 22,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773137686209
+    },
+    {
+      "id": "3536ae84-9f47-4a66-8993-a91577ea47c3",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1773118800000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773138673391
+    },
+    {
+      "id": "466da1b5-59db-4b58-9ab2-d124d5e2acda",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1773118800000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 25
+        },
+        {
+          "reps": 20,
+          "weight": 25
+        },
+        {
+          "reps": 20,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773139351010
+    },
+    {
+      "id": "71274d76-22a4-48dc-8d33-1e2ff6742c13",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1773118800000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 16,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773169053803
+    },
+    {
+      "id": "473f1072-2319-4da9-92dd-8416801b35d1",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1773218005081,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773223084497
+    },
+    {
+      "id": "389b636c-556a-4114-8476-b477f7e56eb3",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1773218005081,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 55
+        },
+        {
+          "reps": 20,
+          "weight": 55
+        },
+        {
+          "reps": 12,
+          "weight": 55
+        },
+        {
+          "reps": 18,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773223911960
+    },
+    {
+      "id": "e727ff26-6b80-4d5f-a32b-ae18b3e097b0",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1773218005081,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 30
+        },
+        {
+          "reps": 20,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773224733692
+    },
+    {
+      "id": "5aea55d8-36f9-4846-8398-a0bdd07ca58a",
+      "exerciseId": "046ce7ec-0820-4ede-87b2-99826ed70b3c",
+      "name": "Dips (Bonus)",
+      "type": "Arms",
+      "date": 1773218005081,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773256051095
+    },
+    {
+      "id": "df76aafd-8814-41db-933e-19e67b4c1c43",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1773291600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 12,
+          "weight": 100
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773308834561
+    },
+    {
+      "id": "b1a80f82-fb28-4150-8f8b-cba0ebc4d381",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1773291600000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 160
+        },
+        {
+          "reps": 22,
+          "weight": 160
+        },
+        {
+          "reps": 22,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773309470724
+    },
+    {
+      "id": "95088890-b914-4cf6-a9c4-cf75d2118b8b",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1773291600000,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 180
+        },
+        {
+          "reps": 17,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773310170672
+    },
+    {
+      "id": "7720bd6c-e3ba-4fcc-b051-7d746e5de0be",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1773291600000,
+      "sets": [
+        {
+          "reps": 36,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773310507496
+    },
+    {
+      "id": "b897e8f7-2fc9-4b91-8af9-5d636af15260",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1773291600000,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 31,
+          "weight": 20
+        },
+        {
+          "reps": 22,
+          "weight": 20
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        },
+        {
+          "reps": 38,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773349063873
+    },
+    {
+      "id": "8ae7551a-a2fc-4148-ba0c-f532520f9a2e",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1773378000000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 105
+        },
+        {
+          "reps": 22,
+          "weight": 105
+        },
+        {
+          "reps": 19,
+          "weight": 105
+        },
+        {
+          "reps": 19,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773394995297
+    },
+    {
+      "id": "53780e32-4bd5-4fae-a3fd-77484ab42ba8",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1773378000000,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 17,
+          "weight": 80
+        },
+        {
+          "reps": 19,
+          "weight": 70
+        },
+        {
+          "reps": 20,
+          "weight": 70
+        },
+        {
+          "reps": 24,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773396224296
+    },
+    {
+      "id": "1db84305-55ec-493c-93db-d51a2b273ba5",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1773378000000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773397229448
+    },
+    {
+      "id": "037f71e6-e625-4acd-aa6c-1f1c1a7f0b80",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1773378000000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 25
+        },
+        {
+          "reps": 21,
+          "weight": 25
+        },
+        {
+          "reps": 21,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773397856682
+    },
+    {
+      "id": "d540d459-1fbf-4292-9904-529dbe6dbadd",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1773464400000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773483280717
+    },
+    {
+      "id": "cae3f2ca-8978-4cea-b120-38f92b0bc1b5",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1773464400000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 50
+        },
+        {
+          "reps": 16,
+          "weight": 50
+        },
+        {
+          "reps": 12,
+          "weight": 50
+        },
+        {
+          "reps": 20,
+          "weight": 40
+        },
+        {
+          "reps": 17,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773484398187
+    },
+    {
+      "id": "58451831-e9f8-4fe7-a336-fd09a1cb3970",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1773464400000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 40
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 21,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773485119394
+    },
+    {
+      "id": "d73f9f2a-6a2e-4af9-8e10-bcdb6ee3059f",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1773485189774,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 33,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 35,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773485899388
+    },
+    {
+      "id": "0bfe2992-af12-4254-bfb1-2aeaa9077f88",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1773649828535,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 115
+        },
+        {
+          "reps": 16,
+          "weight": 115
+        },
+        {
+          "reps": 14,
+          "weight": 115
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773656265019
+    },
+    {
+      "id": "d4c3a421-1006-4fd1-acd0-b9c6c44001b6",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1773649828535,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 160
+        },
+        {
+          "reps": 24,
+          "weight": 160
+        },
+        {
+          "reps": 24,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773657031357
+    },
+    {
+      "id": "90226db6-a35f-48c9-9842-78f0989fdff8",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1773649828535,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773657816650
+    },
+    {
+      "id": "b1d2ede1-cb3f-4f5b-a04a-a3a174b0489e",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1773649828535,
+      "sets": [
+        {
+          "reps": 38,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773658196547
+    },
+    {
+      "id": "7fe29024-8d2a-4a56-a836-d230a4c88167",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1773649828535,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 24,
+          "weight": 20
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        },
+        {
+          "reps": 40,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773686075549
+    },
+    {
+      "id": "ec166133-ffd4-4433-b659-84c82e271362",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1773723600000,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 105
+        },
+        {
+          "reps": 23,
+          "weight": 105
+        },
+        {
+          "reps": 20,
+          "weight": 105
+        },
+        {
+          "reps": 22,
+          "weight": 105
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773741791603
+    },
+    {
+      "id": "c347c926-32ef-4d1f-921a-d7e2ae6dfb0d",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1773723600000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 18,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 70
+        },
+        {
+          "reps": 21,
+          "weight": 70
+        },
+        {
+          "reps": 26,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773742980768
+    },
+    {
+      "id": "17f1456e-3cd3-4e6c-ae37-af7802fccd8d",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1773723600000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773744076199
+    },
+    {
+      "id": "ff289dd3-ffb3-413e-86ab-cd19db615325",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1773723600000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 25
+        },
+        {
+          "reps": 24,
+          "weight": 25
+        },
+        {
+          "reps": 25,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773744871285
+    },
+    {
+      "id": "8b78e9dd-efaf-4e72-baa2-be4480e5ab12",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1773723600000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        },
+        {
+          "reps": 20,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773773900434
+    },
+    {
+      "id": "8645c40a-4d1c-4d57-8421-008717c510ab",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1773810000000,
+      "sets": [
+        {
+          "reps": 29,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 34,
+          "weight": 20
+        },
+        {
+          "reps": 32,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 10
+        },
+        {
+          "reps": 30,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773829048883
+    },
+    {
+      "id": "c189418d-59b1-4236-a6e3-3f2e56f18cb2",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1773810000000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 55
+        },
+        {
+          "reps": 20,
+          "weight": 55
+        },
+        {
+          "reps": 20,
+          "weight": 55
+        },
+        {
+          "reps": 16,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773830620088
+    },
+    {
+      "id": "7f67e82a-1811-4aab-a819-124479ab5bb1",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1773810000000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 40
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 22,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773831546091
+    },
+    {
+      "id": "fd1c6867-692b-422f-ada6-a2ece301841f",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1773810000000,
+      "sets": [
+        {
+          "reps": 28,
+          "weight": 40
+        },
+        {
+          "reps": 33,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 38,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773858768631
+    },
+    {
+      "id": "f7fa1a78-670d-4df9-a9c5-b546f3ac414d",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1773911707194,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 100
+        },
+        {
+          "reps": 20,
+          "weight": 100
+        },
+        {
+          "reps": 16,
+          "weight": 100
+        },
+        {
+          "reps": 24,
+          "weight": 80
+        },
+        {
+          "reps": 22,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773914440517
+    },
+    {
+      "id": "8dc3bc10-d96b-4ae9-8b8b-c49b5da7dca5",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1773911707194,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 160
+        },
+        {
+          "reps": 25,
+          "weight": 160
+        },
+        {
+          "reps": 25,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773915188766
+    },
+    {
+      "id": "afd389b3-b10e-4679-8a3d-66870790047b",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1773911707194,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 19,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773916079610
+    },
+    {
+      "id": "129b0b17-1c0d-431a-b609-8f26106c4c28",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1773911707194,
+      "sets": [
+        {
+          "reps": 39,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773916436781
+    },
+    {
+      "id": "5821bee8-02ec-47fe-8ea8-8b8096e34f44",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1773911707194,
+      "sets": [
+        {
+          "reps": 29,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 42,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1773948112277
+    },
+    {
+      "id": "53ea7ef3-c6ba-401c-8764-43080ed56344",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1773982800000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 115
+        },
+        {
+          "reps": 21,
+          "weight": 115
+        },
+        {
+          "reps": 19,
+          "weight": 115
+        },
+        {
+          "reps": 21,
+          "weight": 115
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774001400116
+    },
+    {
+      "id": "e6430906-adc2-4db9-8d78-63d89f6f0c98",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1773982800000,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 80
+        },
+        {
+          "reps": 19,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 70
+        },
+        {
+          "reps": 22,
+          "weight": 70
+        },
+        {
+          "reps": 28,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774002864285
+    },
+    {
+      "id": "c3676514-2aed-4a51-a5aa-fe83d95de33a",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1773982800000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 23,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774003968419
+    },
+    {
+      "id": "c12d9c24-5971-42ea-9016-11db053d8e81",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1773982800000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 25
+        },
+        {
+          "reps": 28,
+          "weight": 25
+        },
+        {
+          "reps": 28,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774004726258
+    },
+    {
+      "id": "eb41960b-b135-438a-bebc-e4a9bab16e3f",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1774069200000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 36,
+          "weight": 20
+        },
+        {
+          "reps": 34,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 10
+        },
+        {
+          "reps": 40,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774089101477
+    },
+    {
+      "id": "57a5d8c6-b514-438a-8ffe-8ba783f95f04",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1774069200000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 55
+        },
+        {
+          "reps": 22,
+          "weight": 55
+        },
+        {
+          "reps": 21,
+          "weight": 55
+        },
+        {
+          "reps": 20,
+          "weight": 55
+        },
+        {
+          "reps": 25,
+          "weight": 40
+        },
+        {
+          "reps": 27,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774090625840
+    },
+    {
+      "id": "8ab51651-0181-4e8c-89e2-6e936c470c62",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1774069200000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774091563816
+    },
+    {
+      "id": "c3b653c3-b92d-4486-866e-2677bae8afb4",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1774069200000,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 40
+        },
+        {
+          "reps": 35,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 40,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774129173374
+    },
+    {
+      "id": "b1419b8e-5b2d-4653-bae0-af71e1dfbc8a",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1774242000000,
+      "sets": [
+        {
+          "reps": 18,
+          "weight": 120
+        },
+        {
+          "reps": 16,
+          "weight": 120
+        },
+        {
+          "reps": 14,
+          "weight": 120
+        },
+        {
+          "reps": 19,
+          "weight": 100
+        },
+        {
+          "reps": 24,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774260175687
+    },
+    {
+      "id": "e5b2cce4-6bf3-4d35-a0de-45db989f516b",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1774242000000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 160
+        },
+        {
+          "reps": 26,
+          "weight": 160
+        },
+        {
+          "reps": 26,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774260889281
+    },
+    {
+      "id": "f9058fc3-d69a-4856-a8f3-46c9b6404b34",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1774242000000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774261787655
+    },
+    {
+      "id": "6d74be2e-4df2-45e1-83f3-0b0049384602",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1774242000000,
+      "sets": [
+        {
+          "reps": 40,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774262101608
+    },
+    {
+      "id": "5f914cbc-83a9-4e28-ada4-515ee2e8a080",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1774265751088,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        },
+        {
+          "reps": 27,
+          "weight": 20
+        },
+        {
+          "reps": 31,
+          "weight": 20
+        },
+        {
+          "reps": 43,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774290718595
+    },
+    {
+      "id": "f7209ae2-c72c-42f7-a689-6bd0989fe8da",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1774342044539,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 130
+        },
+        {
+          "reps": 18,
+          "weight": 130
+        },
+        {
+          "reps": 18,
+          "weight": 130
+        },
+        {
+          "reps": 20,
+          "weight": 110
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774345903915
+    },
+    {
+      "id": "9832036e-2af5-4d5e-b40d-daa524320a2d",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1774342044539,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 90
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        },
+        {
+          "reps": 15,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774347012790
+    },
+    {
+      "id": "282b80f6-bcd4-4365-ba10-58f8db22311b",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1774342044539,
+      "sets": [
+        {
+          "reps": 14,
+          "weight": 50
+        },
+        {
+          "reps": 14,
+          "weight": 50
+        },
+        {
+          "reps": 14,
+          "weight": 50
+        },
+        {
+          "reps": 15,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774347837147
+    },
+    {
+      "id": "1b75505e-e1ac-42bc-8c7e-2a622a665ef0",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1774342044539,
+      "sets": [
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774348691023
+    },
+    {
+      "id": "39f01592-7d14-4944-b468-067e04c3d455",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1774350034618,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774381193291
+    },
+    {
+      "id": "f54b8876-304c-498d-868d-54a8343b218f",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1774414800000,
+      "sets": [
+        {
+          "reps": 31,
+          "weight": 30
+        },
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 25,
+          "weight": 20
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774432573355
+    },
+    {
+      "id": "5e4dfa79-1321-4521-be03-bb9a54fa0aa7",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1774414800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 60
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 22,
+          "weight": 50
+        },
+        {
+          "reps": 25,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774434091903
+    },
+    {
+      "id": "8ce224cb-d396-4853-9343-dc65c085e030",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1774414800000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 40
+        },
+        {
+          "reps": 14,
+          "weight": 40
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774434991192
+    },
+    {
+      "id": "9d6ed207-3df9-4c2a-b531-414f343648e4",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1774414800000,
+      "sets": [
+        {
+          "reps": 33,
+          "weight": 40
+        },
+        {
+          "reps": 38,
+          "weight": 30
+        },
+        {
+          "reps": 35,
+          "weight": 30
+        },
+        {
+          "reps": 42,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774466212939
+    },
+    {
+      "id": "429de506-b908-4a60-9e87-b6d247a49430",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1774501200000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 100
+        },
+        {
+          "reps": 19,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 18,
+          "weight": 100
+        },
+        {
+          "reps": 26,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774518891808
+    },
+    {
+      "id": "5dde4ec2-67f8-44f3-86d4-29940fc62184",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1774501200000,
+      "sets": [
+        {
+          "reps": 27,
+          "weight": 160
+        },
+        {
+          "reps": 27,
+          "weight": 160
+        },
+        {
+          "reps": 27,
+          "weight": 160
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774519685725
+    },
+    {
+      "id": "e7a04a1e-5556-4ff6-beb8-063c82067d80",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1774501200000,
+      "sets": [
+        {
+          "reps": 41,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774520910746
+    },
+    {
+      "id": "19c4934f-ea12-4d00-b52c-87001d1de276",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1774501200000,
+      "sets": [
+        {
+          "reps": 19,
+          "weight": 180
+        },
+        {
+          "reps": 15,
+          "weight": 180
+        },
+        {
+          "reps": 18,
+          "weight": 180
+        },
+        {
+          "reps": 22,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774543677350
+    },
+    {
+      "id": "bad956ca-5728-4704-a5cf-7c86faaa81aa",
+      "exerciseId": "0acb6a4e-6dae-4180-8f59-ba4e3842e707",
+      "name": "Lateral Raise (Bonus)",
+      "type": "Push",
+      "date": 1774501200000,
+      "sets": [
+        {
+          "reps": 31,
+          "weight": 30
+        },
+        {
+          "reps": 24,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        },
+        {
+          "reps": 34,
+          "weight": 20
+        },
+        {
+          "reps": 50,
+          "weight": 10
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774551745385
+    },
+    {
+      "id": "1bd0a47d-1eac-4e47-b279-a48f4c527087",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1774587600000,
+      "sets": [
+        {
+          "reps": 20,
+          "weight": 130
+        },
+        {
+          "reps": 20,
+          "weight": 130
+        },
+        {
+          "reps": 20,
+          "weight": 130
+        },
+        {
+          "reps": 22,
+          "weight": 110
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774605263532
+    },
+    {
+      "id": "18274afe-bceb-4db1-8a50-59fccfefc36a",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1774587600000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 16,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774606404146
+    },
+    {
+      "id": "010cd9fa-2dc5-463f-91d3-fcad81e8e02b",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1774587600000,
+      "sets": [
+        {
+          "reps": 15,
+          "weight": 50
+        },
+        {
+          "reps": 15,
+          "weight": 50
+        },
+        {
+          "reps": 15,
+          "weight": 50
+        },
+        {
+          "reps": 16,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774607300259
+    },
+    {
+      "id": "6448fedc-cfee-41b4-9f22-5c7ef0a13554",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1774587600000,
+      "sets": [
+        {
+          "reps": 31,
+          "weight": 30
+        },
+        {
+          "reps": 29,
+          "weight": 30
+        },
+        {
+          "reps": 31,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774608079123
+    },
+    {
+      "id": "b9eaff21-fa76-4f0e-a800-4dddf312553f",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1774587600000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        },
+        {
+          "reps": 22,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774638628345
+    },
+    {
+      "id": "5945ca98-068d-460d-bde5-322938dc94ea",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1774674000000,
+      "sets": [
+        {
+          "reps": 32,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 26,
+          "weight": 20
+        },
+        {
+          "reps": 30,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774694599407
+    },
+    {
+      "id": "4bf4e1af-a74f-454f-823c-ef488c9de008",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1774674000000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 60
+        },
+        {
+          "reps": 19,
+          "weight": 60
+        },
+        {
+          "reps": 21,
+          "weight": 60
+        },
+        {
+          "reps": 18,
+          "weight": 60
+        },
+        {
+          "reps": 22,
+          "weight": 50
+        },
+        {
+          "reps": 27,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774696048883
+    },
+    {
+      "id": "e3d2bc68-2057-447e-be18-fec63649d958",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1774674000000,
+      "sets": [
+        {
+          "reps": 25,
+          "weight": 40
+        },
+        {
+          "reps": 16,
+          "weight": 40
+        },
+        {
+          "reps": 25,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774697029598
+    },
+    {
+      "id": "b279b7ea-d1cf-4a33-9bf9-8c396e3931a1",
+      "exerciseId": "af2ad289-6e7a-4795-946a-e874939f00ec",
+      "name": "Overhead Tricep Extensions (Bonus)",
+      "type": "Arms",
+      "date": 1774674000000,
+      "sets": [
+        {
+          "reps": 35,
+          "weight": 40
+        },
+        {
+          "reps": 40,
+          "weight": 30
+        },
+        {
+          "reps": 36,
+          "weight": 30
+        },
+        {
+          "reps": 43,
+          "weight": 25
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774718233400
+    },
+    {
+      "id": "a6d75de0-66a6-4aa4-b6db-3c78cb14bf91",
+      "exerciseId": "e23b3d00-7103-4f3c-9c4e-181e5a865025",
+      "name": "Incline Bench Press",
+      "type": "Push",
+      "date": 1774846800000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 125
+        },
+        {
+          "reps": 12,
+          "weight": 125
+        },
+        {
+          "reps": 14,
+          "weight": 125
+        },
+        {
+          "reps": 22,
+          "weight": 100
+        },
+        {
+          "reps": 30,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774864635848
+    },
+    {
+      "id": "23482ae2-a4f3-4e80-9922-dd7be715fa70",
+      "exerciseId": "6b30d3bc-d979-4f36-a359-463daee2f01e",
+      "name": "High to Low Cable Crossovers",
+      "type": "Push",
+      "date": 1774846800000,
+      "sets": [
+        {
+          "reps": 23,
+          "weight": 180
+        },
+        {
+          "reps": 23,
+          "weight": 180
+        },
+        {
+          "reps": 23,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774865389237
+    },
+    {
+      "id": "5bbbe045-3d82-4068-a825-d939a0abd63a",
+      "exerciseId": "52f008ba-1af5-4eea-8b42-a0431c557786",
+      "name": "Pushups",
+      "type": "Push",
+      "date": 1774846800000,
+      "sets": [
+        {
+          "reps": 42,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774866596291
+    },
+    {
+      "id": "d23c3fe6-11b1-4202-96bc-45819247b06e",
+      "exerciseId": "4e8c8653-47c8-40cf-869c-aabfb9d280b2",
+      "name": "Dips",
+      "type": "Push",
+      "date": 1774846800000,
+      "sets": [
+        {
+          "reps": 22,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 20,
+          "weight": 180
+        },
+        {
+          "reps": 23,
+          "weight": 180
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774897429678
+    },
+    {
+      "id": "dcbdc077-9e81-4591-a889-0725c340b4ee",
+      "exerciseId": "f36b407b-6aee-4972-aa10-e90f8f8ecf51",
+      "name": "Seated Cable Rows",
+      "type": "Pull",
+      "date": 1774933200000,
+      "sets": [
+        {
+          "reps": 21,
+          "weight": 130
+        },
+        {
+          "reps": 21,
+          "weight": 130
+        },
+        {
+          "reps": 21,
+          "weight": 130
+        },
+        {
+          "reps": 23,
+          "weight": 110
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774950701039
+    },
+    {
+      "id": "93c71b40-117f-40b1-bea7-e0dd31d5536f",
+      "exerciseId": "ba93be48-d512-4ed5-acf8-004e3353676e",
+      "name": "Lat Pulldowns",
+      "type": "Pull",
+      "date": 1774933200000,
+      "sets": [
+        {
+          "reps": 17,
+          "weight": 90
+        },
+        {
+          "reps": 17,
+          "weight": 90
+        },
+        {
+          "reps": 17,
+          "weight": 90
+        },
+        {
+          "reps": 16,
+          "weight": 90
+        },
+        {
+          "reps": 17,
+          "weight": 90
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774951652238
+    },
+    {
+      "id": "ae811856-36f5-421b-a192-f5f4596e1e9b",
+      "exerciseId": "4564060d-7255-443d-98b4-529fbc12aeec",
+      "name": "One Arm Tripod Rows",
+      "type": "Pull",
+      "date": 1774933200000,
+      "sets": [
+        {
+          "reps": 16,
+          "weight": 50
+        },
+        {
+          "reps": 16,
+          "weight": 50
+        },
+        {
+          "reps": 16,
+          "weight": 50
+        },
+        {
+          "reps": 17,
+          "weight": 50
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774952563352
+    },
+    {
+      "id": "d0e3669b-40bf-4647-9092-a14656862a9a",
+      "exerciseId": "fe9fbb7f-1d0f-4421-83dc-e7f69248a12f",
+      "name": "Dumbbell Pullovers",
+      "type": "Pull",
+      "date": 1774933200000,
+      "sets": [
+        {
+          "reps": 32,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        },
+        {
+          "reps": 32,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774953248244
+    },
+    {
+      "id": "7f4c66ff-9c61-4413-91cc-a9d41ddb5892",
+      "exerciseId": "2f2ba574-7d45-44e7-932c-f108d8ae647e",
+      "name": "Single-Arm Lat Pulldowns (Bonus)",
+      "type": "Pull",
+      "date": 1774933200000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 80
+        },
+        {
+          "reps": 21,
+          "weight": 80
+        },
+        {
+          "reps": 23,
+          "weight": 80
+        }
+      ],
+      "completed": true,
+      "completedDate": 1774983820342
+    },
+    {
+      "id": "7ae0bf67-7440-4555-b27e-295a765c77bb",
+      "exerciseId": "dfbc4760-fb9f-45bd-a0b9-d6414cd20c4b",
+      "name": "Lateral Raises",
+      "type": "Arms",
+      "date": 1775019600000,
+      "sets": [
+        {
+          "reps": 33,
+          "weight": 30
+        },
+        {
+          "reps": 29,
+          "weight": 30
+        },
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 27,
+          "weight": 30
+        },
+        {
+          "reps": 28,
+          "weight": 20
+        },
+        {
+          "reps": 33,
+          "weight": 20
+        }
+      ],
+      "completed": true,
+      "completedDate": 1775036971344
+    },
+    {
+      "id": "c77ca991-7594-45ed-bf3a-707f5e31ce48",
+      "exerciseId": "d739f0c6-5271-436f-bb4d-7dcffc97303c",
+      "name": "Tricep Extensions",
+      "type": "Arms",
+      "date": 1775019600000,
+      "sets": [
+        {
+          "reps": 24,
+          "weight": 60
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 22,
+          "weight": 60
+        },
+        {
+          "reps": 20,
+          "weight": 60
+        },
+        {
+          "reps": 23,
+          "weight": 50
+        },
+        {
+          "reps": 30,
+          "weight": 40
+        }
+      ],
+      "completed": true,
+      "completedDate": 1775038398140
+    },
+    {
+      "id": "7058fa3d-26a0-46a3-ad42-487a1945c0c0",
+      "exerciseId": "a48250c2-52af-4755-8614-23ed74f69630",
+      "name": "Curls",
+      "type": "Arms",
+      "date": 1775019600000,
+      "sets": [
+        {
+          "reps": 26,
+          "weight": 40
+        },
+        {
+          "reps": 17,
+          "weight": 40
+        },
+        {
+          "reps": 26,
+          "weight": 30
+        },
+        {
+          "reps": 30,
+          "weight": 30
+        }
+      ],
+      "completed": true,
+      "completedDate": 1775039524945
+    }
+  ],
+  "userBodyWeight": "180"
+}
