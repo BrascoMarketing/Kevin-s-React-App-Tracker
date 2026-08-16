@@ -40,10 +40,9 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
     plugins: { tooltip: { enabled: false } },
   };
 
-  // Calculate days left to November 18, 2026
-  const today = new Date();
+  // Countdown uses the viewedDate as the "current" reference point
   const targetDate = new Date('2026-11-18');
-  const msLeft = targetDate - today;
+  const msLeft = targetDate - viewedDate;
   const daysLeft = Math.max(0, Math.floor(msLeft / (1000 * 60 * 60 * 24)));
 
   return (
@@ -58,8 +57,9 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
              {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
           </span>
         </div>
-        <div className="mt-8 text-center text-white">          
-          <span className="block text-4xl font-bold text-green-400 mt-1">
+        <div className="mt-8 text-center text-white">
+          <span className="text-xs font-medium">Days left to target</span>
+          <span className="block text-3xl font-bold text-green-500 mt-0">
             {daysLeft}
           </span>
         </div>
