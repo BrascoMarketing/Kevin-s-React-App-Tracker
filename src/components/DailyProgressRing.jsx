@@ -62,10 +62,10 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
         {/* Creative countdown - clean, centered, and non-disruptive */}
         <div className="mt-8 text-center text-white">          
           <div className="mt-3 flex items-baseline justify-center gap-2">
-            <span className="text-4xl font-black text-green-400 tracking-tighter">
+            <span className="text-3xl font-black text-neutral-800 tracking-tighter">
               {daysLeft}
             </span>
-            <span className="text-xl font-medium text-green-400/70">days</span>
+            <span className="text-xl font-medium text-neutral-800">days</span>
           </div>
         </div>
       </div>
