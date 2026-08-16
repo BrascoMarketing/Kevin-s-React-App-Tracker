@@ -9,27 +9,17 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
 
   // Calculate daily volume from exerciseLogs
   useEffect(() => {
-    // Get viewedDate as a string (e.g., "Wed Jun 18 2025")
     const viewedKey = viewedDate.toDateString();
-
-    // Filter logs for viewedDate
     const viewedLogs = exerciseLogs.filter(
       (log) => new Date(log.date).toDateString() === viewedKey
     );
 
-    // Calculate total volume (sum of reps * weight across all sets)
     const totalVolume = viewedLogs.reduce((sum, log) => {
       return sum + log.sets.reduce((setSum, set) => setSum + (set.reps * set.weight || 0), 0);
     }, 0);
 
     setDailyVolume(totalVolume);
-
-    // Debug logs
-    console.log('viewedDate:', viewedDate);
-    console.log('viewedKey:', viewedKey);
-    console.log('viewedLogs:', viewedLogs);
-    console.log('totalVolume:', totalVolume);
-  }, [exerciseLogs, viewedDate]); // Recalculate when logs or date change
+  }, [exerciseLogs, viewedDate]);
 
   const progressRaw = targetSets > 0 ? (loggedSets / targetSets) * 100 : 0;
   const percentage = Math.min(progressRaw, 100);
@@ -50,6 +40,12 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
     plugins: { tooltip: { enabled: false } },
   };
 
+  // Calculate days left to November 18, 2026
+  const today = new Date();
+  const targetDate = new Date('2026-11-18');
+  const msLeft = targetDate - today;
+  const daysLeft = Math.max(0, Math.floor(msLeft / (1000 * 60 * 60 * 24)));
+
   return (
     <div className={`relative w-45 h-45 block m-auto`}>
       <Doughnut data={data} options={options} className={`${isOverAchieved ? 'animate-pulse' : ''}`} />
@@ -62,8 +58,12 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
              {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
           </span>
         </div>
+        <div className="mt-8 text-center text-white">          
+          <span className="block text-4xl font-bold text-green-400 mt-1">
+            {daysLeft}
+          </span>
+        </div>
       </div>
-      
     </div>
   );
 }
