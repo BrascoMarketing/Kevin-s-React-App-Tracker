@@ -39,11 +39,6 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
     plugins: { tooltip: { enabled: false } },
   };
 
-  // Countdown
-  const targetDate = new Date('2026-11-18');
-  const msLeft = targetDate - viewedDate;
-  const daysLeft = Math.max(0, Math.floor(msLeft / (1000 * 60 * 60 * 24)));
-
   return (
     <div className="relative w-45 h-45 block m-auto">
       <Doughnut data={data} options={options} className={`${isOverAchieved ? 'animate-pulse' : ''}`} />
@@ -58,16 +53,7 @@ export default function DailyProgressRing({ targetSets, loggedSets, exerciseLogs
              {dailyVolume > 0 ? `${dailyVolume.toLocaleString('en-US')} lbs` : 'No volume logged'}
           </span>
         </div>
-
-        {/* Creative countdown - clean, centered, and non-disruptive */}
-        <div className="mt-8 text-center text-white">          
-          <div className="mt-3 flex items-baseline justify-center gap-2">
-            <span className="text-3xl font-black text-neutral-800 tracking-tighter">
-              {daysLeft}
-            </span>
-            <span className="text-xl font-medium text-neutral-800">days</span>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
