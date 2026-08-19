@@ -202,6 +202,48 @@ export default function DayView({ exercises, categoryOrder, viewedDate, setViewe
       ) : (
         <p>No workout data available for this week. Enjoy your rest day!</p>
       )}
+
+ <h2 className="text-xl font-bold mb-4 mt-12 text-center">HIIT List</h2>
+ <table className="w-full table-auto border-collapse text-sm">
+  <thead>
+    <tr>
+      <th className="border-b border-gray-200 p-4 pt-0 pb-3 pl-8 text-left font-medium text-gray-400 dark:border-gray-600 dark:text-gray-200">Exercise</th>
+      <th className="border-b border-gray-200 p-4 pt-0 pb-3 pl-8 text-left font-medium text-gray-400 dark:border-gray-600 dark:text-gray-200">Duration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Jumping Jacks</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Push Ups</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Bodyweight Squats</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Mountain Climbers</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">High Knees</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Plank</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    <tr>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">Burpees</td>
+      <td className="border-b border-gray-100 p-4 pl-8 text-gray-500 dark:border-gray-700 dark:text-gray-400">30 secs</td>
+    </tr>
+    
+  </tbody>
+</table>
+      
     </div>
   );
 }
